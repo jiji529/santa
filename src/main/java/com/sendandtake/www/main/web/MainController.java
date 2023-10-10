@@ -27,7 +27,7 @@ public class MainController {
 	List<ProductVO> list = mainService.selectProductList();
 	model.addAttribute("list", list);
 		
-		return "main";
+		return "user";
 	}
 
 	
@@ -84,7 +84,7 @@ public class MainController {
 			
 			session.setAttribute("msg", "환영합니다.");
 			
-			return "redirect:/main.do";
+			return "redirect:/user.do";
 		}
 		
 	}
@@ -95,7 +95,7 @@ public class MainController {
 		
 		session.invalidate();
 		
-		return "redirect:/main.do";
+		return "redirect:/user.do";
 	}
 	
 
