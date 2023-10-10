@@ -24,7 +24,7 @@ public class ProductController {
 	@Autowired
 	ProductService productService;
 	
-	//상품목록 페이지 
+	//상품리스트
 	@GetMapping("/productList.do")
 	String productList(Model model) {
 		
