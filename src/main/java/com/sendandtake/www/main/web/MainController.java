@@ -20,8 +20,19 @@ public class MainController {
 	@Autowired
 	MainService mainService;
 	
+	//홈페이지
+	@GetMapping("/")
+	String main (Model model) {
+		
+	List<ProductVO> list = mainService.selectProductList();
+	model.addAttribute("list", list);
+		
+		return "main";
+	}
+
+	
 	//메인페이지-회원목록
-	@GetMapping("/main.do")
+	@GetMapping("/user.do")
 	String main (Model model, HttpSession session) {
 	
 		String msg = (String)session.getAttribute("msg");
@@ -31,11 +42,11 @@ public class MainController {
 			session.removeAttribute("msg");
 		}
 		
-		List<MemberVO> list = mainService.selectList();
+		List<MemberVO> list = mainService.selectMemberList();
 		
 		model.addAttribute("list", list);
 		
-		return "main";
+		return "user";
 	}
 	
 	

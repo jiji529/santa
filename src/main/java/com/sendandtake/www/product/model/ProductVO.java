@@ -4,6 +4,7 @@ public class ProductVO {
 	
 	private int pNo;
 	private int cNo;
+	private String pCode;
 	private String pName;
 	private String pInfo;
 	private String pImg1;
@@ -22,6 +23,12 @@ public class ProductVO {
 	}
 	public void setcNo(int cNo) {
 		this.cNo = cNo;
+	}
+	public String getpCode() {
+		return pCode;
+	}
+	public void setpCode(String pCode) {
+		this.pCode = pCode;
 	}
 	public String getpName() {
 		return pName;

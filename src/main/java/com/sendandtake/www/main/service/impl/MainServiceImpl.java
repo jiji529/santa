@@ -8,15 +8,20 @@ import org.springframework.stereotype.Service;
 import com.sendandtake.www.main.dao.MainDao;
 import com.sendandtake.www.main.model.MemberVO;
 import com.sendandtake.www.main.service.MainService;
+import com.sendandtake.www.product.dao.ProductDao;
+import com.sendandtake.www.product.model.ProductVO;
 
 @Service
 public class MainServiceImpl implements MainService {
 
 	@Autowired
 	MainDao mainDao;
+
+	@Autowired
+	ProductDao productDao;
 	
 	@Override
-	public List<MemberVO> selectList() {
+	public List<MemberVO> selectMemberList() {
 
 		return mainDao.selectList();
 	}
@@ -24,6 +29,12 @@ public class MainServiceImpl implements MainService {
 	@Override
 	public MemberVO selectLogin(MemberVO vo) {
 		return mainDao.selectLogin(vo);
+	}
+
+	@Override
+	public List<ProductVO> selectProductList() {
+		
+		return productDao.selectProductList();
 	}
 
 	
