@@ -1,0 +1,341 @@
+.login-page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+
+
+    .login-content {
+        width: 420px;
+        padding: 40px;
+        height: 500px;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        position: absolute;
+        background: #FFF;
+        box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
+        border-top: 5px solid #013ffb;
+        float: left;
+        -webkit-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+        transition-delay: 0.2s;
+    }
+
+
+    .login-content.login-content-signin.ng-hide:not(.ng-hide-animate) {
+        transition-delay: 0s;
+        display: block !important;
+        opacity: 0;
+        z-index: -1;
+        -webkit-transform: translate(-45%, -50%);
+        transform: translate(-45%, -50%);
+    }
+
+    .login-content.login-content-signup.ng-hide:not(.ng-hide-animate) {
+        transition-delay: 0s;
+        display: block !important;
+        opacity: 0;
+        z-index: -1;
+        -webkit-transform: translate(-55%, -50%);
+        transform: translate(-55%, -50%);
+    }
+
+    .h2 {
+        text-align: left;
+        color: #013ffb;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 0;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    form.wrapper-box {
+        margin-top: 40px;
+
+        input {
+            margin-top: 20px;
+            border: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 0;
+            padding-left: 0;
+            box-shadow: none;
+            -webkit-transition: all 0.1s ease-out;
+            transition: all 0.1s ease-out;
+
+            &:valid {
+                border-bottom: 1px solid #7ac142;
+            }
+
+            &:focus:invalid {
+                border-bottom: 1px solid #EF6161;
+            }
+        }
+
+        ::-webkit-input-placeholder {
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        :-moz-placeholder {
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        ::-moz-placeholder {
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        :-ms-input-placeholder {
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        button {
+            display: inline-block;
+            margin-top: 50px;
+            border: 2px solid #7ac142;
+            background: #7ac142;
+            border-radius: 25px;
+            padding: 3px 12px 5px 12px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 0px;
+            -webkit-transition: all 0.1s ease-out;
+            transition: all 0.1s ease-out;
+
+            &:hover {
+                color: #7ac142;
+                background: #fff;
+                border: 2px solid #7ac142;
+            }
+
+            &:active {
+                box-shadow: none;
+            }
+        }
+    }
+
+    .outer-link {
+        display: inline-block;
+        margin-top: 50px;
+        padding: 5px 0;
+        display: block;
+        color: rgba(0, 0, 0, 0.4);
+        -webkit-transition: all 0.1s ease-out;
+        transition: all 0.1s ease-out;
+
+        &:hover {
+            -webkit-transition: all 0s ease-out;
+            transition: all 0s ease-out;
+            color: rgba(0, 0, 0, 0.8);
+            text-decoration: none;
+        }
+
+    }
+
+    &.login-content-signin>div,
+    &.login-content-signup>div {
+        overflow: hidden;
+        top: 50%;
+        position: relative;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    &.login-content-signin {
+        margin-left: -130px;
+    }
+
+    &.login-content-signup {
+        margin-left: 130px;
+    }
+
+}
+
+
+
+.login-switcher {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 660px;
+    height: 400px;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.03);
+
+    &>div {
+        width: 40%;
+        margin-top: 125px;
+
+        &.login-switcher-signin {
+            float: left;
+        }
+
+        &.login-switcher-signup {
+            float: right;
+        }
+
+        h3 {
+            color: rgba(0, 0, 0, 0.4);
+            text-align: center;
+            font-size: 14px;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto 0 auto;
+            outline: 0;
+            background: none;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            color: rgba(0, 0, 0, 0.3);
+            font-weight: bold;
+            font-size: 14px;
+            padding: 4px 12px 5px 12px;
+            -webkit-transition: all 0.1s ease-out;
+            transition: all 0.1s ease-out;
+
+            &:hover {
+                border: 2px solid #7ac142 !important;
+                color: rgba(0, 0, 0, 0.8);
+            }
+        }
+    }
+
+    .login-switcher-signin,
+    .login-switcher-signup {
+        -webkit-transition: all 0.1s ease-out;
+        transition: all 0.1s ease-out;
+    }
+
+    .login-switcher-signin.ng-hide:not(.ng-hide-animate),
+    .login-switcher-signup.ng-hide:not(.ng-hide-animate) {
+        display: block !important;
+        opacity: 0;
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+    }
+}
+
+.h1 {
+    text-align: center;
+    font-size: 60px;
+}
+
+.form-control {
+    display: block;
+    width: 90%;
+    height: 45px;
+    padding: 6px 12px;
+    margin: 15px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+}
+
+.form-control:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
+}
+
+.form-control::-moz-placeholder {
+    color: #999;
+    opacity: 1
+}
+
+.form-control:-ms-input-placeholder {
+    color: #999
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #999
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+    background-color: #eee;
+    opacity: 1
+}
+
+.form-control[disabled],
+fieldset[disabled] .form-control {
+    cursor: not-allowed
+}
+
+textarea.form-control {
+    height: auto
+}
+
+input[type=search] {
+    -webkit-appearance: none
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+    input[type=date].form-control,
+    input[type=time].form-control,
+    input[type=datetime-local].form-control,
+    input[type=month].form-control {
+        line-height: 34px
+    }
+
+    .input-group-sm input[type=date],
+    .input-group-sm input[type=time],
+    .input-group-sm input[type=datetime-local],
+    .input-group-sm input[type=month],
+    input[type=date].input-sm,
+    input[type=time].input-sm,
+    input[type=datetime-local].input-sm,
+    input[type=month].input-sm {
+        line-height: 30px
+    }
+
+    .input-group-lg input[type=date],
+    .input-group-lg input[type=time],
+    .input-group-lg input[type=datetime-local],
+    .input-group-lg input[type=month],
+    input[type=date].input-lg,
+    input[type=time].input-lg,
+    input[type=datetime-local].input-lg,
+    input[type=month].input-lg {
+        line-height: 46px
+    }
+
+    .form-control-static {
+        min-height: 34px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        margin-bottom: 0
+    }
+
+    .form-control-static.input-lg,
+    .form-control-static.input-sm {
+        padding-right: 0;
+        padding-left: 0
+    }
+
+    .btn {
+        width: 96%;
+        margin-left: 15px;
+        padding: 18px 15px;
+
+    }
+}

@@ -1,34 +1,50 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <jsp:include page="header.jsp"></jsp:include>
+<link rel="stylesheet" href="/login.css">
 <title>로그인</title>
 </head>
 <body>
-	<div class="container">
-		<div>
-			<h3>로그인</h3>
-		</div>
-		<form method="POST">
-		<div>
-			<div class="form-group">
-				<label>아이디:</label>
-				<input type="text" name="userEmail">
+	<div class="login-page" ng-app="">
+
+		<div class="login-content login-content-signin" ng-hide="showSignIn">
+			<div>
+				<h1 class="h1">santa</h1>
 			</div>
 			<div>
-				<label>비밀번호:</label>
-				<input type="password" name="userPwd">
-			</div>
-			<div>
-				<button>로그인</button>
-				<a href="${pageContext.request.contextPath}/main.do"><button type="button">처음으로</button></a>
+				<h2 class="h2">Log in</h2>
+				<form method="POST" class="wrapper-box" role="form"
+					ng-submit="login()">
+					<input type="email" ng-model="email"
+						class="form-control form-control-email"
+						placeholder="Email address" required> <input
+						type="password" ng-model="password"
+						class="form-control form-control-password" placeholder="Password"
+						required>
+
+					<!-- <div class="checkbox pull-left">
+                <label>
+                  <input type="checkbox"> Remember me.
+                </label>
+              </div> -->
+
+					<a href="${pageContext.request.contextPath}/main.do">
+						<button type="submit" class="btn">Log in</button>
+					</a>
+				</form>
 			</div>
 		</div>
-		</form>
-	</div>	
-	
+
+
+	</div>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.5/angular.min.js"></script>
+
 </body>
 </html>
