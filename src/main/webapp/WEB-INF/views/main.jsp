@@ -119,10 +119,17 @@
 		</c:forEach>
 
         </div>
+        
+        <br>
+        <div class="d-flex align-items-center justify-content-center">
+        	<a href="#" class="btn outlinegrey medium" style="border: 1px solid #eef0ef;"> 더보기 </a>
+        </div>
 
       </div>
     </section>
     <!-- End 인기상품 Section -->
+    
+    
 
   </main>
   <!-- End #main -->
@@ -170,7 +177,7 @@
 			     <p>
 			       대전광역시 동구 가양동 <br>
 			       우암로 352-21<br><br>
-			       <strong>Tel:</strong> +1 5589 55488 55<br>
+			       <strong>Tel:</strong> +82 42 000 0000 <br>
 			       <strong>Email:</strong> polytechonly@gmail.com<br>
 			     </p><br>
 				   <a href="support.do" class="btn btn-dark btn-sm "><i class="bi bi-vector-pen"></i>1:1문의</a>
@@ -182,7 +189,7 @@
 	</div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i>top</a>
+  <a href="#"><img src="resources/img/화살표.png"  class="back-to-top d-flex align-items-center justify-content-center" alt="..." >top</a>
   
    <!-- Vendor JS Files -->
   <script src="resources/vendor/purecounter/purecounter_vanilla.js"></script>

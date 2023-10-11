@@ -2,20 +2,28 @@ package com.sendandtake.www.product.model;
 
 import java.util.Date;
 
+import org.springframework.web.multipart.MultipartFile;
+
+
 public class ReviewVO {
 	
 	private int rvNo;
 	private int pNo;
 	private int userNo;
 	private Date rvDate;
-	private String rvImg;
+	private MultipartFile rvImg;
 	private String rvContent;
 	private String rvImgPath;
 	private String rvNewImg;
 	private String rvExtn;
 	private String userEmail;
-	
-	
+
+	public MultipartFile getRvImg() {
+		return rvImg;
+	}
+	public void setRvImg(MultipartFile rvImg) {
+		this.rvImg = rvImg;
+	}
 	public String getUserEmail() {
 		return userEmail;
 	}
@@ -46,12 +54,7 @@ public class ReviewVO {
 	public void setRvDate(Date rvDate) {
 		this.rvDate = rvDate;
 	}
-	public String getRvImg() {
-		return rvImg;
-	}
-	public void setRvImg(String rvImg) {
-		this.rvImg = rvImg;
-	}
+	
 	public String getRvContent() {
 		return rvContent;
 	}

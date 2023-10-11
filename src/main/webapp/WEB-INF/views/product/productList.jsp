@@ -45,7 +45,7 @@
 					</td>
 					<td>
 						<a href="${pageContext.request.contextPath}/detail.do?pNo=${item.pNo}">
-						<img alt="" src="${pageContext.request.contextPath}/resources/img/${item.pImg1}" class="toDetail" width="570" height="570">
+						<img alt="" src="img/${item.pImg1}" class="toDetail" width="570" height="570">
 						</a>
 					</td>
 				</tr>
