@@ -19,6 +19,7 @@
 				<tr>
 					<th>아이디</th>
 					<th>비밀번호</th>
+					<th>회원번호</th>
 				</tr>
 			</thead>
 			<c:forEach var="item" items="${list}">
@@ -26,6 +27,7 @@
 				<tr>
 					<td>${item.userEmail}</td>
 					<td>${item.userPwd}</td>
+					<td>${item.userNo}</td>
 				</tr>
 			</tbody>
 			</c:forEach>

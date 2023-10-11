@@ -11,28 +11,31 @@
 <body>
 	<div class="login-page" >
 
-		<div class="login-content login-content-signin" ng-hide="showSignIn">
+		<div class="login-content login-content-signin" >
 			<div>
 				<h1 class="h1">santa</h1>
 			</div>
 			<div>
-				<h2 class="h2">Log in</h2>
+				<h2 class="h2">Login</h2>
 				<form method="POST" class="wrapper-box" role="form">
 					<input type="email"  name="userEmail" class="form-control form-control-email"
-						placeholder="Email address" required> 
+						placeholder="Email address"> 
 					<input type="password" name="userPwd" class="form-control form-control-password" 
-					placeholder="Password" required>
+					placeholder="Password">
 
 
 					<a href="${pageContext.request.contextPath}/user.do">
 						<button type="submit" class="btn">Log in</button>
 					</a>
-					<a href="${pageContext.request.contextPath}/member/join">회원가입</a>
+					<br>
+					<br>
+					<a href="${pageContext.request.contextPath}/join.do">
+						<button type="submit" class="btn">회원가입</button>
+					</a>
 				</form>
+
 			</div>
 		</div>
-
-
 	</div>
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

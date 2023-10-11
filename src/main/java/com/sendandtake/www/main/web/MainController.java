@@ -26,6 +26,8 @@ public class MainController {
 		
 	List<ProductVO> list = mainService.selectProductList();
 	model.addAttribute("list", list);
+	
+	
 		
 		return "main";
 	}

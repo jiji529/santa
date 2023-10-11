@@ -1,4 +1,7 @@
-.login-page {
+.container{
+    width: 1920px;
+}
+.join-page {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -7,7 +10,7 @@
     background: #fff;
 
 
-    .login-content {
+    .join-content {
         width: 420px;
         padding: 40px;
         height: 500px;
@@ -30,13 +33,10 @@
 
 
     .h2 {
-        text-align: left;
-        color: #020f36;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin: 0;
-        font-size: 18px;
-        font-weight: bold;
+        text-align: center;
+        font-size: 30px;
+
+
     }
 
     form.wrapper-box {
@@ -99,8 +99,8 @@
 
     }
 
-    &.login-content-signin>div,
-    &.login-content-signup>div {
+    &.join-content-signin>div,
+    &.join-content-signup>div {
         overflow: hidden;
         top: 50%;
         position: relative;
@@ -108,19 +108,19 @@
         transform: translateY(-50%);
     }
 
-    &.login-content-signin {
+    &.join-content-signin {
         margin-left: -130px;
     }
 
-    &.login-content-signup {
+    &.join-content-signup {
         margin-left: 130px;
     }
 
-}
 
 
 
-.login-switcher {
+
+.join-switcher {
     position: absolute;
     top: 0;
     right: 0;
@@ -135,11 +135,11 @@
         width: 40%;
         margin-top: 125px;
 
-        &.login-switcher-signin {
+        &.join-switcher-signin {
             float: left;
         }
 
-        &.login-switcher-signup {
+        &.join-switcher-signup {
             float: right;
         }
 
@@ -152,18 +152,15 @@
 
     }
 
-    .login-switcher-signin,
-    .login-switcher-signup {
+    .join-switcher-signin,
+    .join-switcher-signup {
         -webkit-transition: all 0.1s ease-out;
         transition: all 0.1s ease-out;
     }
 
 }
 
-.h1 {
-    text-align: center;
-    font-size: 60px;
-}
+
 
 .form-control {
     display: block;
@@ -221,40 +218,40 @@ textarea.form-control {
     height: auto
 }
 
-/* input[type=search] { */
-/*     -webkit-appearance: none */
-/* } */
+input[type=search] {
+    -webkit-appearance: none
+}
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
 
-/*     input[type=date].form-control, */
-/*     input[type=time].form-control, */
-/*     input[type=datetime-local].form-control, */
-/*     input[type=month].form-control { */
-/*         line-height: 34px */
-/*     } */
+    input[type=date].form-control,
+    input[type=time].form-control,
+    input[type=datetime-local].form-control,
+    input[type=month].form-control {
+        line-height: 34px
+    }
 
-/*     .input-group-sm input[type=date], */
-/*     .input-group-sm input[type=time], */
-/*     .input-group-sm input[type=datetime-local], */
-/*     .input-group-sm input[type=month], */
-/*     input[type=date].input-sm, */
-/*     input[type=time].input-sm, */
-/*     input[type=datetime-local].input-sm, */
-/*     input[type=month].input-sm { */
-/*         line-height: 30px */
-/*     } */
+    .input-group-sm input[type=date],
+    .input-group-sm input[type=time],
+    .input-group-sm input[type=datetime-local],
+    .input-group-sm input[type=month],
+    input[type=date].input-sm,
+    input[type=time].input-sm,
+    input[type=datetime-local].input-sm,
+    input[type=month].input-sm {
+        line-height: 30px
+    }
 
-/*     .input-group-lg input[type=date], */
-/*     .input-group-lg input[type=time], */
-/*     .input-group-lg input[type=datetime-local], */
-/*     .input-group-lg input[type=month], */
-/*     input[type=date].input-lg, */
-/*     input[type=time].input-lg, */
-/*     input[type=datetime-local].input-lg, */
-/*     input[type=month].input-lg { */
-/*         line-height: 46px */
-/*     } */
+    .input-group-lg input[type=date],
+    .input-group-lg input[type=time],
+    .input-group-lg input[type=datetime-local],
+    .input-group-lg input[type=month],
+    input[type=date].input-lg,
+    input[type=time].input-lg,
+    input[type=datetime-local].input-lg,
+    input[type=month].input-lg {
+        line-height: 46px
+    }
 
     .form-control-static {
         min-height: 34px;
@@ -270,14 +267,69 @@ textarea.form-control {
     }
 
      .btn {
-        width: 90%;
+        font-size: 15px;
+        width: 96%;
         margin-left: 15px;
-        padding: 6px 12px;
+        padding: 15px 15px;
         background: #ccc;
 
     }
     .btn:hover{
         background: #999;
     }
+    .ck{
+        margin-left: 20px;
+    }
+    .btn_view{
+
+        font-size: 10pt;
+    }
+
+    .ck-l{
+        width: 80%;
+        float: left ;
+    }
+
+    .ck-r{
+        width: 20%;
+        float: right ;
+        text-align: right;
+        
+    }
     
-  
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto; /* 15% from the top and centered */
+        padding: 10px;
+        border: 1px solid #888;
+        width: 50%; /* Could be more or less, depending on screen size */
+    }
+    /* The Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+
+}
