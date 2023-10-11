@@ -102,6 +102,10 @@ public class ProductController {
 		return "OK";
 	}
 	
-	
+	//상품구매
+	@GetMapping("/buy.do")
+	String buy() {
+		return "product/buy";
+	}
 	
 }
