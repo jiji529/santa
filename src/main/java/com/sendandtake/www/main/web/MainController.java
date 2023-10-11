@@ -73,7 +73,7 @@ public class MainController {
 		//로그인 실패시, 로그인 화면으로 이동
 		if(mvo==null) {
 			
-			session.setAttribute("msg", "로그인이 안 됐습니다.");
+			session.setAttribute("msg", "로그인이 안됐습니다.");
 			
 			return "redirect:/login.do";
 			
