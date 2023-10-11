@@ -5,11 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <jsp:include page="header.jsp"></jsp:include>
-<link rel="stylesheet" href="/login.css">
+<link type="text/css" rel="stylesheet" href="resources/css/login.css">
 <title>로그인</title>
 </head>
 <body>
-	<div class="login-page" ng-app="">
+	<div class="login-page" >
 
 		<div class="login-content login-content-signin" ng-hide="showSignIn">
 			<div>
@@ -17,22 +17,14 @@
 			</div>
 			<div>
 				<h2 class="h2">Log in</h2>
-				<form method="POST" class="wrapper-box" role="form"
-					ng-submit="login()">
-					<input type="email" ng-model="email"
-						class="form-control form-control-email"
-						placeholder="Email address" required> <input
-						type="password" ng-model="password"
-						class="form-control form-control-password" placeholder="Password"
-						required>
+				<form method="POST" class="wrapper-box" role="form">
+					<input type="email"  name="userEmail" class="form-control form-control-email"
+						placeholder="Email address" required> 
+					<input type="password" name="userPwd" class="form-control form-control-password" 
+					placeholder="Password" required>
 
-					<!-- <div class="checkbox pull-left">
-                <label>
-                  <input type="checkbox"> Remember me.
-                </label>
-              </div> -->
 
-					<a href="${pageContext.request.contextPath}/main.do">
+					<a href="${pageContext.request.contextPath}/user.do">
 						<button type="submit" class="btn">Log in</button>
 					</a>
 				</form>
@@ -41,10 +33,15 @@
 
 
 	</div>
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.5/angular.min.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.5/angular.min.js"></script>
+	
+	<script>
+	const msg = "${msg}";
+	if(msg)
+		alert(msg);
+	</script>	
 
 </body>
 </html>
