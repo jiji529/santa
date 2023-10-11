@@ -98,5 +98,15 @@ public class MainController {
 		return "redirect:/user.do";
 	}
 	
+	//고객문의
+	@GetMapping("/support.do")
+	String support(Model model) {
+		
+		List<MemberVO> list = mainService.selectMemberList();
+		
+		model.addAttribute("list", list);
+		
+		return "support";
+	}
 
 }
