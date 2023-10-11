@@ -12,4 +12,25 @@
 	WHERE userEmail = #{userEmail} AND userPwd = #{userPwd}
 </select>
 
+<select id="mvo" resultType="Member">
+		SELECT * FROM tbl_user
+		WHERE userEmail=#{userEmail}
+	</select>
+	
+	<insert id="join">
+		INSERT INTO tbl_user
+		VALUES ( , #{userEmail},#{userPwd}, #{userNickname}, NOW(), , '0','0','0',)	
+	</insert>
+	
+	<update id="update">
+		UPDATE tbl_user
+		SET  userPwd=#{userPwd},  userNickname=#{userNickname}
+		WHERE userEmail=#{userEmail}
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM tbl_user
+		WHERE userEmail=#{userEmail}
+	</delete>
+
 </mapper>

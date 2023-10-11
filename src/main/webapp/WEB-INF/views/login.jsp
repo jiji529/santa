@@ -27,6 +27,7 @@
 					<a href="${pageContext.request.contextPath}/user.do">
 						<button type="submit" class="btn">Log in</button>
 					</a>
+					<a href="${pageContext.request.contextPath}/member/join">회원가입</a>
 				</form>
 			</div>
 		</div>
