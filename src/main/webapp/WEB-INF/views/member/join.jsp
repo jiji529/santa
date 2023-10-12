@@ -5,6 +5,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="join.css">
     <link type="text/css" rel="stylesheet" href="/resources/css/join.css">
     <title>회원가입</title>
     <style>
@@ -24,18 +27,16 @@
                 </div>
                 <div>
 
-                    <form method="POST" class="wrapper-box" role="form">
+                    <form id="agreeFrm" method="POST" class="wrapper-box">
                         <label>이메일</label>
                         <input type="email" name="userEmail" class="form-control form-control-email"
                             placeholder="santa@santa.co.kr" required>
                         <label>비밀번호</label>
                         <input type="password" name="userPwd" class="form-control form-control-password"
                             placeholder="영문,숫자,특수문자 조합 8-16자" required>
-                        <div>
-                            <div class="agree_all">
-                                <input type="checkbox" id="check_all">
+                        <div>   
+                                <input type="checkbox" id="check_all" >
                                 <label>[필수] 만 14세 이상이며 모두 동의합니다</label>
-                            </div>    
                                 <div class="ck">
                                     <div class="ck-l">
                                         <div>
@@ -58,7 +59,7 @@
 
                             <br>                            
                             <button type="button" class="btn" id="signup">회원가입</button>
-                            
+                        </div>    
                     </form>
                 </div>
             </div>
@@ -245,7 +246,7 @@
             }
         };
     </script>
- <script>
+    <script>
 $(document).ready(function(){
 	$("#check_all").change(function() {
         const checked = $(this).is(":checked");	
@@ -258,8 +259,8 @@ $(document).ready(function(){
 
 		$(".agree").each( (index, item) => {
             const msg = $(item).parent().find("label").text();            
-
             if(valid && !$(item).is(":checked")) {
+            	console.log(msg);
                 alert(`${msg}에 동의하지 않으셨습니다`);
 		        valid = false;
                 return;
