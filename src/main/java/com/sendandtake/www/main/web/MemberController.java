@@ -29,7 +29,7 @@ public class MemberController {
 	String join (MemberVO mvo) {
 		memberservice.join(mvo);
 		
-		return "redirect:../login.do";
+		return "redirect:../";
 	}
 	
 	//회원정보 수정
