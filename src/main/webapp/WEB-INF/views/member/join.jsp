@@ -34,7 +34,7 @@
    </table>
    
    <div>
-      <button type="submit" class="btn spot">가입</button>
+      <button>가입</button>
    </div>
 </form>
 </body>
