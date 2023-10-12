@@ -32,27 +32,32 @@
                         <input type="password" name="userPwd" class="form-control form-control-password"
                             placeholder="영문,숫자,특수문자 조합 8-16자" required>
                         <div>
-                            <input type="checkbox">
-                            <label>[필수] 만 14세 이상이며 모두 동의합니다</label>
-                            <div class="ck">
-                                <div class="ck-l">
-                                    <input type="checkbox" name="agreement"><label>이용약관동의</label><br>
-                                    <input type="checkbox" name="agreement"><label>개인정보 수집 및 이용 동의</label>
+                            <div class="agree_all">
+                                <input type="checkbox" id="check_all">
+                                <label>[필수] 만 14세 이상이며 모두 동의합니다</label>
+                            </div>    
+                                <div class="ck">
+                                    <div class="ck-l">
+                                        <div>
+                                            <input type="checkbox" name="agree01" class="agree"><label>이용약관동의</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="agree02" class="agree"><label>개인정보 수집 및 이용 동의</label>
+                                        </div>
+                                    </div>
+                                    <div class="ck r ">
+                                        <!-- 첫 번째 Modal을 여는 클래스 -->
+                                        <a href="#" class="btn_view mo_btn">내용보기</a><br>
+                                        <!-- 두 번째 Modal을 여는 클래스 -->
+                                        <a href="#" class="btn_view mo_btn">내용보기</a>
+                                    </div>
                                 </div>
-                                <div class="ck r ">
-                                    <!-- 첫 번째 Modal을 여는 클래스 -->
-                                    <a href="#" class="btn_view mo_btn">내용보기</a><br>
-                                    <!-- 두 번째 Modal을 여는 클래스 -->
-                                    <a href="#" class="btn_view mo_btn">내용보기</a>
-                                </div>
-                            </div>
-
-
-
-
-                            <br>
                             
-                                <button type="submit" class="btn">회원가입</button>
+
+
+
+                            <br>                            
+                            <button type="button" class="btn" id="signup">회원가입</button>
                             
                     </form>
                 </div>
@@ -240,7 +245,34 @@
             }
         };
     </script>
+ <script>
+$(document).ready(function(){
+	$("#check_all").change(function() {
+        const checked = $(this).is(":checked");	
 
+		$(".agree").prop("checked", checked);
+	});
+	
+	$("#signup").click(function() {
+        let valid = true;
+
+		$(".agree").each( (index, item) => {
+            const msg = $(item).parent().find("label").text();            
+
+            if(valid && !$(item).is(":checked")) {
+                alert(`${msg}에 동의하지 않으셨습니다`);
+		        valid = false;
+                return;
+            }
+        });
+
+
+
+        if(valid)
+            $("#agreeFrm").submit();
+	});
+});
+    </script>
 
 
 
