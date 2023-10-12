@@ -260,8 +260,8 @@ $(document).ready(function(){
 		$(".agree").each( (index, item) => {
             const msg = $(item).parent().find("label").text();            
             if(valid && !$(item).is(":checked")) {
-            	console.log(msg);
-                alert(`${msg}에 동의하지 않으셨습니다`);
+//             	console.log(`\${msg}에 동의하지 않으셨습니다`);
+                alert(msg+'에 동의하지 않으셨습니다');
 		        valid = false;
                 return;
             }
