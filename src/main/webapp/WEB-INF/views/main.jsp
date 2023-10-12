@@ -74,9 +74,9 @@ ul {
 	<header>
 		<div class="top">
 			<div>
-				<a href="">로그인</a> <a href="">회원가입</a> <a href="">마이페이지</a> <a
-					href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-				<!--장바구니-->
+				<a href="login.do">로그인</a>
+				<a href="">마이페이지</a>
+				<a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a><!--장바구니-->
 			</div>
 		</div>
 		<div class="logo">
