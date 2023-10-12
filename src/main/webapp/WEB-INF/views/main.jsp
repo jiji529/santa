@@ -1,59 +1,117 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
+	pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>SANTA</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+<meta content="" name="description">
+<meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="resources/img/favicon.png" rel="icon">
-  <link href="resources/img/apple-touch-icon.png" rel="apple-touch-icon">
+<!-- Favicons -->
+<link href="resources/img/favicon.png" rel="icon">
+<link href="resources/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+<!-- Google Fonts -->
+<link
+	href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+	rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="resources/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="resources/vendor/aos/aos.css" rel="stylesheet">
-  <link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="resources/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="resources/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="resources/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="resources/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link href="resources/scss/_variables.scss" rel="stylesheet">
+<!-- Vendor CSS Files -->
+<link href="/resources/vendor/animate.css/animate.min.css"
+	rel="stylesheet">
+<link href="/resources/vendor/aos/aos.css" rel="stylesheet">
+<link href="/resources/vendor/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="/resources/vendor/bootstrap-icons/bootstrap-icons.css"
+	rel="stylesheet">
+<link href="/resources/vendor/boxicons/css/boxicons.min.css"
+	rel="stylesheet">
+<link href="/resources/vendor/remixicon/remixicon.css" rel="stylesheet">
+<link href="/resources/vendor/swiper/swiper-bundle.min.css"
+	rel="stylesheet">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+	crossorigin="anonymous">
+<link href="resources/scss/_variables.scss" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="resources/css/style.css" rel="stylesheet">
+<!-- Template Main CSS File -->
+<link href="resources/css/style.css" rel="stylesheet">
+
+<link type="image/x-icon" href="./img/favicon.ico" rel="shortcut icon" />
+<link
+	href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
+	rel="stylesheet" />
+<link
+	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+	rel="stylesheet" />
+<link
+	href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
+	rel="stylesheet" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://kit.fontawesome.com/20962f3e4b.js"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+<style>
+ul {
+	list-style: none;
+	padding-left: 0px;
+}
+</style>
+
 </head>
 <body>
-	
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="/">SANTA</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="active" href="main.jsp">Home</a></li>
-          <li><a href="about.html">고객센터</a></li>
-          <li><a href="courses.html">마이페이지</a></li>
-          <li><a href="trainers.html">관심상품</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-      <a href="login.do" class="get-started-btn">Login</a>
-
-    </div>
-  </header><!-- End Header -->
+	<!-- ======= Header ======= -->
+	<header>
+		<div class="top">
+			<div>
+				<a href="">로그인</a> <a href="">회원가입</a> <a href="">마이페이지</a> <a
+					href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+				<!--장바구니-->
+			</div>
+		</div>
+		<div class="logo">
+			<div>
+				<a href="#"> <img src="./img/header_logo.png" alt="헤더로고">
+				</a>
+				<form action="#">
+					<input type="text" name="search">
+					<button>
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</button>
+				</form>
+			</div>
+		</div>
+		<div class="menu">
+			<div class="menu_index">
+				<ul>
+					<li><a href="#">히트상품</a></li>
+					<li><a href="#">추천상품</a></li>
+					<li><a href="#">최신상품</a></li>
+					<li><a href="#">인기상품</a></li>
+					<li><a href="#">할인상품</a></li>
+				</ul>
+			</div>
+			<div class="menu_indexr">
+				<form class="search" action="#">
+					<input class="search_box" type="text" name="search">
+					<button class="search_button">
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</button>
+				</form>
+			</div>
+		</div>
+	</header>
+	<!-- End Header -->
 
   <!-- ======= 베너 Section ======= -->
   <section id="banner" class="d-flex justify-content-center align-items-center img-fluid">
