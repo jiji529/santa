@@ -29,10 +29,10 @@
 					</a>
 					<br>
 					<br>
-					<a href="${pageContext.request.contextPath}/join.do">
-						<button type="submit" class="btn">회원가입</button>
-					</a>
 				</form>
+					<a href="${pageContext.request.contextPath}/member/join">
+					<button type="submit" class="btn">회원가입	</button>
+					</a>
 
 			</div>
 		</div>
