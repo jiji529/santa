@@ -24,8 +24,8 @@
 <!-- Template Main CSS File -->
 <link href="resources/css/style.css" rel="stylesheet">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <!-- Template Main JS File -->
+<script src="resources/js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
 <style>
@@ -125,7 +125,6 @@ ul {
 
   <a href="#"><img src="resources/img/화살표.png"  class="back-to-top d-flex align-items-center justify-content-center" alt="..." >top</a>
  
-  <!-- Template Main JS File -->
-  <script src="resources/js/main.js"></script>
+
 </body>
 </html>
