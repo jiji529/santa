@@ -5,9 +5,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/join.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<jsp:include page="../header.jsp"></jsp:include>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/join.css">
     <title>회원가입</title>
     <style>
         input[type='checkbox'] {
@@ -75,7 +76,7 @@
                 </div>
                 <div data-v-02cff063="" class="layer_content">
                     <div data-v-17b3a53d="" class="editor_viewer" data-v-02cff063="">
-                        <p><strong>KREAM 서비스 이용 약관</strong></p>
+                        <p><strong>SANTA 서비스 이용 약관</strong></p>
                         <p>&nbsp;</p>
                         <p><strong>제 1 조 (목적)</strong></p>
                         <p>이 약관은 "회원" 개인 상호 간 또는 “제휴 사업자”, "입점 사업자"와 “회원” 개인 간에 상품 등을 매매하는
@@ -155,8 +156,8 @@
             <!-- 두 번째 Modal의 내용 -->
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <p>개인정보처리방침
-                    개인정보처리방침 | SANTA
+                <h3>개인정보 처리 방침</h3><hr>
+                <p>개인정보처리방침 | SANTA
                     산타㈜(이하 회사)는 ｢개인정보 보호법｣ 에 따라 이용자의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을 수립 및 공개합니다.
                      
                      
