@@ -9,56 +9,25 @@
 <meta content="" name="description">
 <meta content="" name="keywords">
 
-<!-- Favicons -->
-<link href="resources/img/favicon.png" rel="icon">
-<link href="resources/img/apple-touch-icon.png" rel="apple-touch-icon">
-
 <!-- Google Fonts -->
 <link
 	href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
 	rel="stylesheet">
 
 <!-- Vendor CSS Files -->
-<!-- <link href="/resources/vendor/animate.css/animate.min.css" -->
-<!-- 	rel="stylesheet"> -->
-<!-- <link href="/resources/vendor/aos/aos.css" rel="stylesheet"> -->
-<!-- <link href="/resources/vendor/bootstrap/css/bootstrap.min.css" -->
-<!-- 	rel="stylesheet"> -->
-<!-- <link href="/resources/vendor/bootstrap-icons/bootstrap-icons.css" -->
-<!-- 	rel="stylesheet"> -->
-<!-- <link href="/resources/vendor/boxicons/css/boxicons.min.css" -->
-<!-- 	rel="stylesheet"> -->
-<!-- <link href="/resources/vendor/remixicon/remixicon.css" rel="stylesheet"> -->
-<!-- <link href="/resources/vendor/swiper/swiper-bundle.min.css" -->
-<!-- 	rel="stylesheet"> -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
 	rel="stylesheet"
 	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
 	crossorigin="anonymous">
-<!-- <link href="resources/scss/_variables.scss" rel="stylesheet"> -->
 
 <!-- Template Main CSS File -->
 <link href="resources/css/style.css" rel="stylesheet">
 
-<link type="image/x-icon" href="./img/favicon.ico" rel="shortcut icon" />
-<link
-	href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
-	rel="stylesheet" />
-<link
-	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-	rel="stylesheet" />
-<link
-	href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
-	rel="stylesheet" />
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script src="https://kit.fontawesome.com/20962f3e4b.js"
-	crossorigin="anonymous"></script>
-<script
-	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
 <style>
 ul {
@@ -248,14 +217,7 @@ ul {
   </footer><!-- End Footer -->
 
   <a href="#"><img src="resources/img/화살표.png"  class="back-to-top d-flex align-items-center justify-content-center" alt="..." >top</a>
-  
-   <!-- Vendor JS Files -->
-  <script src="resources/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="resources/vendor/aos/aos.js"></script>
-  <script src="resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="resources/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="resources/vendor/php-email-form/validate.js"></script>
-
+ 
   <!-- Template Main JS File -->
   <script src="resources/js/main.js"></script>
 </body>
