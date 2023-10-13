@@ -7,8 +7,7 @@
 <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="join.css">
-    <link type="text/css" rel="stylesheet" href="/resources/css/join.css">
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/join.css">
     <title>회원가입</title>
     <style>
         input[type='checkbox'] {
