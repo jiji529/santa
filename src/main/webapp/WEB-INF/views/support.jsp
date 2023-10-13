@@ -8,7 +8,18 @@
 <title>산타</title>
 </head>
 <body>
- 고객 문의사항 받는 페이지 구현 예정~~
+  <!-- ======= Header ======= -->
+<div>
+  <jsp:include page="header.jsp"></jsp:include>
+</div>
 
+<div>
+ <h1> 고객 문의사항 받는 페이지 구현 예정~~</h1>
+</div>
+
+	<!-- ======= Footer ======= -->
+<div>
+  <jsp:include page="footer.jsp"></jsp:include>
+</div>
 </body>
 </html>

@@ -9,23 +9,12 @@
 <meta content="" name="description">
 <meta content="" name="keywords">
 
-<!-- Google Fonts -->
-<link
-	href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-	rel="stylesheet">
-
-<!-- Vendor CSS Files -->
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-	crossorigin="anonymous">
-
-<!-- Template Main CSS File -->
+<!-- 메인화면 CSS File -->
 <link href="resources/css/style.css" rel="stylesheet">
 
-  <!-- Template Main JS File -->
+  <!-- 메인화면 JS File -->
 <script src="resources/js/main.js"></script>
+  <!-- 슬라이더 JS File -->
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
 <style>
@@ -38,7 +27,9 @@ ul {
 </head>
 <body>
   <!-- ======= Header ======= -->
+  <div>
   <jsp:include page="header.jsp"></jsp:include>
+  </div>
 
   <!-- ======= 베너 Section ======= -->
   <section id="banner" class="d-flex justify-content-center align-items-center img-fluid">
@@ -107,7 +98,7 @@ ul {
         
         <br>
         <div class="d-flex align-items-center justify-content-center">
-        	<a href="#" class="btn outlinegrey medium" style="border: 1px solid #eef0ef;"> 더보기 </a>
+        	<a href="/list" class="btn outlinegrey medium" style="border: 1px solid #eef0ef;"> 더보기 </a>
         </div>
 
       </div>
@@ -120,10 +111,14 @@ ul {
   <!-- End #main -->
 
 	<!-- ======= Footer ======= -->
+	<div>
 	<jsp:include page="footer.jsp"></jsp:include>
+	</div>
 	<!-- End Footer -->
 
-  <a href="#"><img src="resources/img/화살표.png"  class="back-to-top d-flex align-items-center justify-content-center" alt="..." >top</a>
+	<div>
+	  <a href="#"><img src="resources/img/화살표.png"  class="back-to-top d-flex align-items-center justify-content-center" alt="..." >top</a>
+	</div>
  
 
 </body>

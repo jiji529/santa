@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 
 <!-- Template Main CSS File -->
-<link href="resources/css/footer.css" rel="stylesheet">
+<link href="/resources/css/footer.css" rel="stylesheet">
 </head>
 <body>
 <!-- ======= Footer ======= -->

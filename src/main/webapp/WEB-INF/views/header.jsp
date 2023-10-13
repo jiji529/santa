@@ -6,9 +6,14 @@
 <head>
 <meta charset="UTF-8">
 
-<!-- Template Main CSS File -->
-<link href="resources/css/header.css" rel="stylesheet">
+<!-- Google Fonts -->
+<link	href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"	rel="stylesheet">
 
+<!-- Template Main CSS File -->
+<link href="/resources/css/header.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"	rel="stylesheet"
+	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+	crossorigin="anonymous">
 <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -23,7 +28,7 @@
 		</div>
 		<div class="logo">
 			<div>
-				<a href="#"> <img src="./img/header_logo.png" alt="헤더로고">
+				<a href="/"> <img src="resources/img/임시1.png" alt="헤더로고">
 				</a>
 				<form action="#">
 					<input type="text" name="search">
