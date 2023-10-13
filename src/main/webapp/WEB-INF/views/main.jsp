@@ -166,7 +166,7 @@ ul {
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <h4>제조사</h4>
-                  <p class="price"><a href="course-details.html">${item.pName}</a></p>
+                  <p class="price"><a href="detail.do?pNo=${item.pNo}">${item.pName}</a></p>
                 </div>
 
                 <p>${item.pCode}</p>
