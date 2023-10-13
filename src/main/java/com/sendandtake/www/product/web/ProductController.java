@@ -58,14 +58,12 @@ public class ProductController {
 	
 	@ResponseBody
 	@PostMapping("/rvSave/ajax")
-		String rvSave (ReviewVO rvo
-				//, @SessionAttribute("loginUser") MemberVO mvo
-				){
+		String rvSave (ReviewVO rvo, @SessionAttribute("loginUser") MemberVO mvo){
 		final String uploadPath = "C:/upload/";
 		
-		//로그인 처리(-)
-		rvo.setUserNo(1);
-		rvo.setUserEmail("dkwk3185@naver.com");
+		//로그인 처리(+)
+		rvo.setUserNo(mvo.getUserNo());
+		rvo.setUserEmail(mvo.getUserEmail());
 		
 		
 		//첨부파일

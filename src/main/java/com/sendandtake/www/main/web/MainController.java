@@ -22,10 +22,17 @@ public class MainController {
 	
 	//홈페이지
 	@GetMapping("/")
-	String main (Model model) {
+	String main (Model model, HttpSession session) {
 		
-	List<ProductVO> list = mainService.selectProductList();
-	model.addAttribute("list", list);
+		String msg = (String)session.getAttribute("msg");
+		
+		if(msg != null) {
+			model.addAttribute("msg", msg);
+			session.removeAttribute("msg");
+		}
+			
+		List<ProductVO> list = mainService.selectProductList();
+		model.addAttribute("list", list);
 	
 	
 		
@@ -34,22 +41,20 @@ public class MainController {
 
 	
 	//메인페이지-회원목록
-	@GetMapping("/user.do")
-	String main (Model model, HttpSession session) {
-	
-		String msg = (String)session.getAttribute("msg");
-		
-		if(msg != null) {
-			model.addAttribute("msg", msg);
-			session.removeAttribute("msg");
-		}
-		
-		List<MemberVO> list = mainService.selectMemberList();
-		
-		model.addAttribute("list", list);
-		
-		return "user";
-	}
+	/*
+	 * @GetMapping("/user.do") String main (Model model, HttpSession session) {
+	 * 
+	 * String msg = (String)session.getAttribute("msg");
+	 * 
+	 * if(msg != null) { model.addAttribute("msg", msg);
+	 * session.removeAttribute("msg"); }
+	 * 
+	 * List<MemberVO> list = mainService.selectMemberList();
+	 * 
+	 * model.addAttribute("list", list);
+	 * 
+	 * return "user"; }
+	 */
 	
 	
 	
@@ -86,7 +91,7 @@ public class MainController {
 			
 			session.setAttribute("msg", "환영합니다.");
 			
-			return "redirect:/user.do";
+			return "redirect:/";
 		}
 		
 	}
@@ -97,7 +102,7 @@ public class MainController {
 		
 		session.invalidate();
 		
-		return "redirect:/user.do";
+		return "redirect:/";
 	}
 	
 	//고객문의

@@ -55,7 +55,7 @@
             const rvImg = document.querySelector("input[name='rvImg']");
             const rvContent = document.querySelector("input[name='rvContent']");
 
-            item.append("pNo", Number(pNo.value))
+            item.append("pNo", Number(pNo.value));
             item.append("rvImg", rvImg.files[0]);
             item.append("rvContent", rvContent.value);
             
