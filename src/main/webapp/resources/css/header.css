@@ -6,12 +6,18 @@
 * License: https://bootstrapmade.com/license/
 */
 
+@font-face {
+  font-family : 'Pretendard-Bold';
+  src : url(Pretendard-Bold.ttf)
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-header {
-    width: 100%;
-    height: 197px;
+header {	/* 헤더 폭 1200px 높이 125px */
+    width: 1200px;
+    height: 125px;
+    margin: 0 auto;
 }
 
 header ul {
@@ -71,8 +77,8 @@ header > .top > div > a:last-child {
 /*     border-right: 1px solid #e9e9e9; */
 }
 
-header > .logo {
-    height: 115px;
+header > .logo {	/*로고 크기 90px*/
+    height: 90px;
 /*     border-bottom: 1px solid #e9e9e9; */
 }
 
@@ -85,73 +91,22 @@ header > .logo > div {
 
 header > .logo > div > a {
     display: inline-block;
-    margin-top: 30px;
+    margin-left: 18px;
+/*     margin-top: 30px; */
 }
 
-header > .logo > div > form {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -185px;
-    margin-top: -22px;
-    display: inline-block;
-    width: 370px;
-    height: 45px;
-}
+/* header > .logo > div > form { */
+/*     position: absolute; */
+/*     left: 50%; */
+/*     top: 50%; */
+/*     margin-left: -185px; */
+/*     margin-top: -22px; */
+/*     display: inline-block; */
+/*     width: 370px; */
+/*     height: 45px; */
+/* } */
 
-header > .logo > div > form > input {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 1px solid #e9e9e9;
-    border-radius: 5px;
-    font-size: 20px;
-    padding-left: 10px;
-    padding-right: 30px;
-    box-sizing: border-box;
-}
-
-header > .logo > div > form > button {
-    position: absolute;
-    right: 6px;
-    top: 10px;
-    background: #fff;
-    border: none;
-    font-size: 20px;
-    color: #333;
-    outline: none;
-}
-
-header > .menu {
-    height: 46px;
-/*     background: #f2f2f2; */
-/*     border-bottom: 1px solid #ddd; */
-    box-sizing: border-box;
-}
-
-header > .menu > .menu_index {
-    width: 800px;
-    height: 100%;
-    margin: 10px;
-}
-
-header > .menu > .menu_index > ul {
-    display: inline-block;
-    margin-top: 16px;
-}
-
-header > .menu > .menu_indexr > .search {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -185px;
-    margin-top: -22px;
-    display: inline-block;
-    width: 370px;
-    height: 45px;
-}
-
-/* header > .menu > .menu_index > .search > .search_box { */
+/* header > .logo > div > form > input { */
 /*     position: absolute; */
 /*     width: 100%; */
 /*     height: 100%; */
@@ -163,7 +118,59 @@ header > .menu > .menu_indexr > .search {
 /*     box-sizing: border-box; */
 /* } */
 
-/* header > .menu > .menu_index > .search > .search_button { */
+/* header > .logo > div > form > button { */
+/*     position: absolute; */
+/*     right: 6px; */
+/*     top: 10px; */
+/*     background: #fff; */
+/*     border: none; */
+/*     font-size: 20px; */
+/*     color: #333; */
+/*     outline: none; */
+/* } */
+
+/* header > .menu { */
+/*     height: 46px; */
+/* /*     background: #f2f2f2; */ */
+/* /*     border-bottom: 1px solid #ddd; */ */
+/*     box-sizing: border-box; */
+/* } */
+
+/* header > .menu > .menu_index { */
+/*     width: 800px; */
+/*     height: 100%; */
+/*     margin: 10px; */
+/* } */
+
+/* header > .menu > .menu_index > ul { */
+/*     display: inline-block; */
+/*     margin-top: 16px; */
+/* } */
+
+/* header .menu .menu_indexr .search { */
+/*     position: absolute; */
+/*     left: 50%; */
+/*     top: 50%; */
+/*     margin-left: -185px; */
+/*     margin-top: -22px; */
+/*     display: inline-block; */
+/*     width: 370px; */
+/*     height: 45px; */
+/* } */
+
+/* header .menu .menu_index .search .search_box { */
+/*     position: absolute; */
+/*     width: 100%; */
+/*     height: 100%; */
+/*     border: 1px solid #e9e9e9; */
+/*     border-radius: 5px; */
+/*     font-size: 20px; */
+/*     padding-left: 10px; */
+/*     padding-right: 30px; */
+/*     box-sizing: border-box; */
+/* } */
+
+/* header .menu .menu_index .search .search_button { */
 /*     position: absolute; */
 /*     right: 6px; */
 /*     top: 10px; */
@@ -175,20 +182,24 @@ header > .menu > .menu_indexr > .search {
 /* } */
 
 
-header > .menu > div > ul:nth-child(1) { float: left; }
+/* header > .menu > div > ul:nth-child(1) { float: left; } */
 
-header > .menu > div > ul:nth-child(2) { float: right; }
+/* header > .menu > div > ul:nth-child(2) { float: right; } */
 
-header > .menu > div > ul > li:last-child { border-right: 1px solid white; }
+/* header > .menu > div > ul > li:last-child { border-right: 1px solid white; } */
 
-header > .menu > div > ul > li { float: left;}
+/* header > .menu > div > ul > li { float: left;} */
 
-header > .menu > div > ul > li > a {
-/*     border-left: 1px solid red; */
-    padding: 0 10px;
-}
+/* header > .menu > div > ul > li > a { */
+/* /*     border-left: 1px solid red; */ */
+/*     padding: 0 10px; */
+/*     font-family: 'Pretendard-Bold'; */
+/*     font-size: 20px; */
+/*     font-weight: bold; */
+/*     padding-right: 20px; */
+/* } */
 
-header > .menu > div > ul > li > a:hover {
-    color: #333;
-    border-bottom: 1px solid #444;
-}
+/* header > .menu > div > ul > li > a:hover { */
+/*     color: #333; */
+/*     border-bottom: 1px solid #444; */
+/* } */

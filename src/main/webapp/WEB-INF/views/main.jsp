@@ -22,6 +22,7 @@ ul {
 	list-style: none;
 	padding-left: 0px;
 }
+
 </style>
 
 </head>
@@ -30,6 +31,27 @@ ul {
   <div>
   <jsp:include page="header.jsp"></jsp:include>
   </div>
+  
+ <header style='height: 50px;'>	<!-- 메뉴 헤더 height: 50px; -->
+	<div class="menu">
+		<div class="menu_index">
+			<ul>
+				<li><a href="#">노트북</a></li>
+				<li><a href="#">태블릿</a></li>
+				<li><a href="#">핸드폰</a></li>
+				<li><a href="#">액세서리</a></li>
+			</ul>
+			<form id="menu_indexr" class="search" action="#">
+				<input class="search_box" type="text" name="search">
+				<button class="search_button">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</button>
+			</form>
+		</div>
+		<div class="menu_indexr">
+		</div>
+	</div>
+</header>
 
   <!-- ======= 베너 Section ======= -->
   <section id="banner" class="d-flex justify-content-center align-items-center img-fluid">
