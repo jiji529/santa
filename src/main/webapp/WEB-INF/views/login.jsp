@@ -46,6 +46,5 @@
 	if(msg)
 		alert(msg);
 	</script>	
-
 </body>
 </html>
