@@ -58,7 +58,7 @@
 
 
 
-  <main id="main">
+  <main id="main" class="min">
 
     <!-- ======= 리뷰 section ======= -->
     <section id="popular-courses" class="courses">
@@ -79,25 +79,24 @@
 
 		<c:forEach var="rvListOne" items="${rvList}">
 	          <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4">
-	          	<div id="rvOne" class="course-item">
-	            
-	            
-	              <img class="rvImgSize" src="upload/${rvListOne.rvNewImg}${rvListOne.rvExtn}" class="img-fluid" alt="...">
-	              
-	              <div class="course-content">
-	                <div class="d-flex justify-content-between align-items-center mb-3">
-	                  <p class="price"><fmt:formatDate value="${rvListOne.rvDate}" pattern="YYYY.MM.dd"/></p>
-	                </div>
-	                <p>${rvListOne.rvContent}</p>
-	                <div class="trainer d-flex justify-content-between align-items-center">
-	                  <div class="trainer-profile d-flex align-items-center">
-	                    <span>${rvListOne.userEmail}</span>
-	                  </div>
-	                </div>
-	              </div>
-	              
-	              
-	            </div>
+		          	<div id="rvOne" class="course-item">
+		            
+		              <img src="upload/${rvListOne.rvNewImg}${rvListOne.rvExtn}" class="ajaxRvImg rvImgSize img-fluid" alt="...">
+		              
+		              <div class="course-content">
+			                <div class="d-flex justify-content-between align-items-center mb-3">
+			                 	<p class="price">${rvListOne.rvDate}</p>
+			                </div>
+			                <p class="ajaxRvContent">${rvListOne.rvContent}</p>
+			                <div class="trainer d-flex justify-content-between align-items-center">
+			                  <div class="trainer-profile d-flex align-items-center">
+			                    <span class="ajaxUserEmail">${rvListOne.userEmail}</span>
+			                  </div>
+			                </div>
+		              </div>
+		              
+		              
+		            </div>
 	          </div> 
 		</c:forEach>
 		<!-- End 상품 -->
@@ -116,8 +115,7 @@
     <div>
         <form id="rvForm" method="POST" enctype="multipart/form-data">
         	<input type="hidden" name="pNo" value="${pvo.pNo}">
-        	<input type="hidden" name="userNo" value="${sessionScope.userNo}">
-            아이디: <c:out value="${sessionScope.userEmail}"/><br>
+            아이디: <c:out value="${loginUser.userEmail}"/><br>
             리뷰사진: 
             <label for="rvImg">이미지 첨부</label>
             <input type="file" id="rvImg" name="rvImg"><br>
@@ -129,15 +127,16 @@
     </div>
     
 <!-- 리뷰 한 개씩 폼 -->
-<template id="rvRow">    
+<template id="rvTemp">    
 	    
 	<div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4">
-         <div id="rvOne" class="course-item">
-             <img src="review/${rvListOne.rvImg}" class="ajaxRvImg img-fluid" alt="...">
-             
-         <div class="course-content">
+	  	<div id="rvOne" class="course-item">
+	    
+	      <img src="upload/${rvListOne.rvNewImg}${rvListOne.rvExtn}" class="ajaxRvImg rvImgSize img-fluid" alt="...">
+	      
+	      <div class="course-content">
 	         <div class="d-flex justify-content-between align-items-center mb-3">
-	           <p class="ajaxRvDate price"><fmt:formatDate value="${rvListOne.rvDate}" pattern="YYYY.mm.dd"/></p>
+               	<p class="ajaxRvDate price">${rvListOne.rvDate}</p>
 	         </div>
 	         <p class="ajaxRvContent">${rvListOne.rvContent}</p>
 	         <div class="trainer d-flex justify-content-between align-items-center">
@@ -145,10 +144,10 @@
 	             <span class="ajaxUserEmail">${rvListOne.userEmail}</span>
 	           </div>
 	         </div>
-         </div>
-             
-             
-		</div>
+	      </div>
+	      
+	  	</div>
+	    
 	</div> 
 	
 </template>

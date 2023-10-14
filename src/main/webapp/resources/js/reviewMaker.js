@@ -17,7 +17,7 @@
         let rvFormElm = document.querySelectorAll('#rvForm input[name="rvImg"], #rvForm input[name="rvContent"]');
 
         //리뷰 추가 템플릿 객체화
-        let rowTemp = document.querySelector('#rvRow');
+        //let rvTemp = document.querySelector('#rvTemp');
 
         
         rvAddBtn.onclick = function () {
@@ -30,30 +30,42 @@
                 e.value = '';
             });
         };
-        
-        // const makeItem = (rvImg, rvContent) => {
-        //     //리뷰추가 템플릿 객체 -> 클론
-        //     let r = rowTemp.content.cloneNode(true); 
+
+        //사용자 -> 리뷰 입력값(.value로 꺼내쓰기)
+        const pNo = document.querySelector("input[name='pNo']");
+        const rvImg = document.querySelector("input[name='rvImg']");
+        const rvContent = document.querySelector("input[name='rvContent']");
+
+            //const userEmail = document.querySelector(".userEmailInp");
+
+
+            /*
+            const makeItem = (rvNewImg, rvExtn, rvDate, rvContent, userEmail) => {
+             //리뷰추가 템플릿 객체 -> 클론
+                let r = rvTemp.content.cloneNode(true); 
+
+                let ajaxRvImg = r.querySelector('.ajaxRvImg');
+                ajaxRvImg.setAttribute('src', 'upload/s.rvNewImg+s.rvExtn');
+
+                let ajaxRvDate = r.querySelector('.ajaxRvDate');
+                ajaxRvDate.textContent = 
+
+                let ajaxRvContent = r.querySelector('.ajaxRvContent');
+                ajaxRvContent.textContent = 
+
+                let ajaxUserEmail = r.querySelector('.ajaxUserEmail');
+                ajaxUserEmail.textContent = 
+
+            }
+            */
             
-//            let rc = r.querySelector('#AjaxRvContent');
-//            rc.textContent = rvContent;
+            
 
-            //let rue = r.querySelector('#AjaxRvUserEmail');
-            //rue.textContent = `${loginUser.userEmail}`;
-
-//        }
-
-        //<c:forEach items="${list}" var="item">
-        //    document.querySelector('ul').append(makeItem("${item.title}", "${item.filename}"));
-        //</c:forEach>
         
         document.querySelector('#rvSave').addEventListener("click", e => {
 
             const item = new FormData();
             
-            const pNo = document.querySelector("input[name='pNo']");
-            const rvImg = document.querySelector("input[name='rvImg']");
-            const rvContent = document.querySelector("input[name='rvContent']");
 
             item.append("pNo", Number(pNo.value));
             item.append("rvImg", rvImg.files[0]);
@@ -65,12 +77,14 @@
             }).then(resp => resp.text()
             ).then(result => {
                 console.log(result);
-                
+
+                rvForm.classList.remove('active');
+
                 if(result == "OK") {
                     alert("리뷰가 등록되었습니다.");
                     
-//                    document.querySelector("ul").append(makeItem(title.value, uploadFile.files[0].name));
-//                    console.log(uploadFile.files[0].name);
+//                  document.querySelector("ul").append(makeItem(title.value, uploadFile.files[0].name));
+
                 }
             }).catch(error => {
                 alert("리뷰 작성 실패");
@@ -80,4 +94,5 @@
 
     };
 
+    
 

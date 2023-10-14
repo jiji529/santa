@@ -4,11 +4,11 @@
 <mapper namespace="review"> 
 
 <select id="list" resultType="Review">
-	SELECT * FROM tbl_rv where pNo = #{pNo}
+	SELECT * FROM tbl_rv WHERE pNo = #{pNo} ORDER BY rvNo DESC
 </select>
 
 <insert id="add">
-	INSERT INTO tbl_rv (pNo, userNo, rvDate, rvNewImg, rvExtn, rvContent, userEmail) VALUES (#{pNo}, #{userNo}, SYSDATE(),  #{rvNewImg}, #{rvExtn}, #{rvContent}, #{userEmail})
+	INSERT INTO tbl_rv (pNo, userNo, rvDate, rvNewImg, rvExtn, rvContent, userEmail) VALUES (#{pNo}, #{userNo}, date_format(SYSDATE(), "%y.%m.%d"),  #{rvNewImg}, #{rvExtn}, #{rvContent}, #{userEmail})
 </insert>
 
 
