@@ -36,14 +36,14 @@ ul {
 	<div class="menu">
 		<div class="menu_index">
 			<ul>
-				<li><a href="#">노트북</a></li>
-				<li><a href="#">태블릿</a></li>
-				<li><a href="#">핸드폰</a></li>
-				<li><a href="#">액세서리</a></li>
+				<li><div><a href="#">SAMSUNG</a></div></li>
+				<li><div><a href="#">태블릿</a></div></li>
+				<li><div><a href="#">핸드폰</a></div></li>
+				<li><div><a href="#">액세서리</a></div></li>
 			</ul>
 			<form id="menu_indexr" class="search" action="#">
-				<input class="search_box" type="text" name="search">
-				<button class="search_button">
+				<input class="search_box1" type="text" name="search">
+				<button class="search_button1">
 					<i class="fa fa-search" aria-hidden="true"></i>
 				</button>
 			</form>
