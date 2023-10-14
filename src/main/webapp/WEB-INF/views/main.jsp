@@ -42,7 +42,7 @@ ul {
 				<li><div><a href="#">액세서리</a></div></li>
 			</ul>
 			<form id="menu_indexr" class="search" action="#">
-				<input class="search_box1" type="text" name="search">
+				<input class="search_box1" type="text" name="search" placeholder="검색어를 입력하세요." >
 				<button class="search_button1">
 					<i class="fa fa-search" aria-hidden="true"></i>
 				</button>
