@@ -9,88 +9,81 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="resources/assets/img/favicon.png" rel="icon">
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="resources/vendor/aos/aos.css" rel="stylesheet">
-  <link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="resources/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
   <!-- Template Main CSS File -->
   <link href="resources/assets/css/style.css" rel="stylesheet">
   
+  <link href="resources/css/sellbuy.css" rel="stylesheet">
+  
 </head>
 <body>
-	
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
+	<!-- ======= 해더 ======= -->
+	<header>
+        해더부분
+    </header>
+    <!-- 해더 끝 -->
 
-      <h1 class="logo me-auto">
-      	<a href="${pageContext.request.contextPath}/">
-      		<img src="resources/img/logo_santa.png" class="" width="120" height="50" alt="산타로고" >
-      	</a>
-      </h1>
-
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="about.html">고객센터</a></li>
-          <li><a href="courses.html">마이페이지</a></li>
-          <li><a href="trainers.html">관심상품</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-      <a href="courses.html" class="get-started-btn">Login</a>
-
-    </div>
-  </header><!-- End Header -->
-
-
-
-<main id="main">
-    <!-- ======= 구매 폼 ======= -->
-	<div class="container">
-	    <section class="courses">
-      
-        <div class="section-title text-center mt-5">
-        	<p>구매하기</p>
+	<!-- ======= 구매 폼 ======= -->
+    <div class="content">
+        <div class="text-center content_type">
+            <p>구매하기</p>
         </div>
-
-		<div class="col-lg-8 col-md-6 mx-auto">
-          	<div class="course-item p-4 ">
-          		<div class="d-inline">
-	          		<div>
-	            		<img src="resources/img/iphone15protita.png" class="img-thumbnail" alt="상품이미지" width="80" height="80">
-	            	</div>
-	            	<div>
-	            		IPHONE15PROTITA
-	            		<p>Iphone 15 Pro Titanium</p>
-	            		<p>아이폰 15 프로 티타늄</p>
-	            	</div>
-	            </div>
-            	<hr>
-            	<div>
-	            	<div>
-						<h4>애플</h4>
-						<p class="price">1,500,000원</p>
-					</div>
-              		<h3><a href="course-details.html">Website Design</a></h3>
-              		<p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-            	</div>
-        	</div>
-		</div>
-
-	    </section>
-      </div>
-    <!-- End 구매 폼 -->
-</main>
+        <div class="wrap ctn">
+            <div id="item_info">
+                <div id="item_img">
+                    <img src="${pageContext.request.contextPath}/resources/img/iphone15protita.png" alt="상품이미지">
+                </div>
+                <div id="item_detail">
+                    <span>Apple_iphone14pro_128G_silver</span><br>
+                    <span>Iphone 14 Pro 128G Silver</span><br>
+                    <span>아이폰 14 프로 128기가 실버</span>
+                </div>
+            </div>
+            <hr>
+            <div id="grade_select">
+                <ul class="select_List">
+                    <li class="select_item">
+                        <button>
+                            <div>
+                                <span>S</span><br>
+                                <span>1000,000</span>
+                            </div>
+                        </button>
+                    </li>
+                    <li class="select_item">
+                        <button>
+                            <div>
+                                <span>A</span><br>
+                                <span>900,000</span>
+                            </div>
+                        </button>
+                    </li>
+                    <li class="select_item">
+                        <button>
+                            <div>
+                                <span>B</span><br>
+                                <span>850,000</span>
+                            </div>
+                        </button>
+                    </li>
+                </ul>			
+            </div>
+            <hr>
+            <div class="sub">
+                <button>
+                    <div>
+                        <span>1000,000</span><br>
+                        <span>일반배송</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- ======= 구매 폼 끝 ======= -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
