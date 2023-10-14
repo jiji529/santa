@@ -1,0 +1,66 @@
+@charset "UTF-8";
+body, button, dd, div, dl, dt, fieldset, figcaption, figure, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, select, table, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+li, ol, ul {
+    list-style: none;
+}
+header{background: black; height: 90px;font-weight: 700;box-sizing: border-box; color: white; 
+    display: flex;justify-content: center;align-items: center;  /*자식 수직수평중앙정렬*/
+}
+
+
+.content{background-color: #f4f4f4; min-height: 870px;}
+.content .content_type{padding: 20px 0;}
+.content .content_type p{font-size: 1.3em; font-weight: bold;}
+#type_color{color: #f15746;}
+.check_title{padding: 32px 0;}
+.check_title p{font-size: 2em; font-weight: bold;}
+
+.wrap{width: 700px;margin: 0 auto;}
+
+.wrap.ctn{background-color: #fff;box-shadow: 0 4px 10px 0 rgba(0,0,0,0.1); padding: 20px 32px;border-radius: 5px;}
+
+#item_info{margin-bottom: 15px}
+
+#item_info #item_img,  #item_info #item_detail{display: inline-block;}
+
+#item_info #item_img img{width: 80px;height: 80px;border-radius: 5px;box-sizing: border-box;}
+
+#item_detail{padding-left: 16px;vertical-align: top; padding-bottom: 10px;}
+#item_detail span{display: block;}
+#item_detail span:first-child{font-weight: bold;}
+#item_detail span:nth-child(2){font-size: 0.95em; color: #22222280;}
+#item_detail span:nth-child(3){font-weight: bold;}
+
+#grade_select{min-height: 400px; border-top: 1px solid #d3d3d3; padding: 10px 0;}
+
+.select_item{
+    width: calc(33.33333% - 12px);
+    box-sizing: border-box;
+    margin: 4px;
+    display: inline-flex;
+    overflow: hidden;
+    vertical-align: top;
+}
+.select_item button{width: 100%;height: 60px;border-radius: 10px;background: white;border: 1px solid #d3d3d3;box-sizing: border-box;
+    display: flex;justify-content: center;align-items: center;}
+.select_item button span:last-child{font-size: 0.9em; color: #f15746;}
+
+.sub{
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-flex;
+    overflow: hidden;
+    vertical-align: top;
+    border-top: 1px solid #d3d3d3; padding: 20px 0;
+}
+
+
+.sub button{width: 100%;height: 64px;border-radius: 10px;background: #333;box-sizing: border-box;
+    display: flex;justify-content: center;align-items: center;}
+
+.sub button span{color: white;}
+.sub button span:first-child{font-size: 1em;font-weight: bold;}
+.sub button span:last-child{font-size: 0.9em;}
