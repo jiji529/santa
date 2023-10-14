@@ -1,31 +1,5 @@
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
-body {
-  font-family: "Open Sans", sans-serif;
-  color: #444444;
-}
 
-a {
-  color: black;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #444444;
-  text-decoration: none;
-  font-weight:bold;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Raleway", sans-serif;
-}
 
 /*--------------------------------------------------------------
 # Footer
@@ -54,9 +28,17 @@ h6 {
 }
 
 #footer .footer-top {
-  padding: 60px 0 30px 0;
+  padding: 30px 0 30px 0;
   background: #f9faf9;
+  height: 300px;
 }
+
+#footer .footer-top .row {
+  margin: 0 auto;
+  width: 1000px;
+  height: 270px;
+}
+
 
 #footer .footer-top .footer-contact {
   margin-bottom: 30px;
