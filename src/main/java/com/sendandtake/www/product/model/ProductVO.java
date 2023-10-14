@@ -11,7 +11,14 @@ public class ProductVO {
 	private String pImg2;
 	private String pImg3;
 	private String pDetail;
+	private String releasePrice;
 	
+	public String getReleasePrice() {
+		return releasePrice;
+	}
+	public void setReleasePrice(String releasePrice) {
+		this.releasePrice = releasePrice;
+	}
 	public int getpNo() {
 		return pNo;
 	}

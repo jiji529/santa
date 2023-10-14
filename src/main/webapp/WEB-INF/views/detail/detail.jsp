@@ -9,7 +9,10 @@
 <title>SANTA</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
+  
+  <!-- 상세페이지: event -->
+  <link rel="stylesheet" href="css/event.css">
+  
   <!-- 리뷰추가 새창 -->
   <link rel="stylesheet" href="css/review.css">
 
@@ -21,8 +24,12 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="resources/vendor/aos/aos.css" rel="stylesheet">
   <link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="resources/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
@@ -59,11 +66,51 @@
 
 
   <main id="main" class="min">
+    <!-- ======= 상세페이지 section ======= -->
+    
+    <section id="events" class="events">
+      <div id="product" class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <div class="card-img">
+                <img src="resources/img/product/${product.pImg1}" alt="제품사진">
+              </div>
+       
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <div class="card-body">
+              	
+                <p><a href="#">${comName}</a></p>
+                <h5 class="card-title">${product.pName}</h5>
+                <p class="text-center">${product.pCode}</p>
+                <p>발매가 : ${product.releasePrice}원</p>
+                <hr>
+                <p>최근거래가 : 주문테이블 조인</p>
+                <div id="redBlueButton">
+                	<button type="button" class=" btn btn-danger">구매</button>
+                	<button type="button" class="ms-1 btn btn-danger">판매</button>
+                </div>
+                <div class="d-grid gap-1">
+                	<button type="button" class="btn btn-light btn-lg">관심 상품</button>
+                </div>
+                <p class="card-text">Sed ut perspiciatis unde omniddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddds iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Events Section -->
 
     <!-- ======= 리뷰 section ======= -->
     <section id="popular-courses" class="courses">
-      <div class="container" ><!-- data-aos="fade-up" -->
-      
+      <div class="container"><!-- data-aos="fade-up" -->
+      	<hr>
         <div class="section-title">
           <h2>Review</h2>
           <p>Review</p>

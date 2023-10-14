@@ -28,37 +28,43 @@ public class ProductController {
 	@Autowired
 	ProductService productService;
 	
-	List<ReviewVO> rvList = new ArrayList<ReviewVO>();
-	
-	//상품리스트
-	@GetMapping("/productList.do")
-	String productList(Model model) {
-		
-		List<ProductVO> productlist = productService.selectProductList();
-	
-		model.addAttribute("plist", productlist);
-		return "product/productList";
-	}
-	
 	//상세페이지
 	@GetMapping("/detail.do")
-	String detail(ProductVO pvo, Model model, HttpSession session) {
-		System.out.println("겟"); //1 -> 상품코드
-		System.out.println(pvo.getpNo()); //1 -> 상품코드
+	String detail(int pNo, Model model) {
 		
-		rvList = productService.selectReviewList(pvo.getpNo());
 		
-		model.addAttribute("rvList", rvList);
+		//상품 불러오기
+		ProductVO productOne = productService.selectProduct(pNo);
 		
-		model.addAttribute("pvo", pvo);
+		System.out.println("제품번호는???" + pNo);
+		System.out.println(productOne.getpImg1());
+		System.out.println(productOne.getReleasePrice());
 		
+		
+		//회사명 CompanyName
+		int index = productOne.getpCode().indexOf("_");
+		
+		String CompanyName = productOne.getpCode().substring(0, index);
+		
+
+		model.addAttribute("comName", CompanyName.toUpperCase());
+		
+		model.addAttribute("product", productOne);
+		
+		
+		//리뷰 리스트 불러오기
+		List<ReviewVO> rvList = productService.selectReviewList(pNo);
+		
+		model.addAttribute("rvList", rvList);		
 		
 		return "detail/detail";
 	}
 	
+	
 	@ResponseBody
 	@PostMapping("/rvSave/ajax")
 		String rvSave (ReviewVO rvo, @SessionAttribute("loginUser") MemberVO mvo){
+		
 		final String uploadPath = "C:/upload/";
 		
 		//로그인 처리(+)
@@ -73,6 +79,7 @@ public class ProductController {
 			
 			String filename = file.getOriginalFilename();
 			
+			//랜덤 파일 이름
 			UUID uuid = UUID.randomUUID();
 			String[] uuids = uuid.toString().split("-");
 			
@@ -83,8 +90,9 @@ public class ProductController {
 			
 			try {
 				
-				file.transferTo(new File(uploadPath +uniquefilename + fileExtension));
+				file.transferTo(new File(uploadPath + uniquefilename + fileExtension));
 				
+				//jsp로 이미지파일 불러오기 위한 준비(+)
 				rvo.setRvNewImg(uniquefilename);
 				
 				rvo.setRvExtn(fileExtension);

@@ -4,7 +4,11 @@
 <mapper namespace="product"> 
 
 <select id="list" resultType="Product">
-	SELECT pNo, cNo,pCode, pName, pImg1 FROM tbl_product
+	SELECT pNo, cNo, pCode, pName, pImg1 FROM tbl_product
+</select>
+
+<select id="product" resultType="Product">
+	SELECT * FROM tbl_product WHERE pNo = ${pNo}
 </select>
 
 

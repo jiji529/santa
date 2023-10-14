@@ -7,10 +7,13 @@ import com.sendandtake.www.product.model.ReviewVO;
 
 public interface ProductService {
 
-	List<ProductVO> selectProductList();
 
+	ProductVO selectProduct(int pNo);
+	
 	List<ReviewVO> selectReviewList(int pNo);
-
+	
 	void insertReview(ReviewVO rvo);
+
+
 
 }

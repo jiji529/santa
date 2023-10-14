@@ -7,5 +7,8 @@ import com.sendandtake.www.product.model.ProductVO;
 public interface ProductDao {
 
 	List<ProductVO> selectProductList();
+	
+	ProductVO selectProduct(int pNo);
+
 
 }

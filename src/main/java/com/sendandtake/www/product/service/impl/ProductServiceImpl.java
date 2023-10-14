@@ -21,9 +21,9 @@ public class ProductServiceImpl implements ProductService {
 	ReviewDao reviewDao;
 	
 	@Override
-	public List<ProductVO> selectProductList() {
+	public ProductVO selectProduct(int pNo) {
 		
-		return productDao.selectProductList();
+		return productDao.selectProduct(pNo);
 	}
 
 	@Override
@@ -37,5 +37,7 @@ public class ProductServiceImpl implements ProductService {
 		reviewDao.insertReview(rvo);
 		
 	}
+
+
 
 }

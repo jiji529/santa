@@ -1,8 +1,6 @@
 @charset "UTF-8";
-		.min {
-			min-height: 500px;
-		}
-
+		
+		
 		#rvForm:not(.active) {
             display: none;
         }

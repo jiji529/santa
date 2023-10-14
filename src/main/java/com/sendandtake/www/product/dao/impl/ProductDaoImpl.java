@@ -14,12 +14,18 @@ public class ProductDaoImpl implements ProductDao {
 
 	@Autowired
 	SqlSession sql;
-	
+
 	@Override
 	public List<ProductVO> selectProductList() {
 
-		
 		return sql.selectList("product.list");
+	}
+	
+	@Override
+	public ProductVO selectProduct(int pNo) {
+		
+		return sql.selectOne("product.product", pNo);
+		
 	}
 
 }
