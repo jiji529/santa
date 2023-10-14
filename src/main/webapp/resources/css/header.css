@@ -59,6 +59,14 @@ header > .top > div {
     text-align: right;
 }
 
+header > .top > div > p {
+    display: inline-block;
+    height: 100%;
+    line-height: 35px;
+    padding: 0 10px;
+    color: #646464;
+}
+
 header > .top > div > a {
     display: inline-block;
     height: 100%;

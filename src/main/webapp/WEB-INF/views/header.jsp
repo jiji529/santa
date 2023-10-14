@@ -20,15 +20,28 @@
 	<!-- ======= Header ======= -->
 	<header>
 		<div class="top">
-			<div>
-				<a href="login.do">로그인</a>
-				<a href="">마이페이지</a>
-				<a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>장바구니
-			</div>
+			<c:if test="${sessionScope.loginUser == null}">
+				<div>
+					<a href="${pageContext.request.contextPath}/login.do">로그인</a> <a
+						href="${pageContext.request.contextPath}/member/join">회원가입</a> <a
+						href="">마이페이지</a> <a href=""><i class="fa fa-shopping-cart"
+						aria-hidden="true"></i></a>장바구니
+				</div>
+			</c:if>
+
+			<c:if test="${sessionScope.loginUser != null}">
+				<div>
+					<p>${loginUser.userEmail}님환영합니다!</p>
+					<a href="${pageContext.request.contextPath}/logout.do">로그아웃</a> <a
+						href="">마이페이지</a> <a href=""><i class="fa fa-shopping-cart"
+						aria-hidden="true"></i></a>장바구니
+				</div>
+			</c:if>
+			<!-- 				<a href="login.do">로그인</a> -->
 		</div>
 		<div class="logo">
 			<div>
-				<a href="/"> <img src="resources/img/로고.png" alt="헤더로고"></a>
+				<a href="/"> <img src="/resources/img/로고.png" alt="헤더로고"></a>
 <!-- 				<form action="#"> -->
 <!-- 					<input type="text" name="search"> -->
 <!-- 					<button> -->
