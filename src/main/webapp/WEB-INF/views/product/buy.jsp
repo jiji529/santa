@@ -38,12 +38,10 @@
                     <img src="${pageContext.request.contextPath}/resources/img/iphone15protita.png" alt="상품이미지">
                 </div>
                 <div id="item_detail">
-                    <span>Apple_iphone14pro_128G_silver</span><br>
-                    <span>Iphone 14 Pro 128G Silver</span><br>
+                    <span>apple_iphone14pro_128G_silver</span>
                     <span>아이폰 14 프로 128기가 실버</span>
                 </div>
             </div>
-            <hr>
             <div id="grade_select">
                 <ul class="select_List">
                     <li class="select_item">
@@ -72,7 +70,6 @@
                     </li>
                 </ul>			
             </div>
-            <hr>
             <div class="sub">
                 <button>
                     <div>
