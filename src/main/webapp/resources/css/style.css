@@ -287,6 +287,17 @@ section {
   color: #37423b;
 }
 
+.courses .course-content .price > a {
+  color: black;
+  text-decoration: none;
+}
+
+.courses .course-content .price > a:hover {
+  color: #444444;
+  text-decoration: none;
+  font-weight:bold;
+}
+
 .courses .trainer {
   padding-top: 15px;
   border-top: 1px solid #eef0ef;

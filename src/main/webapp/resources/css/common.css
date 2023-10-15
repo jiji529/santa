@@ -58,60 +58,66 @@ main > aside {
     height: 100%;
 }
 
-main > aside > .category {
+main > aside > .cgory {
     position: relative;
     width: 215px;
     height: 425px;
-    background: #333949;
 }
 
-main > aside > .category > li {
+main > aside > .cgory > li {
     width: 100%;
     height: 40px;
     line-height: 40px;
-    color: #ccc;
-    font-size: 13px;
-    font-weight: bold;
-    border-bottom: 1px solid #2b313f;
+    color: #000;
+    font-size: 15px;
+/*     font-weight: bold; */
+/*     border-bottom: 1px solid #2b313f; */
     box-sizing: border-box;
+    list-style: none;
 }
 
-main > aside > .category > li:nth-child(1){
+main > aside > .cgory > li:nth-child(1){
     padding: 0 20px;
-    color: #fff;
-    line-height: 40px;
-}
-
-main > aside > .category > li > a {
-    display: block;
-    padding: 0 20px;
-    line-height: 40px;
-    color: #ccc;
+    font-size: 20px;
     font-weight: bold;
+    line-height: 40px;
+}
+
+main > aside > .cgory > li:nth-child(1) div{
+    border-bottom: 1px solid #2b313f;
+    
+}
+
+main  aside  .cgory  li  a {
     text-decoration: none;
     font-size: 1em;
+    display: block;
+    padding: 0 20px;
+    color: #000;
+    line-height: 40px;
+    font-weight: bold;
 }
 
-main > aside > .category > li > a:hover {
+main > aside > .cgory > li > a:hover {
     background: #2b313f;
     color: #fff;
 }
 
-main > aside > .category > li > a:hover + ol {
+main > aside > .cgory > li > a:hover + ol {
     display: block;
 }
 
-main > aside > .category ol:hover {
+main > aside > .cgory ol:hover {
     display: block;
 }   
 
-main > aside > .category i {
+main > aside > .cgory i {
     width: 22px;
     font-size: 16px;
     margin-right: 12px;
 }
 
-main > aside > .category > li i.fa-angle-right{
+main > aside > .cgory > li i.fa-angle-right{
     float: right;
     width: auto;
     margin-top: 10px;
@@ -221,9 +227,9 @@ main > section {
  main > section > section > h3 > span {
      display: inline-block;
      margin: 10px;
-     border-bottom: 2px solid #111;
+/*      border-bottom: 2px solid #111; */
      font-weight: bold;
-     font-size: 16px;
+     font-size: 30px;
  }
  main > section > section > article {
      float:left;
