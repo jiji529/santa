@@ -5,7 +5,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>산타루치아~</title>
+    <title>SANTA</title>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"/>
@@ -45,12 +45,26 @@
 </head>
 <body>
 	<!-- ======= Header ======= -->
-		<div>
+	<div>
 		<jsp:include page="header.jsp"></jsp:include>
-		</div>
-		<!-- End Header -->
+	</div>
 
-    <div id="wrapper">
+	<header style='height: 50px;'>
+		<!-- 메뉴 헤더 height: 50px; -->
+		<div class="menu">
+			<form id="menu_indexr" class="search" action="#">
+				<input class="search_box1" type="text" name="search"
+					placeholder="검색어를 입력하세요.">
+				<button class="search_button1">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</button>
+			</form>
+			<div class="menu_indexr"></div>
+		</div>
+	</header>
+	<!-- End Header -->
+
+	<div id="wrapper">
         <main>
             <aside>
             <ul class="cgory">
