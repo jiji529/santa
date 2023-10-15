@@ -40,6 +40,8 @@ public class ProductController {
 		System.out.println(productOne.getpImg1());
 		System.out.println(productOne.getReleasePrice());
 		System.out.println("최근거래가는???" + productOne.getSalePrice());
+		System.out.println("pCode" + productOne.getpCode());
+		
 		
 		
 		//회사명 CompanyName -> ${comName}
@@ -47,6 +49,7 @@ public class ProductController {
 		
 		String CompanyName = productOne.getpCode().substring(0, index);
 		
+		System.out.println("회사명은??" + CompanyName);
 
 		model.addAttribute("comName", CompanyName.toUpperCase());
 		

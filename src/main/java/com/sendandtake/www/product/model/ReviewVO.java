@@ -15,6 +15,7 @@ public class ReviewVO {
 	private String rvNewImg;
 	private String rvExtn;
 	private String userEmail;
+	
 	public int getRvNo() {
 		return rvNo;
 	}

@@ -78,13 +78,12 @@
             ).then(result => {
                 console.log(result);
 
-                rvForm.classList.remove('active');
-
+                
                 if(result == "OK") {
                     alert("리뷰가 등록되었습니다.");
-                    
-//                  document.querySelector("ul").append(makeItem(title.value, uploadFile.files[0].name));
 
+                    //                  document.querySelector("ul").append(makeItem(title.value, uploadFile.files[0].name));
+                    rvForm.classList.remove('active');
                 }
             }).catch(error => {
                 alert("리뷰 작성 실패");
