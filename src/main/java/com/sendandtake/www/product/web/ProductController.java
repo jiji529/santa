@@ -115,4 +115,10 @@ public class ProductController {
 		return "product/buy";
 	}
 	
+	//상품구매동의
+	@GetMapping("/buycheck.do")
+	String buycheck() {
+		return "product/buycheck";
+	}
+	
 }
