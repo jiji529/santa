@@ -63,6 +63,17 @@ header{background: black; height: 90px;font-weight: 700;box-sizing: border-box; 
 .notice_check_btn{width: 24px;height: 24px;box-sizing: border-box; accent-color: black;}
 
 .notice_sub{font-size: 0.95em;color: #22222280;}
+
+/* */
+#input_select{ border-top: 1px solid #d3d3d3; padding: 10px 0;}
+
+.now_price_form{padding: 20px 0;}
+.now_price_form > ul > li:nth-child(2){border-left: 1px solid #d3d3d3; box-sizing: border-box;}
+.now_price{width: calc(50% - 4px); display: inline-block;box-sizing: border-box;text-align: center;}
+.now_price p:nth-child(1){font-size: 0.95em; color: #22222280;}
+
+
+
 /* */
 .sub{
     width: 100%;
