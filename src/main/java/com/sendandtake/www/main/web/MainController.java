@@ -115,5 +115,13 @@ public class MainController {
 		
 		return "support";
 	}
+	
+	
+	//카테고리페이지
+	@GetMapping("/list")
+	String list() {
+		
+		return "list";
+	}
 
 }

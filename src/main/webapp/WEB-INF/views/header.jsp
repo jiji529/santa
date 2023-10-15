@@ -34,7 +34,7 @@
 					<p>${loginUser.userEmail}님환영합니다!</p>
 					<a href="${pageContext.request.contextPath}/logout.do">로그아웃</a> <a
 						href="">마이페이지</a> <a href=""><i class="fa fa-shopping-cart"
-						aria-hidden="true"></i></a>장바구니
+						aria-hidden="true"></i></a>
 				</div>
 			</c:if>
 			<!-- 				<a href="login.do">로그인</a> -->
