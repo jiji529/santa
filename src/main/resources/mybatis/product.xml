@@ -8,7 +8,12 @@
 </select>
 
 <select id="product" resultType="Product">
-	SELECT * FROM tbl_product WHERE pNo = ${pNo}
+	SELECT *, (SELECT salePrice 
+                 FROM tbl_sale_product 
+                 WHERE tbl_product.pNo = tbl_sale_product.pNo
+                 ORDER BY saleEnd DESC
+                 LIMIT 1) salePrice 
+     FROM tbl_product WHERE pNo = ${pNo}
 </select>
 
 

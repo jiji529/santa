@@ -39,9 +39,10 @@ public class ProductController {
 		System.out.println("제품번호는???" + pNo);
 		System.out.println(productOne.getpImg1());
 		System.out.println(productOne.getReleasePrice());
+		System.out.println("최근거래가는???" + productOne.getSalePrice());
 		
 		
-		//회사명 CompanyName
+		//회사명 CompanyName -> ${comName}
 		int index = productOne.getpCode().indexOf("_");
 		
 		String CompanyName = productOne.getpCode().substring(0, index);

@@ -84,18 +84,37 @@
             <div class="card">
               <div class="card-body">
               	
-                <p><a href="#">${comName}</a></p>
+              	
+                <p><a href="#"><strong>${comName}</strong></a></p>
                 <h5 class="card-title">${product.pName}</h5>
-                <p class="text-center">${product.pCode}</p>
+                <h5 class="pCodeWrite">${product.pCode}</h5>
                 <p>발매가 : ${product.releasePrice}원</p>
                 <hr>
-                <p>최근거래가 : 주문테이블 조인</p>
+                <p>최근거래가 : <fmt:formatNumber value="${product.salePrice}" pattern="#,###,###"/>원</p>
+                
                 <div id="redBlueButton">
-                	<button type="button" class=" btn btn-danger">구매</button>
-                	<button type="button" class="ms-1 btn btn-danger">판매</button>
+                	<button type="button" class="OneRedBtn btn btn-danger">
+                		<div class="btnDesign" id="FrontRed">구매</div>
+                		<div class="btnDesign" id="BackRed">
+                			<p class="p1">
+                				00000000<span class="p2">원</span>
+                			</p>
+                			<p class="p3">즉시 구매가</p>
+                		</div>
+                	</button>
+                	
+                	<button type="button" class="btn btn-danger">
+                		<div class="btnDesign" id="FrontRed">판매</div>
+                		<div class="btnDesign" id="BackRed">
+                			<p class="p1">
+                				00000000<span class="p2">원</span>
+                			</p>
+                			<p class="p3">즉시 판매가</p>
+                		</div>
+                	</button>
                 </div>
                 <div class="d-grid gap-1">
-                	<button type="button" class="btn btn-light btn-lg">관심 상품</button>
+                	<button type="button" class="btn btn-light btn-lg"><div class="OneLikeBtn">관심 상품</div></button>
                 </div>
                 <p class="card-text">Sed ut perspiciatis unde omniddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddds iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
               </div>

@@ -13,6 +13,15 @@ public class ProductVO {
 	private String pDetail;
 	private String releasePrice;
 	
+	//tbl_sale_product 에서 '최근거래가' 가져온 것 -> selectProduct 메소드 실행 시 가져옴.
+	private int salePrice;
+	
+	public int getSalePrice() {
+		return salePrice;
+	}
+	public void setSalePrice(int salePrice) {
+		this.salePrice = salePrice;
+	}
 	public String getReleasePrice() {
 		return releasePrice;
 	}

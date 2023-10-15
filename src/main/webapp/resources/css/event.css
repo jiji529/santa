@@ -3,8 +3,18 @@
 /*--------------------------------------------------------------
 상세페이지
 --------------------------------------------------------------*/
+p{
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
 #product {
   padding-top: 150px;
+}
+
+.pCodeWrite {
+	text-align: center;
+	margin-bottom: 20px;
 }
 
 #redBlueButton {
@@ -14,11 +24,49 @@
 	margin-bottom: 15px;
 }
 
+.btnDesign {
+	display: inline-block;
+}
+
+#FrontRed {
+	font-size: 1.5em;
+	vertical-align: bottom;
+	margin-bottom: 5px;
+	margin-right: 35px; 
+}
+
+#BackRed {
+	text-align: left;
+
+} 
+
+.p1 {
+	font-size: 1.2em;
+} 
+
+
+.p2 {
+	font-size: 0.8em;
+}
+
+.p3 {
+	font-size: 0.7em;
+}
+
+
 #redBlueButton > button {
-	width: calc(50% - 2px);
+	margin-top: 10px;
+	width: calc(50%);
 	padding: 11px;
 }
 
+.OneRedBtn {
+	margin-right: 10px;
+}
+
+.OneLikeBtn {
+	font-size: 1.3em;
+}
 
 .events .card {
   border: 0;
