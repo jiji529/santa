@@ -90,14 +90,14 @@
                 <h5 class="pCodeWrite">${product.pCode}</h5>
                 <p>발매가 : ${product.releasePrice}원</p>
                 <hr>
-                <p>최근거래가 : <fmt:formatNumber value="${product.salePrice}" pattern="#,###,###"/>원</p>
+                <p>최근거래가 : <fmt:formatNumber value="${product.recentPrice}" pattern="#,###,###"/>원</p>
                 
                 <div id="redBlueButton">
                 	<button type="button" class="OneRedBtn btn btn-danger">
                 		<div class="btnDesign" id="FrontRed">구매</div>
                 		<div class="btnDesign" id="BackRed">
                 			<p class="p1">
-                				00000000<span class="p2">원</span>
+                				<fmt:formatNumber value="${product.immediatePurchacePrice}" pattern="#,###,###"/><span class="p2">원</span>
                 			</p>
                 			<p class="p3">즉시 구매가</p>
                 		</div>
@@ -107,7 +107,7 @@
                 		<div class="btnDesign" id="FrontRed">판매</div>
                 		<div class="btnDesign" id="BackRed">
                 			<p class="p1">
-                				00000000<span class="p2">원</span>
+                				<fmt:formatNumber value="${product.immediateSellingPrice}" pattern="#,###,###"/><span class="p2">원</span>
                 			</p>
                 			<p class="p3">즉시 판매가</p>
                 		</div>
@@ -116,12 +116,18 @@
                 <div class="d-grid gap-1">
                 	<button type="button" class="btn btn-light btn-lg"><div class="OneLikeBtn">관심 상품</div></button>
                 </div>
-                <p class="card-text">Sed ut perspiciatis unde omniddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddds iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
+                <!-- <p class="card-text">Sed ut perspiciatis unde omniddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddds iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p> -->
               </div>
             </div>
 
           </div>
         </div>
+        <div id="graph-center">
+        	<h1 class="text-center">상품 등급 별 거래현황</h1>
+			<canvas id="Sline-chart" width="400vw" height="400vh"></canvas>
+			<canvas id="Aline-chart" width="400vw" height="400vh"></canvas>
+			<canvas id="Bline-chart" width="400vw" height="400vh"></canvas>
+		</div>
 
       </div>
     </section><!-- End Events Section -->
@@ -129,7 +135,7 @@
     <!-- ======= 리뷰 section ======= -->
     <section id="popular-courses" class="courses">
       <div class="container"><!-- data-aos="fade-up" -->
-      	<hr>
+
         <div class="section-title">
           <h2>Review</h2>
           <p>Review</p>
@@ -180,7 +186,7 @@
   
     <div>
         <form id="rvForm" method="POST" enctype="multipart/form-data">
-        	<input type="hidden" name="pNo" value="${pvo.pNo}">
+        	<input type="hidden" name="pNo" value="${product.pNo}">
             아이디: <c:out value="${loginUser.userEmail}"/><br>
             리뷰사진: 
             <label for="rvImg">이미지 첨부</label>
@@ -308,89 +314,12 @@
   <script src="resources/js/main.js"></script>
   
   <!-- 리뷰추가 기능 -->
-  <!-- <script src="js/reviewMaker.js"></script> -->
+  <script src="js/reviewMaker.js"></script>
   
-  <script>
-  window.onload = function () {
+  <!-- 차트 만들기 기능 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <script src="js/chart.js"></script>
+  
 
-      //'댓글 추가' 버튼
-      let rvAddBtn = document.querySelector('#rvAdd');
-
-      //리뷰추가 새 창
-      let rvForm = document.querySelector('#rvForm');
-
-      //리뷰 '확인' 버튼
-      let rvSaveBtn = document.querySelector('#rvSave');
-
-      //리뷰 '취소' 버튼
-      let rvCancelBtn = document.querySelector('#rvCancel');
-
-      //리뷰 이미지, 내용 넣는 태그 선택자
-      let rvFormElm = document.querySelectorAll('#rvForm input[name="rvImg"], #rvForm input[name="rvContent"]');
-
-      //리뷰 추가 템플릿 객체화
-      let rowTemp = document.querySelector('#rvRow');
-
-      
-      rvAddBtn.onclick = function () {
-          rvForm.classList.add('active');
-      };
-      
-      rvCancelBtn.onclick = function () {
-          rvForm.classList.remove('active');
-          rvFormElm.forEach(function(e){
-              e.value = '';
-          });
-      };
-      
-      // const makeItem = (rvImg, rvContent) => {
-      //     //리뷰추가 템플릿 객체 -> 클론
-      //     let r = rowTemp.content.cloneNode(true); 
-          
-//          let rc = r.querySelector('#AjaxRvContent');
-//          rc.textContent = rvContent;
-
-          //let rue = r.querySelector('#AjaxRvUserEmail');
-          //rue.textContent = `${loginUser.userEmail}`;
-
-//      }
-
-      //<c:forEach items="${list}" var="item">
-      //    document.querySelector('ul').append(makeItem("${item.title}", "${item.filename}"));
-      //</c:forEach>
-      
-      document.querySelector('#rvSave').addEventListener("click", e => {
-
-          const item = new FormData();
-          
-          const pNo = document.querySelector("input[name='pNo']");
-          const rvImg = document.querySelector("input[name='rvImg']");
-          const rvContent = document.querySelector("input[name='rvContent']");
-
-          item.append("pNo", Number(pNo.value));
-          item.append("rvImg", rvImg.files[0]);
-          item.append("rvContent", rvContent.value);
-          
-          fetch("rvSave/ajax", {
-              method: "POST",
-              body: item
-          }).then(resp => resp.text()
-          ).then(result => {
-              console.log(result);
-              
-              if(result == "OK") {
-                  alert("리뷰가 등록되었습니다.");
-                  
-//                  document.querySelector("ul").append(makeItem(title.value, uploadFile.files[0].name));
-//                  console.log(uploadFile.files[0].name);
-              }
-          }).catch(error => {
-              alert("리뷰 작성 실패");
-          })
-          ;
-      });
-
-  };
-  </script>
 </body>
 </html>

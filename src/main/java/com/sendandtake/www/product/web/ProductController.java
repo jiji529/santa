@@ -2,7 +2,9 @@ package com.sendandtake.www.product.web;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 import javax.servlet.http.HttpSession;
@@ -30,19 +32,19 @@ public class ProductController {
 	
 	//상세페이지
 	@GetMapping("/detail.do")
-	String detail(int pNo, Model model) {
+	String detail(int pNo, Model model, ReviewVO rvo) {
 		
-		
-		//상품 불러오기
+		//상품 하나 불러오기
 		ProductVO productOne = productService.selectProduct(pNo);
 		
+		//테스트 부분
 		System.out.println("제품번호는???" + pNo);
+		System.out.println("네가 가져온 제품 한 줄의 pNo는?" + productOne.getpNo());
 		System.out.println(productOne.getpImg1());
 		System.out.println(productOne.getReleasePrice());
-		System.out.println("최근거래가는???" + productOne.getSalePrice());
+		System.out.println("최근거래가는???" + productOne.getRecentPrice());
 		System.out.println("pCode" + productOne.getpCode());
-		
-		
+		System.out.println("pNo 2의 즉시구매가???" + productOne.getImmediatePurchacePrice());
 		
 		//회사명 CompanyName -> ${comName}
 		int index = productOne.getpCode().indexOf("_");
@@ -59,7 +61,8 @@ public class ProductController {
 		//리뷰 리스트 불러오기
 		List<ReviewVO> rvList = productService.selectReviewList(pNo);
 		
-		model.addAttribute("rvList", rvList);		
+		model.addAttribute("rvList", rvList);	
+		
 		
 		return "detail/detail";
 	}
@@ -70,6 +73,8 @@ public class ProductController {
 		String rvSave (ReviewVO rvo, @SessionAttribute("loginUser") MemberVO mvo){
 		
 		final String uploadPath = "C:/upload/";
+		
+		System.out.println(rvo.getpNo());
 		
 		//로그인 처리(+)
 		rvo.setUserNo(mvo.getUserNo());

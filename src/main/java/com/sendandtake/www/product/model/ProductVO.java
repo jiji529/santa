@@ -13,14 +13,32 @@ public class ProductVO {
 	private String pDetail;
 	private String releasePrice;
 	
-	//tbl_sale_product 에서 '최근거래가' 가져온 것 -> selectProduct 메소드 실행 시 가져옴.
-	private int salePrice;
+	//'최근거래가' -> selectProduct 메소드 실행 시 가져옴.
+	private int recentPrice;
 	
-	public int getSalePrice() {
-		return salePrice;
+	//'즉시구매가' -> selectProduct 메소드 실행 시 가져옴.
+	private int immediatePurchacePrice;
+	
+	//'즉시판매가' -> selectProduct 메소드 실행 시 가져옴.
+	private int immediateSellingPrice;
+	
+	public int getImmediateSellingPrice() {
+		return immediateSellingPrice;
 	}
-	public void setSalePrice(int salePrice) {
-		this.salePrice = salePrice;
+	public void setImmediateSellingPrice(int immediateSellingPrice) {
+		this.immediateSellingPrice = immediateSellingPrice;
+	}
+	public int getImmediatePurchacePrice() {
+		return immediatePurchacePrice;
+	}
+	public void setImmediatePurchacePrice(int immediatePurchacePrice) {
+		this.immediatePurchacePrice = immediatePurchacePrice;
+	}
+	public int getRecentPrice() {
+		return recentPrice;
+	}
+	public void setRecentPrice(int recentPrice) {
+		this.recentPrice = recentPrice;
 	}
 	public String getReleasePrice() {
 		return releasePrice;
