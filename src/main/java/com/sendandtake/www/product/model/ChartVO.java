@@ -3,7 +3,7 @@ package com.sendandtake.www.product.model;
 import java.util.Date;
 
 public class ChartVO {
-
+	
 	private String grade;
 	private Date saleEnd;
 	private int salePrice;
