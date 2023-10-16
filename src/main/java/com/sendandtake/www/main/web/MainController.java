@@ -121,7 +121,12 @@ public class MainController {
 	
 	//카테고리페이지
 	@GetMapping("/list")
-	String list() {
+	String list(Model model) {
+		
+		List<ProductVO> list = mainService.selectProductList();
+		
+		
+		model.addAttribute("list", list);
 		
 		return "list";
 	}

@@ -148,12 +148,12 @@ main > section {
      box-sizing: border-box;
  }
 
- main > section > section > article {
-     float: left;
-     width: 25%;
-     height: 345px;
-     box-sizing: border-box;
- }
+/*  main > section > section > div  .thumbs { */
+/*      float: left; */
+/*      width: 25%; */
+/*      height: 345px; */
+/*      box-sizing: border-box; */
+/*  } */
 
  h3 {
      display: block;
@@ -206,7 +206,7 @@ main > section {
  main > section > .hit {}
  main > section > section {
      width: 100%;
-     height: auto;
+     height: 2000px;
      overflow: hidden;
  }
  main > section > section > h3 > span {
@@ -216,61 +216,62 @@ main > section {
      font-weight: bold;
      font-size: 30px;
  }
- main > section > section > article {
+ main  .thumbs {
      float:left;
      width: 25%;
-     height: 345px;
+     
+     height: 400px;
  }
- main > section > section > article > a {
+ main  .thumbs  a {
      display: block;
+     color: #000;
+     text-decoration: none;
      width: 100%;
      height: 100%;
      padding: 10px;
      box-sizing: border-box;
  }
- main > section > section > article h2 {
-     font-size: 15px;
-     font-weight: bold;
-     margin-top: 4px;
-     text-align: center;
-     text-overflow: ellipsis;
-     white-space: nowrap;
-     overflow: hidden;
- }
- main > section > section > article p {
+main .thumbs h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 4px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    min-height: 50px;
+}
+ main .thumbs p {
      color: #222;
      font-size: 12px;
      line-height: 16px;
      margin: 4px 0;
      text-overflow: ellipsis;
-     white-space: nowrap;
      overflow: hidden;
  }
- main > section > section > article p:hover {
+ main > section > section > .thumbs p:hover {
      text-decoration: underline;
  }
- main > section > section > article .org_price > del {
+ main > section > section > .thumbs .org_price > del {
      color: #aaa;
  }
- main > section > section > article del::after {
+ main > section > section > .thumbs del::after {
      content: "원";
  }
- main > section > section > article .org_price > span {
+ main > section > section > .thumbs .org_price > span {
      color: #eb000a;
      font-size: 10px;
  }
- main > section > section > article .org_price > span::after {
+ main > section > section > .thumbs .org_price > span::after {
      content: "↓";
  }
- main > section > section > article .dis_price {}
- main > section > section > article .dis_price > ins {
+ main > section > section > .thumbs .dis_price {}
+ main > section > section > .thumbs .dis_price > ins {
      font-size: 14px;
      text-decoration: none;
  }
- main > section > section > article ins::after {
+ main > section > section > .thumbs ins::after {
      content: "원";
  }
- main > section > section > article .dis_price > .free {
+ main > section > section > .thumbs .dis_price > .free {
      display: inline-block;
      font-size: 0;
      vertical-align: text-bottom;
