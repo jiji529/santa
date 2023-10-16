@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.sendandtake.www.product.dao.ProductDao;
+import com.sendandtake.www.product.model.ChartVO;
 import com.sendandtake.www.product.model.ProductVO;
 
 @Repository
@@ -27,5 +28,12 @@ public class ProductDaoImpl implements ProductDao {
 		return sql.selectOne("product.product", pNo);
 		
 	}
+
+	@Override
+	public List<ChartVO> selectXyList(int pNo) {
+
+		return sql.selectList("product.chart", pNo);
+	}
+
 
 }

@@ -1,10 +1,13 @@
 package com.sendandtake.www.product.web;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-
+import com.sendandtake.www.product.model.ChartVO;
 import com.sendandtake.www.product.service.ProductService;
 
 @Controller
@@ -12,27 +15,43 @@ public class ChartController {
 
 	@Autowired
 	ProductService productService;
-	
+
 	@GetMapping("/chartTest")
-	String chart () {
+	String chart() {
+
+		int pNo = 1;
+
+		List<ChartVO> chartList = productService.selectXyList(pNo);
+
 		
-		//pNo=1인 S등급 상품의 chart 띄우기 위한 Map을 만들어 보쟈..!
-		//chartMap =[Sx:{}, Sy:{}]
+		List <ChartVO> SList = new ArrayList<ChartVO>(); 
+		List <ChartVO> AList = new ArrayList<ChartVO>(); 
+		List <ChartVO> BList = new ArrayList<ChartVO>();
 		
-		/*
-		 * ProductVO chart_data= productService.selectProduct(pNo);
-		 * 
-		 * ArrayList<String> chartList = new ArrayList<String>();
-		 * chartList.add(chart_data.getSx()); chartList.add(chart_data.getSy());
-		 * 
-		 * Map<String, ArrayList<String>> CMap = new HashMap<String,
-		 * ArrayList<String>>(); CMap.put("Sx", chartList.get(0)); CMap.put("Sy",
-		 * chartList.get(1));
-		 * 
-		 * model.addAttribute("ChartMap", CMap);
-		 */
+
+		for (ChartVO cl : chartList) {
+			
+			String condition = cl.getGrade();
+			
+			 if (condition.equals('S')) { 
+			 System.out.println(condition);
+			 
+			 SList.add(cl);
+			 
+			 } else if (condition.equals('A')) {
+			 
+			 AList.add(cl);
+			 
+			 } else {
+			 
+			 BList.add(cl);
+			 
+			 }
+			 
+
+		}
 
 		return "chart";
 	}
-	
+
 }

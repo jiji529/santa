@@ -6,6 +6,7 @@
 		<typeAlias type="com.sendandtake.www.main.model.MemberVO" alias="Member"/>
 		<typeAlias type="com.sendandtake.www.product.model.ProductVO" alias="Product"/>
 		<typeAlias type="com.sendandtake.www.product.model.ReviewVO" alias="Review"/>
+		<typeAlias type="com.sendandtake.www.product.model.ChartVO" alias="Chart"/>
 	</typeAliases>
 	
 	<mappers>

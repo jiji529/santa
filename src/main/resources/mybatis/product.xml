@@ -27,6 +27,13 @@
      FROM tbl_product WHERE pNo = ${pNo}
 </select>
 
+<select id="chart" resultType="Chart">
+	SELECT grade, saleEnd, salePrice 
+	FROM tbl_sale_product 
+	WHERE progress IN (6, 7, 8) AND pNo = ${pNo}
+	ORDER BY saleEnd;
+</select>
+
 
 
 </mapper>

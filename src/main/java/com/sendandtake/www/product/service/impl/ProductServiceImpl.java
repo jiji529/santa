@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.sendandtake.www.product.dao.ProductDao;
 import com.sendandtake.www.product.dao.ReviewDao;
+import com.sendandtake.www.product.model.ChartVO;
 import com.sendandtake.www.product.model.ProductVO;
 import com.sendandtake.www.product.model.ReviewVO;
 import com.sendandtake.www.product.service.ProductService;
@@ -37,6 +38,14 @@ public class ProductServiceImpl implements ProductService {
 		reviewDao.insertReview(rvo);
 		
 	}
+
+	@Override
+	public List<ChartVO> selectXyList(int pNo) {
+
+		return productDao.selectXyList(pNo);
+	}
+
+
 
 
 

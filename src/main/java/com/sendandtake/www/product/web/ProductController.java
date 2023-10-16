@@ -119,13 +119,20 @@ public class ProductController {
 	
 	//상품구매
 	@GetMapping("/buy.do")
-	String buy() {
+	String buy(int pNo) {
+		
+		System.out.println(pNo);
+		
+		
+		
 		return "product/buy";
 	}
 	
 	//상품구매동의
 	@GetMapping("/buycheck.do")
-	String buycheck() {
+	String buycheck(int pNo) {
+		
+		
 		return "product/buycheck";
 	}
 	

@@ -94,7 +94,7 @@
                 
                 <div id="redBlueButton">
                 	<button type="button" class="OneRedBtn btn btn-danger">
-                		<div class="btnDesign" id="FrontRed">구매</div>
+                		<div class="btnDesign" id="FrontRed"><a href="buy.do?pNo=${product.pNo}">구매</a></div>
                 		<div class="btnDesign" id="BackRed">
                 			<p class="p1">
                 				<fmt:formatNumber value="${product.immediatePurchacePrice}" pattern="#,###,###"/><span class="p2">원</span>

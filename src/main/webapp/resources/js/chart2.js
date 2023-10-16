@@ -1,4 +1,20 @@
 window.onload = function () {
+/* 
+    let labels : [];
+    let datasets : [];
+
+    const grade_data = {
+        labels: [],
+        datasets: [{
+            data: [],
+            //label: "S등급",
+            borderColor: "#3e95cd",
+            fill: false
+        }]
+    } */
+
+    //let x = grade_data.labels.put
+    //let y = grade_data.datasets.date.put
 
     const grade_data = {
         labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
@@ -16,8 +32,8 @@ window.onload = function () {
         options: {
         	responsive: false,
             title: {
-            display: true,
-            text: 'World population per region (in millions)'
+            display: true
+            //, text: 'World population per region (in millions)'
             }
         }
     });
@@ -35,8 +51,7 @@ window.onload = function () {
         options: {
         	responsive: false,
             title: {
-            display: true,
-            text: 'World population per region (in millions)'
+            display: true
             }
         }
     });
@@ -54,8 +69,7 @@ window.onload = function () {
         options: {
         	responsive: false,
             title: {
-            display: true,
-            text: 'World population per region (in millions)'
+            display: true
             }
         }
     });
