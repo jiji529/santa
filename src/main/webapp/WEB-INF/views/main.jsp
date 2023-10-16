@@ -25,6 +25,9 @@ ul {
 
 </style>
 
+<!-- 파비콘! -->
+<link href="resources/img/favicon.png" rel="icon">
+
 </head>
 <body>
   <!-- ======= Header ======= -->
