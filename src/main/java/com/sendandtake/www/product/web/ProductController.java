@@ -142,4 +142,10 @@ public class ProductController {
 		return "product/buyinput";
 	}
 	
+	//상품구매동의
+	@GetMapping("/pay.do")
+	String pay() {
+		return "product/pay";
+	}
+	
 }

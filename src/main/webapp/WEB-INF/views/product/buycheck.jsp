@@ -21,6 +21,7 @@
   
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
   
+  <script src="resources/js/notice.js"></script>
 </head>
 <body>
 	<header>
@@ -34,7 +35,7 @@
         </div>
         <div class="wrap ctn">
             <div class="check_title">
-                <p><span id="type_color">구매</span>하시기 전에 꼭 확인하세요.</p>
+                <p><span class="buy">구매</span>하시기 전에 꼭 확인하세요.</p>
             </div>
             <div id="item_info">
                 <div id="item_img">
@@ -46,58 +47,60 @@
                     <span>S</span>
                 </div>
             </div>
-            <div id="notice_select">
-                <ul>
-                    <li>
-                        <div class="notice">
-                            <label for="notice_1">
-                                <div>
-                                    <p class="notice_main">구매하려는 상품이 맞습니다.</p>
-                                    <p class="notice_sub">상품 이미지, 모델번호, 출시일, 상품명, 사이즈를 한 번 더 확인했습니다. 단, 상품의 이미지는 촬영 환경에 따라 실제와 다를 수 있습니다.</p>
-                                </div>
-                                <div class="check_div">
-                                    <input type="checkbox" id="notice_1" class="notice_check_btn">
-                                </div>
-                            </label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="notice">
-                            <label for="notice_2">
-                                <div>
-                                    <p class="notice_main">제조사에서 불량으로 인정하지 않는 기준은 하자로 판단하지 않습니다.</p>
-                                    <p class="notice_sub">박스/패키지와 상품 컨디션에 민감하시다면 검수 기준을 반드시 확인하시기 바랍니다.</p>
-                                    <a href="">검수기준 보기</a>
-                                </div>
-                                <div class="check_div">
-                                    <input type="checkbox" id="notice_2" class="notice_check_btn">
-                                </div>
-                            </label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="notice">
-                            <label for="notice_3">
-                                <div>
-                                    <p class="notice_main">SANTA의 최신 이용정책을 모두 확인하였으며, 구매를 계속합니다.</p>
-                                    <p class="notice_sub">건전하고 안전한 거래를 위해 반드시 숙지해야 할 미입고, 페널티, 부정거래 등의 이용정책을 확인했습니다.</p>
-                                    <a href="">이용정책 보기</a>
-                                </div>
-                                <div class="check_div">
-                                    <input type="checkbox" id="notice_3" class="notice_check_btn">
-                                </div>
-                            </label>
-                        </div>
-                    </li>
-                </ul>			
-            </div>
-            <div class="sub">
-                <button id="btn_not_active">
-                    <div>
-                        <span>구매 계속</span>
-                    </div>
-                </button>
-            </div>
+            <form action="" id="notice_form">
+	            <div id="notice_select">
+	                <ul>
+	                    <li>
+	                        <div class="notice">
+	                            <label for="notice_1">
+	                                <div>
+	                                    <p class="notice_main"><span>구매</span>하려는 상품이 맞습니다.</p>
+	                                    <p class="notice_sub">상품 이미지, 모델번호, 출시일, 상품명, 사이즈를 한 번 더 확인했습니다. 단, 상품의 이미지는 촬영 환경에 따라 실제와 다를 수 있습니다.</p>
+	                                </div>
+	                                <div class="check_div">
+	                                    <input type="checkbox" id="notice_1" class="notice_check_btn">
+	                                </div>
+	                            </label>
+	                        </div>
+	                    </li>
+	                    <li>
+	                        <div class="notice">
+	                            <label for="notice_2">
+	                                <div>
+	                                    <p class="notice_main">제조사에서 불량으로 인정하지 않는 기준은 하자로 판단하지 않습니다.</p>
+	                                    <p class="notice_sub">박스/패키지와 상품 컨디션에 민감하시다면 검수 기준을 반드시 확인하시기 바랍니다.</p>
+	                                    <a href="">검수기준 보기</a>
+	                                </div>
+	                                <div class="check_div">
+	                                    <input type="checkbox" id="notice_2" class="notice_check_btn">
+	                                </div>
+	                            </label>
+	                        </div>
+	                    </li>
+	                    <li>
+	                        <div class="notice">
+	                            <label for="notice_3">
+	                                <div>
+	                                    <p class="notice_main">SANTA의 최신 이용정책을 모두 확인하였으며, <span>구매</span>를 계속합니다.</p>
+	                                    <p class="notice_sub">건전하고 안전한 거래를 위해 반드시 숙지해야 할 미입고, 페널티, 부정거래 등의 이용정책을 확인했습니다.</p>
+	                                    <a href="">이용정책 보기</a>
+	                                </div>
+	                                <div class="check_div">
+	                                    <input type="checkbox" id="notice_3" class="notice_check_btn">
+	                                </div>
+	                            </label>
+	                        </div>
+	                    </li>
+	                </ul>			
+	            </div>
+	            <div class="sub">
+	                <button id="btn_not_active">
+	                    <div>
+	                        <span>구매 계속</span>
+	                    </div>
+	                </button>
+	            </div>
+            </form>
         </div>
     </div>
     <!-- ======= 구매 폼 끝 ======= -->

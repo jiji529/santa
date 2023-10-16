@@ -18,11 +18,11 @@
   <link href="resources/assets/css/style.css" rel="stylesheet">
   
   <link href="resources/css/sellbuy.css" rel="stylesheet">
-  
+   
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+   
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="pay.js"></script>
+  <script src="resources/js/pay.js"></script>
 </head>
 
 <body>
@@ -50,7 +50,7 @@
             <div class="address adr_form">
                 <div>
                     <span>배송주소</span>
-                    <a href="#">+ 새 주소 추가</a>
+                    <a>+ 새 주소 추가</a>
                 </div>
                 <div>
                     <div id="adr">
@@ -70,7 +70,7 @@
                         </dl>
                     </div>
                     <div>
-                        <a href="#" class="btn btn-outline-secondary">변경</a>
+                        <a class="btn btn-outline-secondary">변경</a>
                     </div>
                 </div>
             </div>
@@ -82,9 +82,9 @@
                 <div id="pay">
                     <span>일반 결제</span>
                     <ul>
-                        <li><a class="btn" data-payType="credit">신용카드</a></li>
-                        <li><a class="btn" data-payType="nPay">네이버페이<img src="images/Npay.png" /></a></li>
-                        <li><a class="btn" data-payType="kPay">카카오페이<img src="images/Kpay.png" /></a></li>
+                        <li><a class="btn" data-paytype="credit">신용카드</a></li>
+                        <li><a class="btn" data-paytype="nPay">네이버페이<img src="Npay.png" /></a></li>
+                        <li><a class="btn" data-paytype="kPay">카카오페이<img src="Kpay.png" /></a></li>
                     </ul>
                 </div>
             </div>
@@ -110,6 +110,7 @@
             </div>
 
             <div id="notice_select">
+                <form>
                 <ul>
                     <li>
                         <div class="notice">
@@ -135,7 +136,7 @@
                                         단, 조작 실수 등을 고려하여 계정당 하루 1회 구매를 거부할 수 있습니다.</p>
                                 </div>
                                 <div class="check_div">
-                                    <input type="checkbox" id="notice_2" class="notice_check_btn" required>
+                                    <input type="checkbox" id="notice_2" class="notice_check_btn" required="required">
                                 </div>
                             </label>
                         </div>
@@ -144,7 +145,7 @@
                         <div class="notice">
                             <label for="notice_3">
                                 <div>
-                                    <p class="notice_main">S구매 조건을 모두 확인하였으며, 거래 진행에 동의합니다.</p>
+                                    <p class="notice_main">구매 조건을 모두 확인하였으며, 거래 진행에 동의합니다.</p>
                                 </div>
                                 <div class="check_div">
                                     <input type="checkbox" id="notice_3" class="notice_check_btn" required>
@@ -153,6 +154,7 @@
                         </div>
                     </li>
                 </ul>
+                </form>
             </div>
 
             <div class="address total">
