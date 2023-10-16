@@ -1,30 +1,55 @@
 window.onload = function () {
-/* 
-    let labels : [];
-    let datasets : [];
-
+    
     const grade_data = {
         labels: [],
         datasets: [{
+            label: "S등급",
             data: [],
-            //label: "S등급",
             borderColor: "#3e95cd",
             fill: false
         }]
-    } */
+    } 
 
-    //let x = grade_data.labels.put
-    //let y = grade_data.datasets.date.put
+//pNo 보내기 form태그
 
-    const grade_data = {
-        labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
-        datasets: [{
-            data: [86,114,106,106,107,111,133,221,783,2478],
-            //label: "S등급",
-            borderColor: "#3e95cd",
-            fill: false
-        }]
-      }
+
+//차트보기 버튼
+let showChart = document.querySelector('#showChart');
+
+showChart.onclick = function () {
+
+    //차트 만드는 form태그
+    const chartForm = new FormData();
+                
+    //pNo 번호 -> 스트링.
+    const chartpNo = document.querySelector('#chartpNo');
+    
+    console.log(typeof Number(chartpNo.value));
+    
+    chartForm.append("pNo", Number(chartpNo.value));
+
+    fetch("ajax/SchartTest", {
+        method: 'POST',
+        body: chartForm
+    }).then(response =>response.json())
+    .then(function(SchartMap){ 
+
+        console.log(SchartMap);
+            
+        console.log(SchartMap.Slist);
+        SchartMap.Slist.forEach(e => {
+            labels.push(e.saleEnd);
+            data.push(e.salePrice);
+        });
+
+        console.log(grade_data);
+        
+    }).catch(function(error) {
+        console.log(error);
+
+        alert('차트 정보 조회를 실패했습니다.');
+    });
+};
     
     new Chart(document.getElementById("Sline-chart"), {
         type: 'line',
@@ -37,7 +62,7 @@ window.onload = function () {
             }
         }
     });
-
+/*
     new Chart(document.getElementById("Aline-chart"), {
         type: 'line',
         data: {
@@ -73,4 +98,5 @@ window.onload = function () {
             }
         }
     });
+    */
 }

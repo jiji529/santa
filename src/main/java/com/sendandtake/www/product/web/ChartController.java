@@ -1,11 +1,15 @@
 package com.sendandtake.www.product.web;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.sendandtake.www.product.model.ChartVO;
 import com.sendandtake.www.product.service.ProductService;
@@ -15,43 +19,51 @@ public class ChartController {
 
 	@Autowired
 	ProductService productService;
-
+	
 	@GetMapping("/chartTest")
 	String chart() {
+		
+		return "chart";
+	}
 
-		int pNo = 1;
+	@ResponseBody
+	@PostMapping("ajax/SchartTest")
+	Map<String, ArrayList<ChartVO>> Schart(int pNo) {
+
+
+		System.out.println("ajax 상품번호??" + pNo);
 
 		List<ChartVO> chartList = productService.selectXyList(pNo);
 
+		ArrayList<ChartVO> SList = new ArrayList<>();
+		ArrayList<ChartVO> AList = new ArrayList<>();
+		ArrayList<ChartVO> BList = new ArrayList<>();
 		
-		List <ChartVO> SList = new ArrayList<ChartVO>(); 
-		List <ChartVO> AList = new ArrayList<ChartVO>(); 
-		List <ChartVO> BList = new ArrayList<ChartVO>();
-		
-
 		for (ChartVO cl : chartList) {
-			
-			String condition = cl.getGrade();
-			
-			 if (condition.equals('S')) { 
-			 System.out.println(condition);
+
+			 if (cl.getGrade().equals("S")) { 
+				 
+				 SList.add(cl);
 			 
-			 SList.add(cl);
-			 
-			 } else if (condition.equals('A')) {
-			 
-			 AList.add(cl);
+			 } else if (cl.getGrade().equals("A")) {
+				 
+				 AList.add(cl);
 			 
 			 } else {
-			 
-			 BList.add(cl);
-			 
+				 
+				 BList.add(cl);
 			 }
-			 
-
+			
 		}
+		
+		Map<String, ArrayList<ChartVO>> SchartMap = new HashMap<String, ArrayList<ChartVO>>();
+		//Map<String, ArrayList<ChartVO>> AchartMap = new HashMap<String, ArrayList<ChartVO>>();
+		//Map<String, ArrayList<ChartVO>> BchartMap = new HashMap<String, ArrayList<ChartVO>>();
+		SchartMap.put("Slist", SList);
+		//AchartMap.put("Alist", AList);
+		//BchartMap.put("Blist", BList);
 
-		return "chart";
+		return SchartMap;
 	}
 
 }
