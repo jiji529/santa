@@ -21,7 +21,7 @@
     <div id="__layout">
       <div tabindex="0" class="layout_base lg wrap lg win_os" data-v-e2abb636="" data-v-520bec6f="">
         <div class="container my lg" data-v-e2abb636="" data-v-520bec6f="">
-          <div data-v-520bec6f="" class="snb_area"><a data-v-520bec6f="" href="" class="nuxt-link-active">
+          <div data-v-520bec6f="" class="snb_area"><a data-v-520bec6f="" href="/mypage" class="nuxt-link-active">
               <h2 data-v-520bec6f="" class="snb_main_title">마이 페이지</h2>
             </a>
             <nav data-v-7bcac446="" data-v-520bec6f="" class="snb">
@@ -29,7 +29,7 @@
                 <ul data-v-7a824f04="" data-v-7bcac446="" class="snb_menu">
                   <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href=""
                       class="menu_link nuxt-link-exact-active active" aria-current="page"> 구매 내역 </a></li>
-                  <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href="" class="menu_link"> 판매 내역 </a>
+                  <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href="/selling" class="menu_link"> 판매 내역 </a>
                   </li>
                   <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href="" class="menu_link"> 보관 판매 </a>
                   </li>

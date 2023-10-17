@@ -22,22 +22,19 @@
         <div id="__layout">
           <div tabindex="0" class="layout_base lg has_bottom_nav wrap lg win_os" data-v-e2abb636="" data-v-520bec6f="">
             <div data-v-520bec6f="" data-v-e2abb636="" class="container my lg">
-              <div data-v-520bec6f="" class="snb_area" data-v-e2abb636=""><a data-v-520bec6f="" href=""
-                  aria-current="page" class="nuxt-link-exact-active nuxt-link-active">
-                  <h2 data-v-520bec6f="" class="snb_main_title">마이 페이지</h2>
-                </a>
+              <div data-v-520bec6f="" class="snb_area" data-v-e2abb636="">
+              <a data-v-520bec6f="" href="/mypage" aria-current="page" class="nuxt-link-exact-active nuxt-link-active">
+                  <h2 data-v-520bec6f="" class="snb_main_title">마이 페이지</h2></a>
                 <nav class="snb">
                   <div class="snb_list"><strong data-v-7bcac446="" class="snb_title">쇼핑 정보</strong>
                     <ul data-v-7a824f04="" data-v-7bcac446="" class="snb_menu">
-                      <li class="menu_item"><a data-v-7a824f04="" href="" class="menu_link"> 구매 내역 </a></li>
-                      <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href="" class=" menu_link"> 판매 내역
-                        </a></li>
-                      <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href="" class="menu_link"> 보관 판매
-                        </a>
-                      </li>
-                      <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href="" class="menu_link"> 관심 상품
-                        </a>
-                      </li>
+                      <li class="menu_item"><a data-v-7a824f04="" href="/buying" class="menu_link"> 구매 내역 </a></li>
+                      <li data-v-7a824f04="" class="menu_item">
+                      <a data-v-7a824f04="" href="/selling" class=" menu_link"> 판매 내역</a></li>
+                      <li data-v-7a824f04="" class="menu_item">
+                      <a data-v-7a824f04="" href="" class="menu_link"> 보관 판매</a></li>
+                      <li data-v-7a824f04="" class="menu_item">
+                      <a data-v-7a824f04="" href="" class="menu_link"> 관심 상품 </a></li>
                     </ul>
                   </div>
                 </nav>
