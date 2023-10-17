@@ -88,11 +88,11 @@
        	 <c:forEach var="item" items="${list}">
           <div class="col-lg-3 col-md-6 align-items-stretch mt-4">
             <div class="course-item">
-			<!-- <img src="resources/img/아이폰15pro.jpg" class="img-fluid" alt="..."> -->
-			  <p>${item.pImg1}</p> <!-- 이미지 DB에 제대로 넣으면 바꿔야해! -->
+			<img src="resources/img/product/apple_iphone14_256GB_starlight.png" class="img-fluid" alt="...">
+<%-- 			  <p>${item.pImg1}</p> <!-- 이미지 DB에 제대로 넣으면 바꿔야해! --> --%>
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>제조사</h4>
+                  <h4>apple</h4>
                   <p class="price"><a href="detail.do?pNo=${item.pNo}">${item.pName}</a></p>
                 </div>
 

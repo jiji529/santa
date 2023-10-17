@@ -4,7 +4,10 @@
 <mapper namespace="product"> 
 
 <select id="list" resultType="Product">
-	SELECT pNo, cNo, pCode, pName, pImg1 FROM tbl_product
+	SELECT pNo, cNo, pCode, pName, pImg1 
+	FROM tbl_product 
+	ORDER BY pNo DESC 
+	LIMIT 16
 </select>
 
 <select id="product" resultType="Product">
