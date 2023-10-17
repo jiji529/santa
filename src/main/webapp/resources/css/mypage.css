@@ -1246,13 +1246,13 @@ a:hover {
         display: flex
     }
     
-    .period_btn_box[data-v-14e5ae1c] {
+/*     .period_btn_box[data-v-14e5ae1c] {
         margin-left: 4px
-    }
+    } */
     
-    .period_calendar[data-v-14e5ae1c] {
+/*     .period_calendar[data-v-14e5ae1c] {
         position: relative
-    }
+    } */
     
     .period_calendar .calendar_wrap[data-v-14e5ae1c] {
         background-color: #fff;
@@ -1291,7 +1291,7 @@ a:hover {
         width: 100%
     }
     
-    .period_calendar .cal_btn[data-v-14e5ae1c] {
+/*     .period_calendar .cal_btn[data-v-14e5ae1c] {
         background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSI1NiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0JCQiIgZD0iTTIxIDI1LjY2N2gtNC42Njd2NC42NjZIMjF2LTQuNjY2em05LjMzMyAwaC00LjY2NnY0LjY2Nmg0LjY2NnYtNC42NjZ6bTkuMzM0IDBIMzV2NC42NjZoNC42Njd2LTQuNjY2em00LjY2Ni0xNi4zMzRINDJWNC42NjdoLTQuNjY3djQuNjY2SDE4LjY2N1Y0LjY2N0gxNHY0LjY2NmgtMi4zMzNjLTIuNTkgMC00LjY0NCAyLjEtNC42NDQgNC42NjdMNyA0Ni42NjdhNC42NjYgNC42NjYgMCAwIDAgNC42NjcgNC42NjZoMzIuNjY2QTQuNjggNC42OCAwIDAgMCA0OSA0Ni42NjdWMTRhNC42OCA0LjY4IDAgMCAwLTQuNjY3LTQuNjY3em0wIDM3LjMzNEgxMS42NjdWMjFoMzIuNjY2djI1LjY2N3oiLz48L3N2Zz4=);
         background-size: 18px 18px;
         height: 18px;
@@ -1300,7 +1300,7 @@ a:hover {
         right: 12px;
         top: 50%;
         width: 18px
-    }
+    } */
     
     .period_calendar[data-v-14e5ae1c] .vc-popover-content-wrapper {
         -webkit-transform: translate(-1px, 30px) !important;
