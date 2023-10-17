@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 
-<!-- Template Main CSS File -->
+<!-- footer.css -->
 <link href="/resources/css/footer.css" rel="stylesheet">
 </head>
 <body>

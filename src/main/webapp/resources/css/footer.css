@@ -4,8 +4,9 @@
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+*{font-family: 'Noto Sans KR', sans-serif;}
 #footer body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #444444;
 }
 
@@ -48,7 +49,6 @@
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Raleway", sans-serif;
   color: #777777;
 }
 

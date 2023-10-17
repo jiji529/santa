@@ -9,8 +9,9 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+*{font-family: 'Noto Sans KR', sans-serif;}
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #444444;
 }
 
@@ -30,7 +31,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -132,7 +133,6 @@ h6 {
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
 }
 
 #header .logo a {
@@ -198,7 +198,6 @@ h6 {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 10px 30px;
-  font-family: "Poppins", sans-serif;
   font-size: 15px;
   font-weight: 500;
   color: #37423b;
@@ -433,7 +432,6 @@ h6 {
   font-weight: 700;
   line-height: 56px;
   color: #fff;
-  font-family: "Poppins", sans-serif;
 }
 
 #hero h2 {
@@ -443,7 +441,6 @@ h6 {
 }
 
 #hero .btn-get-started {
-  font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 15px;
   letter-spacing: 1px;
@@ -508,7 +505,6 @@ section {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #aaaaaa;
-  font-family: "Poppins", sans-serif;
 }
 
 .section-title h2::after {
@@ -526,7 +522,6 @@ section {
   font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
   color: #37423b;
 }
 
@@ -617,7 +612,6 @@ section {
 .counts .counters p {
   padding: 0;
   margin: 0 0 20px 0;
-  font-family: "Raleway", sans-serif;
   font-size: 15px;
   font-weight: 600;
   color: #37423b;
@@ -1002,7 +996,6 @@ section {
   font-weight: 400;
   font-size: 16px;
   margin: 0;
-  font-family: "Poppins", sans-serif;
 }
 
 .course-details .course-info p {
@@ -1176,7 +1169,6 @@ section {
   font-size: 36px;
   color: #5fcf80;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
   margin-bottom: 20px;
 }
 
@@ -1232,7 +1224,6 @@ section {
   transition: none;
   font-size: 14px;
   font-weight: 400;
-  font-family: "Raleway", sans-serif;
   font-weight: 600;
   transition: 0.3s;
 }
@@ -1435,7 +1426,6 @@ section {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Raleway", sans-serif;
   color: #777777;
 }
 

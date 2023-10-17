@@ -9,9 +9,11 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 li, ol, ul {
     list-style: none;
 }
+/*
 header{background: black; height: 90px;font-weight: 700;box-sizing: border-box; color: white; 
-    display: flex;justify-content: center;align-items: center;  /*자식 수직수평중앙정렬*/
+    display: flex;justify-content: center;align-items: center;  
 }
+*/
 
 /* */
 .content{background-color: #f4f4f4; min-height: 870px; padding-bottom: 40px;}

@@ -5,12 +5,12 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-
+/*
 @font-face {
   font-family : 'Pretendard-Bold';
   src : url(Pretendard-Bold.ttf)
 }
-
+*/
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -26,7 +26,7 @@ header ul {
 }
 
 header body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #444444;
 }
 

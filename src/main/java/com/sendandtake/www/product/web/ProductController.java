@@ -119,33 +119,56 @@ public class ProductController {
 	
 	//상품구매
 	@GetMapping("/buy.do")
-	String buy(int pNo) {
-		
-		System.out.println(pNo);
-		
-		
-		
+	String buy() {
 		return "product/buy";
 	}
 	
 	//상품구매동의
 	@GetMapping("/buycheck.do")
-	String buycheck(int pNo) {
+	String buycheck() {
 		
 		
 		return "product/buycheck";
 	}
 	
-	//상품구매동의
+	//상품구매종류선택
 	@GetMapping("/buyinput.do")
 	String buyinput() {
 		return "product/buyinput";
 	}
 	
-	//상품구매동의
-	@GetMapping("/pay.do")
-	String pay() {
-		return "product/pay";
+	//상품구매 배송/결제
+	@GetMapping("/buypay.do")
+	String buypay() {
+		return "product/buypay";
+	}
+	
+	//상품구매완료
+	@GetMapping("/buycomplete.do")
+	String buycomplete() {
+		return "product/buycomplete";
+	}
+	
+	//상품판매
+	@GetMapping("/sell.do")
+	String sell() {
+		return "product/sell";
+	}
+	//상품판매동의
+	@GetMapping("/sellcheck.do")
+	String sellcheck() {
+		return "product/sellcheck";
+	}
+	
+	//상품판매 반송/결제
+	@GetMapping("/sellpay.do")
+	String sellpay() {
+		return "product/sellpay";
+	}
+	//상품판매신청완료
+	@GetMapping("/sellcomplete.do")
+	String sellcomplete() {
+		return "product/sellcomplete";
 	}
 	
 }

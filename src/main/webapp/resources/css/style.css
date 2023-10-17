@@ -10,9 +10,18 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+*{font-family: 'Noto Sans KR', sans-serif;}
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   color: #444444;
+}
+body, button, dd, div, dl, dt, fieldset, figcaption, figure, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, select, table, td, textarea, th, ul, a{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li, ol, ul {
+    list-style: none;
 }
 
 a {
@@ -32,7 +41,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -117,7 +126,6 @@ header > .menu > div > ul > li > div {
 
 header > .menu > div > ul > li > div > a {
 /*     border-left: 1px solid red; */
-    font-family: 'Pretendard-Bold';
     font-size: 20px;
     font-weight: bold;    
 }
@@ -179,7 +187,6 @@ header > .menu > div > ul > li > div > a:hover {
   font-weight: 700;
   line-height: 56px;
   color: #fff;
-  font-family: "Poppins", sans-serif;
 }
 
 #hero h2 {
@@ -189,7 +196,6 @@ header > .menu > div > ul > li > div > a:hover {
 }
 
 #hero .btn-get-started {
-  font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 15px;
   letter-spacing: 1px;
@@ -232,7 +238,6 @@ section {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #aaaaaa;
-  font-family: "Poppins", sans-serif;
 }
 
 .section-title h2::after {
@@ -250,7 +255,6 @@ section {
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
   color: #37423b;
 }
 

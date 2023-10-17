@@ -18,14 +18,13 @@
   <link href="resources/assets/css/style.css" rel="stylesheet">
   
   <link href="resources/css/sellbuy.css" rel="stylesheet">
+  <link href="resources/css/header.css" rel="stylesheet">
+  
+  <!-- ======= TOP Header ======= -->
+  <jsp:include page="../header.jsp"></jsp:include>
   
 </head>
 <body>
-	<!-- ======= 해더 ======= -->
-	<header>
-        해더부분
-    </header>
-    <!-- 해더 끝 -->
 
 	<!-- ======= 구매 폼 ======= -->
     <div class="content">
@@ -81,6 +80,12 @@
         </div>
     </div>
     <!-- ======= 구매 폼 끝 ======= -->
+	<!-- ======= Footer ======= -->
+	<div>
+	<jsp:include page="../footer.jsp"></jsp:include>
+	</div>
+	<!-- End Footer -->
+
 
   <!-- ======= Footer ======= -->
   <footer id="footer">

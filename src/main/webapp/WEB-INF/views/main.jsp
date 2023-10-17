@@ -9,24 +9,13 @@
 <meta content="" name="description">
 <meta content="" name="keywords">
 
-<!-- 메인화면 CSS File -->
-<link href="resources/css/style.css" rel="stylesheet">
-
-  <!-- 메인화면 JS File -->
+ <!-- 메인화면 JS File -->
 <script src="resources/js/main.js"></script>
   <!-- 슬라이더 JS File -->
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
-<style>
-ul {
-	list-style: none;
-	padding-left: 0px;
-}
-
-</style>
-
-  <!-- ======= TOP Header ======= -->
-  <jsp:include page="header.jsp"></jsp:include>
+<!-- ======= TOP Header ======= -->
+<jsp:include page="header.jsp"></jsp:include>
 
 </head>
 <body>
