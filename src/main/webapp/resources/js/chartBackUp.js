@@ -1,4 +1,4 @@
-
+window.onload = function () {
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 const pNo = document.querySelector("input[name='pNo']");
@@ -194,3 +194,4 @@ document.querySelector('#BchartBtn').onclick = function(){
 
 }
 
+}

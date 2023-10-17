@@ -31,7 +31,10 @@
             });
         };
 
-        
+        //사용자 -> 리뷰 입력값(.value로 꺼내쓰기)
+        const pNo = document.querySelector("input[name='pNo']");
+        const rvImg = document.querySelector("input[name='rvImg']");
+        const rvContent = document.querySelector("input[name='rvContent']");
 
             //const userEmail = document.querySelector(".userEmailInp");
 
@@ -61,20 +64,16 @@
         
         document.querySelector('#rvSave').addEventListener("click", e => {
 
+			rvForm.classList.remove('active');
+
             const item = new FormData();
             
-            //사용자 -> 리뷰 입력값(.value로 꺼내쓰기)
-            const pNo = document.querySelector("input[name='pNo']");
-            const rvImg = document.querySelector("input[name='rvImg']");
-            const rvContent = document.querySelector("input[name='rvContent']");
-
-            console.log(pNo.value);
 
             item.append("pNo", Number(pNo.value));
             item.append("rvImg", rvImg.files[0]);
             item.append("rvContent", rvContent.value);
 
-            
+            console.log();
             
             fetch("rvSave/ajax", {
                 method: "POST",

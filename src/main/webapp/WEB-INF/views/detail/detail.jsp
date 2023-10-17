@@ -118,7 +118,7 @@
 	          <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4">
 		          	<div id="rvOne" class="course-item">
 		            
-		              <img src="upload/${rvListOne.rvNewImg}${rvListOne.rvExtn}" class="ajaxRvImg rvImgSize img-fluid" alt="...">
+		              <img src="upload/${rvListOne.rvNewImg}${rvListOne.rvExtn}" class="ajaxRvImg rvImgSize img-fluid" alt="..." style="width: 520px;height: 300px; object-fit: cover;">
 		              
 		              <div class="course-content">
 			                <div class="d-flex justify-content-between align-items-center mb-3">
@@ -149,19 +149,22 @@
   
   <!-- 리뷰추가 새창 -->
   
-    <div>
+
         <form id="rvForm" method="POST" enctype="multipart/form-data">
         	<input type="hidden" name="pNo" value="${product.pNo}">
             아이디: <c:out value="${loginUser.userEmail}"/><br>
-            리뷰사진: 
-            <label for="rvImg">이미지 첨부</label>
-            <input type="file" id="rvImg" name="rvImg"><br>
-            내용: <input type="text" name="rvContent"><br>
-            <input type="button" value="확인" id="rvSave">
-            <input type="button" value="취소" id="rvCancel">
+            <div id="img">
+	            리뷰사진: 
+	            <label for="rvImg">이미지 첨부</label>
+	            <input type="file" id="rvImg" name="rvImg">
+            </div>
+            내용: <br><input type="text" name="rvContent" style="width: 296px;">
+            <div class="between">
+	            <input type="button" value="확인" id="rvSave">
+	            <input type="button" value="취소" id="rvCancel">
+        	</div>
         </form>
 
-    </div>
     
 <!-- 리뷰 한 개씩 폼 -->
 <template id="rvTemp">    
