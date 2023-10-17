@@ -48,8 +48,8 @@
                       </div>
                       <div data-v-ffa2bac2="" class="user_info">
                         <div data-v-ffa2bac2="" class="info_box"><strong data-v-ffa2bac2=""
-                            class="name">4jhxz7pz</strong>
-                          <p data-v-ffa2bac2="" class="email">p******6@naver.com</p><!-- <a data-v-472c9b08="" data-v-ffa2bac2=""
+                            class="name"></strong>
+                          <p data-v-ffa2bac2="" class="email" style="font-size: 20px;">${loginUser.userEmail}</p><!-- <a data-v-472c9b08="" data-v-ffa2bac2=""
                           href="https://kream.co.kr/my/profile-edit" class="btn btn outlinegrey small" type="button"> 프로필
                           관리 </a><a data-v-472c9b08="" data-v-ffa2bac2="" href="https://kream.co.kr/social/users/@4jhxz7pz"
                           class="btn btn btn_my_style outlinegrey small" type="button"> 내 스타일 </a> -->
@@ -118,7 +118,7 @@
                       </a><!----><!----></div>
                   </div>
                   <div data-v-6752ceb2="" data-v-52a917ff="" class="my_home_title">
-                    <h3 data-v-6752ceb2="" class="title"> 구매 내역 </h3><a data-v-6752ceb2="" href=""
+                    <h3 data-v-6752ceb2="" class="title"> 구매 내역 </h3><a data-v-6752ceb2="" href="/buying"
                       class="btn_more"><span data-v-6752ceb2="" class="btn_txt">더보기</span><svg data-v-6752ceb2=""
                         class="icon sprite-icons arr-right-gray">
                         <use data-v-6752ceb2="" href=""></use>
@@ -161,7 +161,7 @@
                     </div>
                   </div>
                   <div data-v-6752ceb2="" data-v-52a917ff="" class="my_home_title">
-                    <h3 data-v-6752ceb2="" class="title"> 판매 내역 </h3><a data-v-6752ceb2="" href=""
+                    <h3 data-v-6752ceb2="" class="title"> 판매 내역 </h3><a data-v-6752ceb2="" href="/selling"
                       class="btn_more"><span data-v-6752ceb2="" class="btn_txt">더보기</span><svg data-v-6752ceb2=""
                         class="icon sprite-icons arr-right-gray">
                         <use data-v-6752ceb2="" href=""></use>
