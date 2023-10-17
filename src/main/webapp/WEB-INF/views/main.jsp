@@ -24,7 +24,8 @@
 	<div class="menu">
 		<div class="menu_index">
 			<ul>
-				<li><div><a href="#">SAMSUNG</a></div></li>
+				<li><div><a href="#">전체상품</a></div></li>
+				<li><div><a href="#">노트북</a></div></li>
 				<li><div><a href="#">태블릿</a></div></li>
 				<li><div><a href="#">핸드폰</a></div></li>
 				<li><div><a href="#">액세서리</a></div></li>
@@ -35,8 +36,6 @@
 					<i class="fa fa-search" aria-hidden="true"></i>
 				</button>
 			</form>
-		</div>
-		<div class="menu_indexr">
 		</div>
 	</div>
 </header>

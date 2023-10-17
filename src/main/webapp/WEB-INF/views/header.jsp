@@ -25,6 +25,8 @@
 <link href="/resources/css/style.css" rel="stylesheet">
 <!-- header.css -->
 <link href="/resources/css/header.css" rel="stylesheet">
+<!-- 아이콘 요소들 링크 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
@@ -44,7 +46,7 @@
 				<div>
 					<p>${loginUser.userEmail}님 환영합니다!</p>
 					<a href="${pageContext.request.contextPath}/logout.do">로그아웃</a>
-					<a href="/mypage">마이페이지</a>
+					<a href="/mypage.do">마이페이지</a>
 					<a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i>관심상품</a>
 				</div>
 			</c:if>

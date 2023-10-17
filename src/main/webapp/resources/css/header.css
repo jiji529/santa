@@ -14,8 +14,8 @@
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-header {	/* 헤더 폭 1200px 높이 125px */
-    width: 1200px;
+header {	/* 헤더 폭 1320px 높이 125px */
+    width: 1320px;
     height: 125px;
     margin: 0 auto;
 }
@@ -53,7 +53,7 @@ header > .top {
 }
 
 header > .top > div {
-    width: 1200px;
+    width: 1320px;
     height: 100%;
     margin: 0 auto;
     text-align: right;
@@ -78,7 +78,6 @@ header > .top > div > a {
 
 header > .top > div > a:hover {
     color: #333;
-    border-bottom: 1px solid #444;
 }
 
 header > .top > div > a:last-child {
@@ -91,17 +90,17 @@ header > .logo {	/*로고 크기 90px*/
 }
 
 header > .logo > div {
-    position: relative;
-    width: 1200px;
+    width: 1320px;
     height: 100%;
     margin: 0 auto;
 }
 
 header > .logo > div > a {
     display: inline-block;
-    margin-left: 18px;
 /*     margin-top: 30px; */
 }
+
+i{padding-right: 5px;}
 
 /* header > .logo > div > form { */
 /*     position: absolute; */

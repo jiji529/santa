@@ -48,60 +48,52 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 header > .menu {
-    height: 46px;
+    height: 60px;
 /*     background: #f2f2f2; */
 /*     border-bottom: 1px solid #ddd; */
     box-sizing: border-box;
 }
 
 header > .menu > .menu_index {
-    width: 800px;
-    height: 100%;
-    margin: 10px;
-    float: none;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header > .menu > .menu_index > ul {
     display: inline-block;
-    margin-top: 16px;
+    padding: 20px 0;
 }
 
 header #menu_indexr {
-	position: relative;
-    top: 100px;
-/*     left: 500px; */
-/*     position: none; */
-    left: 50%;
-    top: 50%;
-    margin-left: -185px;
-    margin-top: -22px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 370px;
     height: 45px;
+    border-radius: 5px;
+  	border: solid 1px rgba(0, 0, 0, 0.3);
+  	z-index: 1;
+  	opacity: 1;
 }
 
 header .search_box1 {
-/* 	position: static; */
-/*  position: absolute; */
-	position: relative;
-    top: -3px;
-    left: 230px;
-    width: 325px;
-    height: 45px;
-    border: 1px solid #e9e9e9;
-    border-radius: 5px;
-    font-size: 15px;
-    padding-left: 10px;
-    padding-right: 50px;
-    box-sizing: border-box;
-/*     float: right; */
+	width: 300px;
+	border: none;
+	-webkit-appearance: none;
+	margin-left: 10px;
+	overflow: auto;
+	z-index: -1;
+	font-size: 15px;
+}
+header .search_box1:focus{
+	outline: none;
+	width: 300px;
+	text-align: left;
 }
 
 header .search_button1 {
-    position: absolute;
-    left: 510px;
-    top: 4px;
+    padding-left: 10px;
     background: #fff;
     border: none;
     font-size: 20px;
@@ -121,7 +113,7 @@ header > .menu > div > ul > li { float: left;}
 header > .menu > div > ul > li > div {
 /* 	padding-right: 20px; */
 /* 	padding-left: 10px; */
-	padding: 0px 20px 0px 10px;
+	padding-right: 20px;
 }
 
 header > .menu > div > ul > li > div > a {
@@ -132,7 +124,6 @@ header > .menu > div > ul > li > div > a {
 
 header > .menu > div > ul > li > div > a:hover {
     color: #333;
-    border-bottom: 1px solid #444;
     display: inline-block;
 }
 
@@ -217,7 +208,7 @@ header > .menu > div > ul > li > div > a:hover {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 40px 0;
   overflow: hidden;
 }
 
