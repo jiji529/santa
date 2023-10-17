@@ -9,7 +9,7 @@ p{
 }
 
 #product {
-  padding-top: 150px;
+  padding-top: 50px;
 }
 
 .pCodeWrite {
@@ -31,8 +31,8 @@ p{
 #FrontRed {
 	font-size: 1.5em;
 	vertical-align: bottom;
-	margin-bottom: 5px;
-	margin-right: 10px; 
+	margin-bottom: 10px;
+	margin-right: 25px; 
 }
 
 #BackRed {
@@ -41,12 +41,12 @@ p{
 } 
 
 .p1 {
-	font-size: 1.2em;
+	font-size: 1.5em;
 } 
 
 
 .p2 {
-	font-size: 0.8em;
+	font-size: 1em;
 }
 
 .p3 {
@@ -57,11 +57,10 @@ p{
 #redBlueButton > button {
 	margin-top: 10px;
 	width: calc(50%);
-	padding: 11px;
 }
 
 .OneRedBtn {
-	margin-right: 10px;
+	margin-right: 15px;
 }
 
 .OneLikeBtn {
@@ -75,17 +74,17 @@ p{
 
 #Sline-chart {
 	float: left;
-	margin: 20px;
+	margin: 10px;
 }
-
+	
 #Aline-chart {
 	float: left;
-	margin: 20px;
+	margin: 10px;
 }
-
+	
 #Bline-chart {
 	float: left;
-	margin: 20px;
+	margin: 10px;
 }
 
 .events .card {
@@ -110,6 +109,7 @@ p{
 
 .events .card-body {
   z-index: 10;
+  width: 550px;
   background: #fff;
   border-top: 4px solid #fff;
   padding: 30px;

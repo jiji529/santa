@@ -23,7 +23,7 @@ public class ChartController {
 	@GetMapping("/chartTest")
 	String chartTest() {
 		
-		return "chart";
+		return "detail.detail";
 	}
 	
 	@ResponseBody

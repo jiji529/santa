@@ -7,41 +7,23 @@
 <head>
 <meta charset="UTF-8">
 <title>SANTA</title>
-
-
-  <!-- ======= TOP Header ======= -->
-  <jsp:include page="../header.jsp"></jsp:include>
-
   <meta content="" name="description">
   <meta content="" name="keywords">
+  
+   <!-- ======= TOP Header ======= -->
+  <jsp:include page="../header.jsp"></jsp:include>
   
   <!-- 상세페이지: event -->
   <link rel="stylesheet" href="css/event.css">
   
   <!-- 리뷰추가 새창 -->
   <link rel="stylesheet" href="css/review.css">
-
-  <!-- Favicons -->
-  <link href="resources/img/favicon.png" rel="icon">
-  <link href="resources/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="resources/vendor/aos/aos.css" rel="stylesheet">
-  <link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="resources/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-  <!-- Template Main CSS File -->
-  <link href="resources/assets/css/style.css" rel="stylesheet">
   
-  
+  <style>
+  .card-img > img{
+  padding-bottom: 50px; 
+  }
+  </style>
 </head>
 <body>
   <main id="main" class="min">
@@ -50,11 +32,11 @@
     <section id="events" class="events">
       <div id="product" class="container" data-aos="fade-up">
 
-        <div class="row">
+        <div class="row mmmmm">
           <div class="col-md-6 d-flex align-items-stretch">
             <div class="card">
               <div class="card-img">
-                <img src="resources/img/product/${product.pImg1}" alt="제품사진">
+                <img src="resources/img/${product.pImg1}" alt="제품사진">
               </div>
        
             </div>
@@ -73,7 +55,7 @@
                 
                 <div id="redBlueButton">
                 	<button type="button" class="OneRedBtn btn btn-danger">
-                		<div class="btnDesign" id="FrontRed"><a href="buy.do?pNo=${product.pNo}">구매</a></div>
+                		<div class="btnDesign" id="FrontRed">구매</div>
                 		<div class="btnDesign" id="BackRed">
                 			<p class="p1">
                 				<fmt:formatNumber value="${product.immediatePurchacePrice}" pattern="#,###,###"/><span class="p2">원</span>
@@ -82,7 +64,7 @@
                 		</div>
                 	</button>
                 	
-                	<button type="button" class="btn btn-danger">
+                	<button type="button" class="btn btn-success">
                 		<div class="btnDesign" id="FrontRed">판매</div>
                 		<div class="btnDesign" id="BackRed">
                 			<p class="p1">
@@ -95,17 +77,21 @@
                 <div class="d-grid gap-1">
                 	<button type="button" class="btn btn-light btn-lg"><div class="OneLikeBtn">관심 상품</div></button>
                 </div>
-                <!-- <p class="card-text">Sed ut perspiciatis unde omniddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddds iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p> -->
               </div>
             </div>
 
           </div>
         </div>
         <div id="graph-center">
-        	<h1 class="text-center">상품 등급 별 거래현황</h1>
-			<canvas id="Sline-chart" width="400vw" height="400vh"></canvas>
+		    <h1 class="text-center">상품 등급 별 거래현황</h1>
+		    <div class="gap-2 col-5 mx-auto">
+			    <button id="SchartBtn" class="btn btn-light">S등급 상품 차트보기</button>
+				<button id="AchartBtn" class="btn btn-light">A등급 상품 차트보기</button>
+				<button id="BchartBtn" class="btn btn-light">B등급 상품 차트보기</button>
+			</div>
+			<canvas id="Sline-chart" width="400vW" height="400vh"></canvas>
 			<canvas id="Aline-chart" width="400vw" height="400vh"></canvas>
-			<canvas id="Bline-chart" width="400vw" height="400vh"></canvas>
+			<canvas id="Bline-chart" width="400vw" height="400vh"></canvas> 
 		</div>
 
       </div>
@@ -118,7 +104,7 @@
         <div class="section-title">
           <h2>Review</h2>
           <p>Review</p>
-          <button type="button" id="rvAdd">리뷰추가</button>
+          <button type="button" id="rvAdd" class="btn btn-light">리뷰추가</button>
           
         </div>
 
