@@ -72,7 +72,7 @@ public class ProductController {
 	@PostMapping("/rvSave/ajax")
 		String rvSave (ReviewVO rvo, @SessionAttribute("loginUser") MemberVO mvo){
 		
-		final String uploadPath = "C:/upload/";
+		final String uploadPath = "/home/poly4/upload/";
 		
 		System.out.println(rvo.getpNo());
 		

@@ -19,7 +19,7 @@
 	<resources location="/resources/css/" mapping="/css/**"></resources>
 	<resources location="/resources/js/" mapping="/js/**"></resources>
 	<resources location="/resources/vendor/" mapping="/vendor/**"></resources>
-	<resources location="file:///C:/upload/" mapping="/upload/**"></resources>
+	<resources location="file:///home/poly4/upload/" mapping="/upload/**"></resources>
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
