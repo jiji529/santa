@@ -27,7 +27,7 @@
 				<div>
 					<a href="${pageContext.request.contextPath}/login.do">로그인</a> <a
 						href="${pageContext.request.contextPath}/member/join">회원가입</a> <a
-						href="">마이페이지</a> <a href=""><i class="fa fa-shopping-cart"
+						href="${pageContext.request.contextPath}/login.do">마이페이지</a> <a href=""><i class="fa fa-shopping-cart"
 						aria-hidden="true"></i></a>장바구니
 				</div>
 			</c:if>
@@ -36,7 +36,7 @@
 				<div>
 					<p>${loginUser.userEmail}님환영합니다!</p>
 					<a href="${pageContext.request.contextPath}/logout.do">로그아웃</a> <a
-						href="">마이페이지</a> <a href=""><i class="fa fa-shopping-cart"
+						href="/mypage">마이페이지</a> <a href=""><i class="fa fa-shopping-cart"
 						aria-hidden="true"></i></a>
 				</div>
 			</c:if>
