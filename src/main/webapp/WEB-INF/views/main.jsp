@@ -25,16 +25,12 @@ ul {
 
 </style>
 
-<!-- 파비콘! -->
-<link href="resources/img/favicon.png" rel="icon">
+  <!-- ======= TOP Header ======= -->
+  <jsp:include page="header.jsp"></jsp:include>
 
 </head>
 <body>
   <!-- ======= Header ======= -->
-  <div>
-  <jsp:include page="header.jsp"></jsp:include>
-  </div>
-  
  <header style='height: 50px;'>	<!-- 메뉴 헤더 height: 50px; -->
 	<div class="menu">
 		<div class="menu_index">

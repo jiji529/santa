@@ -4,14 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
+  
     <link type="text/css" rel="stylesheet" href="resources/css/member.css">
     <title>로그인</title>
+
+  <!-- ======= TOP Header ======= -->
+  <jsp:include page="header.jsp"></jsp:include>
+  
 </head>
 <body>
-    <header>
-        <jsp:include page="header.jsp"></jsp:include>
-    </header>
     <div class="container">
         <div class="login-content">
             <h1 class="h1">Santa</h1>
