@@ -1,76 +1,202 @@
 window.onload = function () {
-/* 
-    let labels : [];
-    let datasets : [];
 
-    const grade_data = {
-        labels: [],
-        datasets: [{
-            data: [],
-            //label: "S등급",
-            borderColor: "#3e95cd",
-            fill: false
-        }]
-    } */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
 
-    //let x = grade_data.labels.put
-    //let y = grade_data.datasets.date.put
+document.querySelector('#SchartBtn').onclick = function(){
 
-    const grade_data = {
-        labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
-        datasets: [{
-            data: [86,114,106,106,107,111,133,221,783,2478],
-            //label: "S등급",
-            borderColor: "#3e95cd",
-            fill: false
-        }]
-      }
-    
-    new Chart(document.getElementById("Sline-chart"), {
-        type: 'line',
-        data: grade_data,
-        options: {
-        	responsive: false,
-            title: {
-            display: true
-            //, text: 'World population per region (in millions)'
-            }
+    let pNo = 1;
+
+    fetch('/ajax/chartTest?pNo=' + pNo, {
+        method: 'GET'
+    }).then(response =>response.json())
+    .then(function(chartMap){
+        console.log(chartMap);
+
+        let labels = [];
+        let data = [];
+        
+        for (let i = 0; i < chartMap.SL.length; i++) {
+            const s = chartMap.SL[i];
+
+            labels.push(s.saleEnd);
+            data.push(s.salePrice);
+
         }
+        console.log(labels);
+        console.log(data);
+
+        const grade_data = {
+            
+            labels: labels,
+            datasets: [{
+                label: "S등급",
+                data: data,
+                borderColor: "#3e95cd",
+                fill: false
+            }]
+        }
+
+        new Chart(document.getElementById("Sline-chart"), {
+            type: 'line',
+            data: grade_data,
+            options: {
+                responsive: false,
+                plugins: {
+                    title: {
+                        display: true
+                        //, text: 'World population per region (in millions)'
+                    }
+                },
+                scales: {
+                    yAxes: [
+                        {
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }
+                    ]
+                }
+            }
+        });
+
+        
+    }).catch(function(error) {
+        console.log(error);
+        alert('차트를 불러올 수 없습니다.');
     });
 
-    new Chart(document.getElementById("Aline-chart"), {
-        type: 'line',
-        data: {
-        labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
-        datasets: [{
-            data: [6,3,2,2,7,26,82,172,312,433],
-            borderColor: "#c45850",
-            fill: false
-        }]
-        },
-        options: {
-        	responsive: false,
-            title: {
-            display: true
-            }
+}
+
+document.querySelector('#AchartBtn').onclick = function(){
+
+    let pNo = 1;
+
+    fetch('/ajax/chartTest?pNo=' + pNo, {
+        method: 'GET'
+    }).then(response =>response.json())
+    .then(function(chartMap){
+        console.log(chartMap);
+
+        let labels = [];
+        let data = [];
+        
+        for (let i = 0; i < chartMap.AL.length; i++) {
+            const s = chartMap.AL[i];
+
+            console.log(typeof s.salePrice);
+
+            labels.push(s.saleEnd);
+            data.push(s.salePrice);
+
         }
+        console.log(labels);
+        console.log(data);
+
+        const grade_data = {
+            
+            labels: labels,
+            datasets: [{
+                label: "A등급",
+                data: data,
+                borderColor: "#c45850",
+                fill: false
+            }]
+        }
+
+        new Chart(document.getElementById("Aline-chart"), {
+            type: 'line',
+            data: grade_data,
+            options: {
+                responsive: false,
+                plugins: {
+                    title: {
+                        display: true
+                        //, text: 'World population per region (in millions)'
+                    }
+                },
+                scales: {
+                    yAxes: [
+                        {
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }
+                    ]
+                }
+            }
+        });
+
+        
+    }).catch(function(error) {
+        console.log(error);
+        alert('차트를 불러올 수 없습니다.');
     });
 
-    new Chart(document.getElementById("Bline-chart"), {
-        type: 'line',
-        data: {
-        labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
-        datasets: [{
-            data: [168,170,178,190,203,276,408,547,675,734],
-            borderColor: "#3cba9f",
-            fill: false
-        }]
-        },
-        options: {
-        	responsive: false,
-            title: {
-            display: true
-            }
+}
+
+document.querySelector('#BchartBtn').onclick = function(){
+
+    let pNo = 1;
+
+    fetch('/ajax/chartTest?pNo=' + pNo, {
+        method: 'GET'
+    }).then(response =>response.json())
+    .then(function(chartMap){
+        console.log(chartMap);
+
+        let labels = [];
+        let data = [];
+        
+        for (let i = 0; i < chartMap.BL.length; i++) {
+            const s = chartMap.BL[i];
+
+            labels.push(s.saleEnd);
+            data.push(s.salePrice);
+
         }
+        console.log(labels);
+        console.log(data);
+
+        const grade_data = {
+            
+            labels: labels,
+            datasets: [{
+                label: "B등급",
+                data: data,
+                borderColor: "#3cba9f",
+                fill: false
+            }]
+        }
+
+        new Chart(document.getElementById("Bline-chart"), {
+            type: 'line',
+            data: grade_data,
+            options: {
+                responsive: false,
+                plugins: {
+                    title: {
+                        display: true
+                        //, text: 'World population per region (in millions)'
+                    }
+                },
+                scales: {
+                    yAxes: [
+                        {
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }
+                    ]
+                }
+            }
+        });
+
+        
+    }).catch(function(error) {
+        console.log(error);
+        alert('차트를 불러올 수 없습니다.');
     });
+
+}
+
 }

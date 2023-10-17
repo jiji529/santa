@@ -1,24 +1,23 @@
 package com.sendandtake.www.product.model;
 
-import java.util.Date;
 
 public class ChartVO {
 	
 	private String grade;
-	private Date saleEnd;
+	private String saleEnd;
 	private int salePrice;
 	
+	public String getSaleEnd() {
+		return saleEnd;
+	}
+	public void setSaleEnd(String saleEnd) {
+		this.saleEnd = saleEnd;
+	}
 	public String getGrade() {
 		return grade;
 	}
 	public void setGrade(String grade) {
 		this.grade = grade;
-	}
-	public Date getSaleEnd() {
-		return saleEnd;
-	}
-	public void setSaleEnd(Date saleEnd) {
-		this.saleEnd = saleEnd;
 	}
 	public int getSalePrice() {
 		return salePrice;

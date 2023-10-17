@@ -28,7 +28,7 @@
 </select>
 
 <select id="chart" resultType="Chart">
-	SELECT grade, saleEnd, salePrice 
+	SELECT grade, date_format(saleEnd, "%Y-%m-%d") saleEnd, salePrice 
 	FROM tbl_sale_product 
 	WHERE progress IN (6, 7, 8) AND pNo = ${pNo}
 	ORDER BY saleEnd;

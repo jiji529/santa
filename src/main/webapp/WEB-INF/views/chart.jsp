@@ -13,17 +13,17 @@
 	
 	#Sline-chart {
 		float: left;
-		margin: 20px;
+		margin: 10px;
 	}
 	
 	#Aline-chart {
 		float: left;
-		margin: 20px;
+		margin: 10px;
 	}
 	
 	#Bline-chart {
 		float: left;
-		margin: 20px;
+		margin: 10px;
 	}
 </style>
 </head>
@@ -31,9 +31,14 @@
 
 	<div id="graph-center">
 	    <h1 class="text-center">상품 등급 별 거래현황</h1>
-		<canvas id="Sline-chart" width="400vw" height="400vh"></canvas>
+	    <div>
+	    <button id="SchartBtn">S등급 상품 차트보기</button>
+		<button id="AchartBtn">A등급 상품 차트보기</button>
+		<button id="BchartBtn">B등급 상품 차트보기</button>
+		</div>
+		<canvas id="Sline-chart" width="400vW" height="400vh"></canvas>
 		<canvas id="Aline-chart" width="400vw" height="400vh"></canvas>
-		<canvas id="Bline-chart" width="400vw" height="400vh"></canvas>
+		<canvas id="Bline-chart" width="400vw" height="400vh"></canvas> 
 	</div>
 
 
