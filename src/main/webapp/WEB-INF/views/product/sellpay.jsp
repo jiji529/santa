@@ -82,8 +82,8 @@
                     <span>일반 결제</span>
                     <ul>
                         <li><a class="btn" data-paytype="credit">신용카드</a></li>
-                        <li><a class="btn" data-paytype="nPay">네이버페이<img src="Npay.png" /></a></li>
-                        <li><a class="btn" data-paytype="kPay">카카오페이<img src="Kpay.png" /></a></li>
+                        <li><a class="btn" data-paytype="nPay">네이버페이<img src="/resources/img/pay/Npay.png" /></a></li>
+                        <li><a class="btn" data-paytype="kPay">카카오페이<img src="/resources/img/pay/Kpay.png" /></a></li>
                     </ul>
                 </div>
             </div>

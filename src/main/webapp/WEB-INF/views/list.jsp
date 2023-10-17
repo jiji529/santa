@@ -18,6 +18,7 @@
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" />
 <link href="resources/css/common.css" rel="stylesheet">
+
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script
@@ -66,7 +67,6 @@
 					<i class="fa fa-search" aria-hidden="true"></i>
 				</button>
 			</form>
-			<div class="menu_indexr"></div>
 		</div>
 	</header>
 	<!-- End Header -->

@@ -1,31 +1,50 @@
 /* 헤더 */
-
 header #menu_indexr {
-	position: relative;
-	top: -60px;
-    display: inline-block;
-}
-
-header .search_box1 {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    left:0;
     width: 370px;
     height: 45px;
     border-radius: 5px;
-    margin-left: 450px;
-    padding-left: 10px;
-    padding-right: 50px;
-    box-sizing: border-box;
+  	border: solid 1px rgba(0, 0, 0, 0.3);
+  	z-index: 1;
+  	opacity: 1;
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#wrapper{
+	padding-top: 50px;
+}
+
+header .search_box1 {
+	width: 300px;
+	border: none;
+	-webkit-appearance: none;
+	margin-left: 10px;
+	padding-bottom: 6px;
+	overflow: auto;
+	z-index: -1;
+	font-size: 15px;
+}
+header .search_box1:focus{
+	outline: none;
+	width: 300px;
+	text-align: left;
 }
 
 header .search_button1 {
-    position: absolute;
-    left: 510px;
-    top: 4px;
+    padding-left: 10px;
     background: #fff;
     border: none;
-    margin-left: 270px;
     font-size: 20px;
     color: #333;
     outline: none;
+    padding-top: 6px;
 }
 
 /* 메인 */

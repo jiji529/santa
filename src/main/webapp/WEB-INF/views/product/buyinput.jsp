@@ -32,7 +32,7 @@
     <!-- ======= 구매 폼 ======= -->
     <div class="content">
         <div class="content_type text-center">
-            <p>즉시 구매하기</p>
+            <p>구매하기</p>
         </div>
         <div class="wrap ctn">
             <div id="item_info">
