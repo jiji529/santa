@@ -54,7 +54,7 @@
 		</div>
 		<div class="logo">
 			<div>
-				<a href="/"> <img src="/resources/img/로고.png" alt="헤더로고"></a>
+				<a href="/"> <img src="/resources/img/logo_2.png" alt="헤더로고"></a>
 				<!-- 				<form action="#"> -->
 				<!-- 					<input type="text" name="search"> -->
 				<!-- 					<button> -->

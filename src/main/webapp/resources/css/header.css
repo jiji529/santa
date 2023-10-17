@@ -84,8 +84,14 @@ header > .top > div > a:last-child {
 /*     border-right: 1px solid #e9e9e9; */
 }
 
-header > .logo {	/*로고 크기 90px*/
-    height: 90px;
+/* header > .logo {	로고 크기 90px */
+/*     height: 90px; */
+/* /*     border-bottom: 1px solid #e9e9e9; */ */
+/* } */
+
+header > .logo img {	/*로고 크기 90px*/
+	width: 150px;
+    height: 89px;
 /*     border-bottom: 1px solid #e9e9e9; */
 }
 
