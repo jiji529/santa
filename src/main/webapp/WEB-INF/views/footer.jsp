@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 
 <!-- footer.css -->
-<link href="/resources/css/footer.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/css/footer.css" rel="stylesheet">
 </head>
 <body>
 <!-- ======= Footer ======= -->

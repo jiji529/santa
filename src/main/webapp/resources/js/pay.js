@@ -41,7 +41,6 @@ window.onload = () => {
     });
   });
   
-
   // 구매입찰에서 버튼에 불 안들어오면 전송 막음
   document.querySelector('#payform').addEventListener('submit', (e) => {
     if(e.target.querySelector('button').classList.contains('btn_not_active')){
