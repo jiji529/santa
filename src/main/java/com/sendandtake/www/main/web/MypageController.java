@@ -26,4 +26,10 @@ public class MypageController {
 	String selling() {
 		return "mypage/selling";
 	}
+	
+	//관심상품
+	@GetMapping("/saved")
+	String saved() {
+		return "mypage/saved";
+	}
 }

@@ -33,7 +33,7 @@
                       class="menu_link nuxt-link-exact-active active" aria-current="page"> 판매 내역 </a></li>
                   <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href="" class="menu_link"> 보관 판매 </a>
                   </li>
-                  <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href="" class="menu_link"> 관심 상품 </a>
+                  <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href="/saved" class="menu_link"> 관심 상품 </a>
                   </li>
                 </ul>
               </div>

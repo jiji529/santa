@@ -34,7 +34,7 @@
                       <li data-v-7a824f04="" class="menu_item">
                       <a data-v-7a824f04="" href="" class="menu_link"> 보관 판매</a></li>
                       <li data-v-7a824f04="" class="menu_item">
-                      <a data-v-7a824f04="" href="" class="menu_link"> 관심 상품 </a></li>
+                      <a data-v-7a824f04="" href="/saved" class="menu_link"> 관심 상품 </a></li>
                     </ul>
                   </div>
                 </nav>
@@ -204,7 +204,7 @@
                     </div>
                   </div>
                   <div data-v-6752ceb2="" data-v-52a917ff="" class="my_home_title">
-                    <h3 data-v-6752ceb2="" class="title"> 관심 상품 </h3><a data-v-6752ceb2="" href=""
+                    <h3 data-v-6752ceb2="" class="title"> 관심 상품 </h3><a data-v-6752ceb2="" href="/saved"
                       class="btn_more"><span data-v-6752ceb2="" class="btn_txt">더보기</span><svg data-v-6752ceb2=""
                         class="icon sprite-icons arr-right-gray">
                         <use data-v-6752ceb2="" href=""></use>

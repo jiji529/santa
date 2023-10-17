@@ -119,7 +119,7 @@ html, body {
     color: #fff;
 }
 
-.btn:hover {
+.btn1:hover {
     background: #999;
 }
 
@@ -148,8 +148,8 @@ html, body {
     z-index: 1;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
 }
