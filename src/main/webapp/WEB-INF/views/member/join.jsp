@@ -12,12 +12,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/member.css">
     <title>회원가입</title>
+    
+  <!-- ======= TOP Header ======= -->
+  <jsp:include page="../header.jsp"></jsp:include>
+    
 </head>
 
 <body>
-    <div class="header">
-        <jsp:include page="../header.jsp"></jsp:include>
-    </div>
 
     <div class="container">
         <div class="join-page">

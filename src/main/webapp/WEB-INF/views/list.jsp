@@ -6,6 +6,11 @@
 <head>
 <meta charset="UTF-8">
 <title>SANTA</title>
+
+
+  <!-- ======= TOP Header ======= -->
+  <jsp:include page="header.jsp"></jsp:include>
+
 <link rel="stylesheet"
 	href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
 <link rel="stylesheet"
@@ -51,11 +56,6 @@
     </script>
 </head>
 <body>
-	<!-- ======= Header ======= -->
-	<div>
-		<jsp:include page="header.jsp"></jsp:include>
-	</div>
-
 	<header style='height: 50px;'>
 		<!-- 메뉴 헤더 height: 50px; -->
 		<div class="menu">
