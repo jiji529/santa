@@ -996,16 +996,16 @@ a:hover {
         min-height: 100vh;
         padding-top: 44px
     }
+} */
+
+.header[data-v-520bec6f] {
+    box-shadow: none
 }
 
-/* .header[data-v-520bec6f] {
-    box-shadow: none
-} */
-
-/* .header.lg[data-v-520bec6f],
+.header.lg[data-v-520bec6f],
 .header.md[data-v-520bec6f] {
     box-shadow: 0 1px 0 0 rgba(0, 0, 0, .1)
-} */
+}
 
 .container.my[data-v-520bec6f] {
     display: flex;
@@ -1060,21 +1060,549 @@ a:hover {
     padding-bottom: calc(50px + env(safe-area-inset-bottom))
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    height: 80px;
-  }
+/* 마이페이지 판매내역&구매내역*/
+  .period_search[data-v-77765e40] {
+    background-color: #fafafa;
+    border-bottom: 1px solid #ebebeb;
+    display: flex;
+    justify-content: center;
+    padding: 14px
+}
 
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
+.period_month[data-v-77765e40] {
+    margin-right: 20px
+}
+
+.month_item[data-v-77765e40],
+.month_list[data-v-77765e40] {
+    display: flex
+}
+
+.month_item+.month_item[data-v-77765e40] {
+    margin-left: 4px
+}
+
+.month_item.custom[data-v-77765e40] {
+    display: none
+}
+
+.month_item.custom>.month_link[data-v-77765e40] {
+    background-color: #222;
+    border-color: #d3d3d3;
+    color: #fff
+}
+
+.month_link[data-v-77765e40] {
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    color: rgba(34, 34, 34, .8);
+    display: flex;
+    font-size: 13px;
+    height: 32px;
+    justify-content: center;
+    letter-spacing: -.07px;
+    line-height: 30px;
+    min-width: 62px;
+    padding: 0 12px
+}
+
+.period_option[data-v-77765e40] {
+    display: none
+}
+
+.btn_search[data-v-77765e40] {
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    color: rgba(34, 34, 34, .8);
+    cursor: pointer;
+    font-size: 13px;
+    height: 32px;
+    letter-spacing: -.07px;
+    line-height: 30px;
+    padding: 0 16px
+}
+
+.btn_search.is_active[data-v-77765e40] {
+    background-color: #222;
+    border-color: #d3d3d3;
+    color: #fff
+}
+
+.md .period_month[data-v-77765e40] {
+    display: none
+}
+
+.mo .period_search[data-v-77765e40],
+.sm .period_search[data-v-77765e40] {
+    padding: 15px 24px
+}
+
+.mo .period_month[data-v-77765e40],
+.sm .period_month[data-v-77765e40] {
+    margin-right: 0;
+    width: 100%
+}
+
+.mo .month_item[data-v-77765e40],
+.sm .month_item[data-v-77765e40] {
+    width: 100%
+}
+
+.mo .month_item.custom[data-v-77765e40],
+.sm .month_item.custom[data-v-77765e40] {
+    display: flex
+}
+
+.mo .month_link[data-v-77765e40],
+.sm .month_link[data-v-77765e40] {
+    border-radius: 6px;
+    height: 36px;
+    letter-spacing: -.2px;
+    line-height: 34px;
+    padding: 0 4px;
+    width: 100%
+}
+
+.mo .period_option.open[data-v-77765e40],
+.sm .period_option.open[data-v-77765e40] {
+    display: block;
+    margin-top: 8px;
+    position: relative
+}
+
+.mo .period_option.open .selected_txt[data-v-77765e40],
+.sm .period_option.open .selected_txt[data-v-77765e40] {
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    border-radius: 6px;
+    color: rgba(34, 34, 34, .8);
+    display: block;
+    font-size: 14px;
+    height: 40px;
+    letter-spacing: -.21px;
+    line-height: 38px;
+    padding: 0 28px 0 16px;
+    text-align: left;
+    width: 100%
+}
+
+.mo .period_option.open .ico-arr-down-gray[data-v-77765e40],
+.sm .period_option.open .ico-arr-down-gray[data-v-77765e40] {
+    height: 18px;
+    margin-top: -9px;
     position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
+    right: 8px;
+    top: 50%;
+    width: 18px
+}
+
+.mo .period_option.open select[data-v-77765e40],
+.sm .period_option.open select[data-v-77765e40] {
+    height: 40px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.sm .period_search[data-v-77765e40] {
+    padding-left: 16px;
+    padding-right: 16px
+}
+    .search_info[data-v-a54c4c26] {
+        padding: 12px 0
+    }
+    
+    .search_info .info_item[data-v-a54c4c26] {
+        color: rgba(34, 34, 34, .5);
+        font-size: 12px;
+        letter-spacing: -.06px;
+        padding-left: 7px;
+        position: relative
+    }
+    
+    .search_info .info_item[data-v-a54c4c26]:before {
+        background-color: rgba(34, 34, 34, .5);
+        border-radius: 50%;
+        content: "";
+        height: 3px;
+        left: 0;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 3px
+    }
+    
+    .mo .search_info[data-v-a54c4c26] {
+        padding: 8px 24px
+    }
+    
+    .sm .search_info[data-v-a54c4c26] {
+        padding: 8px 16px
+    }
+    .period_calendar_wrapper[data-v-14e5ae1c] {
+        display: flex
+    }
+    
+    .period_btn_box[data-v-14e5ae1c] {
+        margin-left: 4px
+    }
+    
+    .period_calendar[data-v-14e5ae1c] {
+        position: relative
+    }
+    
+    .period_calendar .calendar_wrap[data-v-14e5ae1c] {
+        background-color: #fff;
+        border: 1px solid #ebebeb;
+        cursor: pointer;
+        display: inline-block;
+        height: 32px;
+        line-height: 30px;
+        padding: 0 30px 0 12px;
+        position: relative;
+        vertical-align: top;
+        width: 120px
+    }
+    
+    .period_calendar .calendar_open .cal_input[data-v-14e5ae1c] {
+        color: #222
+    }
+    
+    .period_calendar .calendar_open .cal_btn[data-v-14e5ae1c] {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iIzIyMiIgZD0iTTkgMTFIN3YyaDJ2LTJ6bTQgMGgtMnYyaDJ2LTJ6bTQgMGgtMnYyaDJ2LTJ6bTItN2gtMVYyaC0ydjJIOFYySDZ2Mkg1Yy0xLjExIDAtMS45OS45LTEuOTkgMkwzIDIwYTIgMiAwIDAgMCAyIDJoMTRjMS4xIDAgMi0uOSAyLTJWNmMwLTEuMS0uOS0yLTItMnptMCAxNkg1VjloMTR2MTF6Ii8+PC9zdmc+)
+    }
+    
+    .period_calendar .swung_dash[data-v-14e5ae1c] {
+        color: rgba(34, 34, 34, .8);
+        display: inline-block;
+        font-size: 14px;
+        letter-spacing: -.21px;
+        line-height: 32px
+    }
+    
+    .period_calendar .cal_input[data-v-14e5ae1c] {
+        color: rgba(34, 34, 34, .8);
+        cursor: default;
+        font-size: 13px;
+        letter-spacing: -.07px;
+        width: 100%
+    }
+    
+    .period_calendar .cal_btn[data-v-14e5ae1c] {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSI1NiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0JCQiIgZD0iTTIxIDI1LjY2N2gtNC42Njd2NC42NjZIMjF2LTQuNjY2em05LjMzMyAwaC00LjY2NnY0LjY2Nmg0LjY2NnYtNC42NjZ6bTkuMzM0IDBIMzV2NC42NjZoNC42Njd2LTQuNjY2em00LjY2Ni0xNi4zMzRINDJWNC42NjdoLTQuNjY3djQuNjY2SDE4LjY2N1Y0LjY2N0gxNHY0LjY2NmgtMi4zMzNjLTIuNTkgMC00LjY0NCAyLjEtNC42NDQgNC42NjdMNyA0Ni42NjdhNC42NjYgNC42NjYgMCAwIDAgNC42NjcgNC42NjZoMzIuNjY2QTQuNjggNC42OCAwIDAgMCA0OSA0Ni42NjdWMTRhNC42OCA0LjY4IDAgMCAwLTQuNjY3LTQuNjY3em0wIDM3LjMzNEgxMS42NjdWMjFoMzIuNjY2djI1LjY2N3oiLz48L3N2Zz4=);
+        background-size: 18px 18px;
+        height: 18px;
+        margin-top: -9px;
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        width: 18px
+    }
+    
+    .period_calendar[data-v-14e5ae1c] .vc-popover-content-wrapper {
+        -webkit-transform: translate(-1px, 30px) !important;
+        transform: translate(-1px, 30px) !important
+    }
+    
+    .period_calendar[data-v-14e5ae1c] .vc-popover-content {
+        border: 1px solid #d3d3d3;
+        border-radius: 0;
+        height: 302px;
+        margin-top: 0 !important;
+        overflow: hidden;
+        width: 256px
+    }
+    
+    .period_calendar[data-v-14e5ae1c] .vc-header {
+        padding: 20px 0 11px
+    }
+    
+    .period_calendar[data-v-14e5ae1c] .vc-header .vc-popover-content-wrapper {
+        display: none
+    }
+    
+    .period_calendar[data-v-14e5ae1c] .vc-title {
+        cursor: default;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -.1px
+    }
+    
+    .period_calendar[data-v-14e5ae1c] .vc-title:hover {
+        opacity: 1
+    }
+    
+    .period_calendar[data-v-14e5ae1c] .vc-arrows-container {
+        padding: 0 15px;
+        top: 23px
+    }
+    
+    .period_calendar[data-v-14e5ae1c] .vc-arrow {
+        border: 0;
+        height: 24px;
+        width: 24px
+    }
+    
+    .period_calendar[data-v-14e5ae1c] .vc-arrow:first-child {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSI+PHBhdGggc3Ryb2tlPSIjMjIyIiBzdHJva2Utd2lkdGg9IjEuNSIgZD0ibTE1IDE4LTYtNiA2LTYiLz48L3N2Zz4=)
+    }
+    
+    .period_calendar[data-v-14e5ae1c] .vc-arrow:last-child {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSI+PHBhdGggc3Ryb2tlPSIjMjIyIiBzdHJva2Utd2lkdGg9IjEuNSIgZD0ibTkgNiA2IDYtNiA2Ii8+PC9zdmc+)
+    }
+    
+    .period_calendar[data-v-14e5ae1c] .vc-arrow:hover {
+        background-color: transparent
+    }
+    
+    .period_calendar[data-v-14e5ae1c] .vc-popover-caret,
+    .period_calendar[data-v-14e5ae1c] .vc-svg-icon {
+        display: none
+    }
+    
+    .period_calendar[data-v-14e5ae1c] .vc-weeks {
+        height: 192px;
+        overflow: hidden;
+        padding: 0 16px
+    }
+    
+    .period_calendar[data-v-14e5ae1c] .vc-weekday {
+        color: rgba(0, 0, 0, .6);
+        font-size: 13px;
+        font-weight: 400;
+        height: 32px;
+        letter-spacing: -.07px;
+        line-height: 30px;
+        width: 32px
+    }
+    
+    .period_calendar[data-v-14e5ae1c] .vc-day-content {
+        color: #222;
+        font-size: 13px;
+        font-weight: 400;
+        height: 32px;
+        letter-spacing: -.03px;
+        line-height: 30px;
+        margin: 0;
+        width: 32px
+    }
+    
+    .period_calendar[data-v-14e5ae1c] .vc-day-content.selected {
+        background-color: #222;
+        color: #fff
+    }
+    
+    .period_calendar[data-v-14e5ae1c] .vc-day-content.started {
+        border: 1px solid #222
+    }
+    
+    .period_calendar[data-v-14e5ae1c] .is-not-in-month .vc-day-content {
+        color: rgba(34, 34, 34, .3);
+        cursor: default;
+        opacity: 1
+    }
+    
+    .period_calendar .btn_today[data-v-14e5ae1c] {
+        bottom: -43px;
+        font-size: 14px;
+        font-weight: 700;
+        height: 36px;
+        letter-spacing: -.21px;
+        line-height: 36px;
+        padding: 0 11px;
+        position: absolute;
+        right: 8px
+    }
+    
+    .btn_search[data-v-14e5ae1c] {
+        background-color: #222;
+        border: 1px solid #d3d3d3;
+        color: #fff;
+        cursor: pointer;
+        font-size: 13px;
+        height: 32px;
+        letter-spacing: -.07px;
+        line-height: 30px;
+        padding: 0 16px
+    }
+    
+    .btn_search.disabled[data-v-14e5ae1c] {
+        cursor: default
+    }
+    .purchase_head[data-v-7a0ddb52] {
+        align-items: center;
+        border-bottom: 1px solid #ebebeb;
+        display: flex;
+        padding: 12px
+    }
+    
+    .head_product[data-v-7a0ddb52] {
+        display: flex
+    }
+    
+    .head_status[data-v-7a0ddb52] {
+        align-items: center;
+        display: flex;
+        margin-left: auto;
+        text-align: right
+    }
+    
+    .head_status .status_box[data-v-7a0ddb52] {
+        margin-left: 10px;
+        width: 134px
+    }
+    
+    .head_status .status_box.active_first[data-v-7a0ddb52] {
+        font-weight: 700
+    }
+    
+    .head_status .status_box.ascending .status_link[data-v-7a0ddb52]:after {
+        background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0QzRDNEMyIgZD0ibTEyIDEzLTQgNS00LTVoOHoiLz48cGF0aCBmaWxsPSIjMjIyIiBkPSJtNCAxMSA0LTUgNCA1SDR6Ii8+PC9zdmc+) no-repeat
+    }
+    
+    .head_status .status_box.descending .status_link[data-v-7a0ddb52]:after {
+        background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0QzRDNEMyIgZD0ibTQgMTEgNC01IDQgNUg0eiIvPjxwYXRoIGZpbGw9IiMyMjIiIGQ9Im0xMiAxMy00IDUtNC01aDh6Ii8+PC9zdmc+) no-repeat
+    }
+    
+    .head_status .status_box.field_price[data-v-7a0ddb52] {
+        display: none;
+        width: 140px
+    }
+    
+    .bidding .head_status .status_box.field_price[data-v-7a0ddb52] {
+        display: block
+    }
+    
+    .head_status .status_box.field_date_purchased[data-v-7a0ddb52] {
+        display: none
+    }
+    
+    .bid.finished .head_status .status_box.field_date_purchased[data-v-7a0ddb52] {
+        display: block
+    }
+    
+    .head_status .status_box.field_date_paid[data-v-7a0ddb52] {
+        display: none
+    }
+    
+    .ask.finished .head_status .status_box.field_date_paid[data-v-7a0ddb52] {
+        display: block
+    }
+    
+    .head_status .status_box.field_expires_at[data-v-7a0ddb52] {
+        display: none
+    }
+    
+    .bidding .head_status .status_box.field_expires_at[data-v-7a0ddb52] {
+        display: block
+    }
+    
+    .head_status .status_box.field_status[data-v-7a0ddb52] {
+        display: none
+    }
+    
+    .finished .head_status .status_box.field_status[data-v-7a0ddb52],
+    .pending .head_status .status_box.field_status[data-v-7a0ddb52] {
+        display: block
+    }
+    
+    .head_status .status_link[data-v-7a0ddb52] {
+        display: inline-block;
+        font-size: 13px;
+        letter-spacing: -.07px;
+        line-height: 24px;
+        padding-right: 16px;
+        position: relative
+    }
+    
+    .head_status .status_link[data-v-7a0ddb52]:after {
+        background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0QzRDNEMyIgZD0ibTEyIDEzLTQgNS00LTVoOHptLTgtMiA0LTUgNCA1SDR6Ii8+PC9zdmc+) no-repeat;
+        content: "";
+        height: 24px;
+        position: absolute;
+        right: -4px;
+        top: 0;
+        width: 16px
+    }
+    
+    .head_status .status_txt[data-v-7a0ddb52] {
+        display: inline-block;
+        vertical-align: top
+    }
+    
+    .btn_filter[data-v-7a0ddb52] {
+        background-color: #fff;
+        border: 1px solid #d3d3d3;
+        border-radius: 12px;
+        display: inline-block;
+        font-size: 13px;
+        letter-spacing: -.07px;
+        line-height: 24px;
+        min-width: 120px;
+        padding: 5px 30px 5px 10px;
+        position: relative
+    }
+    
+    .ico-arr-dir-down-circle[data-v-7a0ddb52] {
+        position: absolute;
+        right: 5px;
+        top: 6px
+    }
+    
+    .mo .purchase_head[data-v-7a0ddb52],
+    .sm .purchase_head[data-v-7a0ddb52] {
+        padding-left: 24px;
+        padding-right: 24px
+    }
+    
+    .mo .head_status .status_link[data-v-7a0ddb52],
+    .sm .head_status .status_link[data-v-7a0ddb52] {
+        padding-right: 18px
+    }
+    
+    .mo .head_status .status_link[data-v-7a0ddb52]:after,
+    .sm .head_status .status_link[data-v-7a0ddb52]:after {
+        right: 0
+    }
+    
+    .mo .status_box[data-v-7a0ddb52],
+    .sm .status_box[data-v-7a0ddb52] {
+        margin-left: 4px;
+        width: 60px
+    }
+    
+    .mo .status_box.field_price[data-v-7a0ddb52],
+    .sm .status_box.field_price[data-v-7a0ddb52] {
+        width: 86px
+    }
+    
+    .mo .status_box.field_status[data-v-7a0ddb52],
+    .sm .status_box.field_status[data-v-7a0ddb52] {
+        width: 82px
+    }
+    
+    .mo .status_box.field_date_purchased[data-v-7a0ddb52],
+    .sm .status_box.field_date_purchased[data-v-7a0ddb52] {
+        width: 86px
+    }
+    
+    .mo .finished .field_status[data-v-7a0ddb52],
+    .sm .finished .field_status[data-v-7a0ddb52] {
+        width: 60px
+    }
+    
+    .mo .btn_filter[data-v-7a0ddb52],
+    .sm .btn_filter[data-v-7a0ddb52] {
+        min-width: 98px
+    }
+    
+    .sm .purchase_head[data-v-7a0ddb52] {
+        padding-left: 16px;
+        padding-right: 16px
+    }    
+
+
 

@@ -44,7 +44,7 @@
 				<div>
 					<p>${loginUser.userEmail}님 환영합니다!</p>
 					<a href="${pageContext.request.contextPath}/logout.do">로그아웃</a>
-					<a href="">마이페이지</a>
+					<a href="/mypage">마이페이지</a>
 					<a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i>관심상품</a>
 				</div>
 			</c:if>
