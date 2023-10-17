@@ -1,7 +1,9 @@
 package com.sendandtake.www.product.web;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,21 +26,20 @@ public class ChartController {
 		List<ChartVO> chartList = productService.selectXyList(pNo);
 
 		
-		List <ChartVO> SList = new ArrayList<ChartVO>(); 
-		List <ChartVO> AList = new ArrayList<ChartVO>(); 
-		List <ChartVO> BList = new ArrayList<ChartVO>();
+		List<ChartVO> SList = new ArrayList<ChartVO>(); 
+		List<ChartVO> AList = new ArrayList<ChartVO>(); 
+		List<ChartVO> BList = new ArrayList<ChartVO>();
 		
 
 		for (ChartVO cl : chartList) {
+
 			
-			String condition = cl.getGrade();
-			
-			 if (condition.equals('S')) { 
-			 System.out.println(condition);
+			 if (cl.getGrade().equals("S")) { 
+			 System.out.println(cl.getGrade());
 			 
 			 SList.add(cl);
 			 
-			 } else if (condition.equals('A')) {
+			 } else if (cl.getGrade().equals("A")) {
 			 
 			 AList.add(cl);
 			 
@@ -47,10 +48,8 @@ public class ChartController {
 			 BList.add(cl);
 			 
 			 }
-			 
-
 		}
-
+		//Map<String, List<ChartVO>> = new HashMap<String, List<ChartVO>>();
 		return "chart";
 	}
 
