@@ -16,7 +16,7 @@
     <div class="container">
         <div class="login-content">
             <h1 class="h1">Santa</h1>
-            <h2 class="h2">Login</h2>
+            <h2 class="h2" style= "font-size: 24px;">Login</h2>
             <form method="POST" role="form">
                 <input type="email" name="userEmail" class="form-control" placeholder="Email address" required>
                 <input type="password" name="userPwd" class="form-control" placeholder="Password" required>
@@ -24,6 +24,11 @@
             </form>
             <div>
                 <a href="${pageContext.request.contextPath}/member/join"><button type="submit" class="btn1">회원가입</button></a>
+            </div>
+            <div class="btn-cont">
+                <a class="btn-kakao" href="#" data-type="login">
+                    <img src="/resources/img/kakaologin.png" width="340" height="48"  alt="카카오 로그인 버튼"/>
+                </a>
             </div>
         </div>
     </div>

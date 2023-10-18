@@ -239,7 +239,7 @@
                             const msg = $(item).parent().find("label").text();
 
                             if (valid && !$(item).is(":checked")) {
-                                alert(`${msg}에 동의하지 않으셨습니다`);
+                                alert(`\${msg}에 동의하지 않으셨습니다`);
                                 valid = false;
                                 return;
                             }
