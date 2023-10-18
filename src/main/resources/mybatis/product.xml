@@ -10,6 +10,21 @@
 	LIMIT 16
 </select>
 
+<!-- <select id="totalList" resultType="Product"> -->
+<!--     SELECT * -->
+<!--     FROM product -->
+<!--     LIMIT #{offset}, #{perPage} -->
+<!-- </select> -->
+
+<select id="totalList" resultType="Product">
+		SELECT * FROM (<include refid="search"></include>) sub
+		LIMIT #{offset}, #{perPage}
+</select>
+
+<select id="total" resultType="Integer">
+	SELECT COUNT(*) FROM (<include refid="search"></include>) sub
+</select>
+
 <select id="product" resultType="Product">
 	SELECT *, (SELECT salePrice 
                  FROM tbl_sale_product 
@@ -36,6 +51,20 @@
 	WHERE progress IN (6, 7, 8) AND pNo = #{pNo}
 	ORDER BY saleEnd;
 </select>
+
+<sql id="search">
+		SELECT * FROM tbl_product
+		<where>
+				
+				pNo LIKE CONCAT(CONCAT('%', #{keyword}), '%')
+				or pName LIKE CONCAT(CONCAT('%', #{keyword}), '%')
+				or pCode LIKE CONCAT(CONCAT('%', #{keyword}), '%')
+				
+		</where> 
+		
+		ORDER BY pNo
+		
+</sql>
 
 
 

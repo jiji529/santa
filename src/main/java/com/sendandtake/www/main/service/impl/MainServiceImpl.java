@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.sendandtake.www.main.dao.MainDao;
 import com.sendandtake.www.main.model.MemberVO;
+import com.sendandtake.www.main.pager.Pager;
 import com.sendandtake.www.main.service.MainService;
 import com.sendandtake.www.product.dao.ProductDao;
 import com.sendandtake.www.product.model.ProductVO;
@@ -35,6 +36,11 @@ public class MainServiceImpl implements MainService {
 	public List<ProductVO> selectProductList() {
 		
 		return productDao.selectProductList();
+	}
+
+	@Override
+	public List<ProductVO> selectProductList(Pager pager) {
+		return productDao.selectProductList(pager);
 	}
 
 	

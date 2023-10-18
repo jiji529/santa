@@ -119,6 +119,17 @@
 						</c:forEach>
 					</div>
 				</section>
+				<div>
+					<ul class="pagination justify-content-center mt-3">
+					    <li class="page-item"><a class="page-link" href="?page=1${pager.query}">처음</a></li>
+					    <li class="page-item"><a class="page-link" href="?page=${pager.prev}${pager.query}">이전</a></li>
+					    <c:forEach var="page" items="${pager.list}">
+					        <li class="page-item"><a class="page-link ${page == pager.page ? 'active' : ''}" href="?page=${page}${pager.query}">${page}</a></li>
+					    </c:forEach>
+					    <li class="page-item"><a class="page-link" href="?page=${pager.next}${pager.query}">다음</a></li>
+					    <li class="page-item"><a class="page-link" href="?page=${pager.last}${pager.query}">마지막</a></li>
+					</ul>
+				</div>
 			</section>
 		</main>
 

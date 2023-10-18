@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.sendandtake.www.main.model.MemberVO;
+import com.sendandtake.www.main.pager.Pager;
 import com.sendandtake.www.main.service.MainService;
 import com.sendandtake.www.product.model.ProductVO;
 
@@ -121,10 +122,11 @@ public class MainController {
 	
 	//카테고리페이지
 	@GetMapping("/list")
-	String list(Model model) {
+	String list(Model model ,Pager pager) {
 		
-		List<ProductVO> list = mainService.selectProductList();
-		
+//		pager.setKeyword("");
+		pager.setPerPage(3);
+		List<ProductVO> list = mainService.selectProductList(pager);
 		
 		model.addAttribute("list", list);
 		

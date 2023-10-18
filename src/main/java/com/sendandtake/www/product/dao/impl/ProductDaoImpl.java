@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.sendandtake.www.main.pager.Pager;
 import com.sendandtake.www.product.dao.ProductDao;
 import com.sendandtake.www.product.model.ChartVO;
 import com.sendandtake.www.product.model.ProductVO;
@@ -33,6 +34,12 @@ public class ProductDaoImpl implements ProductDao {
 	public List<ChartVO> selectXyList(int pNo) {
 
 		return sql.selectList("product.chart", pNo);
+	}
+
+	@Override
+	public List<ProductVO> selectProductList(Pager pager) {
+		
+		return sql.selectList("product.totalList");
 	}
 
 
