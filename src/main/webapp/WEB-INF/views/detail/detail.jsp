@@ -16,10 +16,10 @@
   
   
   <!-- 상세페이지: event -->
-  <link rel="stylesheet" href="css/event.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/event.css">
   
   <!-- 리뷰추가 새창 -->
-  <link rel="stylesheet" href="css/reviews.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/reviews.css">
   
 
 </head>
@@ -30,11 +30,11 @@
     <section id="events" class="events">
       <div id="product" class="container" data-aos="fade-up">
 
-        <div class="row mmmmm">
+        <div class="row">
           <div class="col-md-6 d-flex align-items-stretch">
             <div class="card">
               <div class="card-img">
-                <img src="resources/img/${product.pImg1}" alt="제품사진">
+                <img src="${pageContext.request.contextPath}/resources/img/${product.pImg1}" alt="제품사진">
               </div>
        
             </div>
@@ -102,7 +102,6 @@
         <div class="section-title">
           <h2>Review</h2>
           <p>Review</p>
-			<img alt="" src="/upload/3458d0db.png">
           <button type="button" id="rvAdd" class="btn btn-light">리뷰추가</button>
           
         </div>
@@ -194,19 +193,8 @@
 	
 </template>
 
-  
   <!-- ======= Footer ======= -->
   <jsp:include page="../footer.jsp"></jsp:include>
-
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  
-   <!-- Vendor JS Files -->
-  <script src="resources/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="resources/vendor/aos/aos.js"></script>
-  <script src="resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="resources/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="resources/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="resources/js/main.js"></script>
@@ -217,7 +205,6 @@
   <!-- 차트 만들기 기능 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   <script src="js/chart.js"></script>
-  
 
 </body>
 </html>

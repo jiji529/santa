@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,9 +59,14 @@ public class ProductController {
 	
 	@ResponseBody
 	@PostMapping("/rvSave/ajax")
-		String rvSave (ReviewVO rvo, @SessionAttribute("loginUser") MemberVO mvo){
+		String rvSave (ReviewVO rvo, @SessionAttribute("loginUser") MemberVO mvo, HttpServletRequest req){
 		
-		final String uploadPath = "/upload/";
+		final String webPath = "/upload/";
+		
+		//상대경로 
+		final String folderPath = req.getSession().getServletContext().getRealPath(webPath);
+		
+		System.out.println("상대경로 : "+ folderPath);
 		
 		System.out.println(rvo.getpNo());
 		
@@ -90,7 +96,7 @@ public class ProductController {
 				System.out.println(uniquefilename);
 				System.out.println(fileExtension);
 				
-				file.transferTo(new File(uploadPath + uniquefilename + fileExtension));
+				file.transferTo(new File(folderPath + uniquefilename + fileExtension));
 				
 				//jsp로 이미지파일 불러오기 위한 준비(+)
 				rvo.setRvNewImg(uniquefilename);
@@ -102,6 +108,9 @@ public class ProductController {
 			} catch (Exception e) {				
 				e.printStackTrace();
 			}
+			
+			
+			
 		}
 		
 		return "OK";
