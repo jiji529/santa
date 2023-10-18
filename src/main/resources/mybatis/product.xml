@@ -13,7 +13,7 @@
 <select id="product" resultType="Product">
 	SELECT *, (SELECT salePrice 
                  FROM tbl_sale_product 
-                 WHERE tbl_product.pNo = tbl_sale_product.pNo
+                 WHERE tbl_product.pNo = tbl_sale_product.pNo AND  progress IN (6, 7, 8)
                  ORDER BY saleEnd DESC
                  LIMIT 1) recentPrice,
                  					(SELECT salePrice 
@@ -27,13 +27,13 @@
 																		ORDER BY desiredPrice DESC
 																		LIMIT 1) immediateSellingPrice
                  					    
-     FROM tbl_product WHERE pNo = ${pNo}
+     FROM tbl_product WHERE pNo = #{pNo}
 </select>
 
 <select id="chart" resultType="Chart">
 	SELECT grade, date_format(saleEnd, "%Y-%m-%d") saleEnd, salePrice 
 	FROM tbl_sale_product 
-	WHERE progress IN (6, 7, 8) AND pNo = ${pNo}
+	WHERE progress IN (6, 7, 8) AND pNo = #{pNo}
 	ORDER BY saleEnd;
 </select>
 
