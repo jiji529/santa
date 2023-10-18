@@ -56,7 +56,7 @@
             <img src="resources/img/배너1.png" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="resources/img/베너2.png" class="d-block w-100" alt="...">
+            <img src="resources/img/베너4.png" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
             <img src="resources/img/베너3.png" class="d-block w-100" alt="...">

@@ -95,7 +95,7 @@
 				<!-- 히트상품 영역 -->
 				<section class="hit">
 					<h3>
-						<span>태블릿</span>
+						<span>전체 상품</span>
 					</h3>
 
 					<div>
@@ -107,14 +107,10 @@
 									</div>
 									<h2>${item.pName}</h2>
 									<p>${item.pCode}</p>
-									<div class="org_price">
-										<del>30,000</del>
-										<span> 10% </span>
-									</div>
-									<div class="dis_price">
-										<ins> 27,000 </ins>
-										<span class="free">무료배송</span>
-									</div>
+<!-- 									<div class="org_price"> -->
+<!-- 										<del>30,000</del> -->
+<!-- 										<span> 10% </span> -->
+<!-- 									</div> -->
 								</a>
 							</div>
 						</c:forEach>
