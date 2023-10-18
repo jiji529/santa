@@ -22,7 +22,7 @@
 	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
 	crossorigin="anonymous">
 <!-- main.css -->
-<link href="${pageContext.request.contextPath}/resources/css/style.css" rel="stylesheet">
+<%-- <link href="${pageContext.request.contextPath}/resources/css/style.css" rel="stylesheet"> --%>
 <!-- header.css -->
 <link href="${pageContext.request.contextPath}/resources/css/header.css" rel="stylesheet">
 <!-- 아이콘 요소들 링크 -->

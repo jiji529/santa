@@ -9,6 +9,8 @@
 <meta content="" name="description">
 <meta content="" name="keywords">
 
+<!-- main.css -->
+<link href="${pageContext.request.contextPath}/resources/css/style.css" rel="stylesheet">
  <!-- 메인화면 JS File -->
 <script src="resources/js/main.js"></script>
   <!-- 슬라이더 JS File -->
@@ -24,7 +26,7 @@
 	<div class="menu">
 		<div class="menu_index">
 			<ul>
-				<li><div><a href="#">전체상품</a></div></li>
+				<li><div><a href="/list">전체상품</a></div></li>
 				<li><div><a href="#">노트북</a></div></li>
 				<li><div><a href="#">태블릿</a></div></li>
 				<li><div><a href="#">핸드폰</a></div></li>
