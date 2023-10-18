@@ -59,9 +59,11 @@ public class ProductController {
 	
 	@ResponseBody
 	@PostMapping("/rvSave/ajax")
-		String rvSave (ReviewVO rvo, @SessionAttribute("loginUser") MemberVO mvo, HttpServletRequest req){
+	Map<String, ReviewVO> rvSave (ReviewVO rvo, @SessionAttribute("loginUser") MemberVO mvo, HttpServletRequest req){
 		
-		final String webPath = "/upload/";
+		Map<String, ReviewVO> rmap = new HashMap<String, ReviewVO>();
+		
+		final String webPath = "/resources/upload/";
 		
 		//상대경로 
 		final String folderPath = req.getSession().getServletContext().getRealPath(webPath);
@@ -73,7 +75,6 @@ public class ProductController {
 		//로그인 처리(+)
 		rvo.setUserNo(mvo.getUserNo());
 		rvo.setUserEmail(mvo.getUserEmail());
-		
 		
 		//첨부파일
 		MultipartFile file = rvo.getRvImg();
@@ -105,15 +106,17 @@ public class ProductController {
 				
 				productService.insertReview(rvo);
 				
+				//리뷰 구역 ajax로 띄우기.
+				ReviewVO r = productService.selectReview(rvo.getRvNewImg());			
+				rmap.put("rOne", r);
+				
 			} catch (Exception e) {				
 				e.printStackTrace();
 			}
-			
-			
-			
+	
 		}
 		
-		return "OK";
+		return rmap;
 	}
 	
 	//상품구매

@@ -106,7 +106,7 @@
           
         </div>
 
-        <div class="row"><!-- data-aos="zoom-in" data-aos-delay="100" -->
+        <div class="row" id="bigReview"><!-- data-aos="zoom-in" data-aos-delay="100" -->
 
 		<c:if test="${rvList.size() < 1}">
 			<li>등록 된 리뷰가 없습니다</li>
@@ -116,11 +116,11 @@
 	          <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4">
 		          	<div id="rvOne" class="course-item">
 		            
-		              <img src="/upload/${rvListOne.rvNewImg}${rvListOne.rvExtn}" class="ajaxRvImg img-fluid" alt="..." style="width: 520px;height: 300px; object-fit: cover;">
+		              <img src="/resources/upload/${rvListOne.rvNewImg}${rvListOne.rvExtn}" class="ajaxRvImg img-fluid" alt="리뷰이미지" style="width: 520px;height: 300px; object-fit: cover;">
 		              
 		              <div class="course-content">
 			                <div class="d-flex justify-content-between align-items-center mb-3">
-			                 	<p class="price">${rvListOne.rvDate}</p>
+			                 	<p class="price ajaxRvDate">${rvListOne.rvDate}</p>
 			                </div>
 			                <p class="ajaxRvContent">${rvListOne.rvContent}</p>
 			                <div class="trainer d-flex justify-content-between align-items-center">
@@ -171,25 +171,25 @@
 <template id="rvTemp">    
 	    
 	<div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4">
-	  	<div id="rvOne" class="course-item">
-	    
-	      <img src="/upload/${rvListOne.rvNewImg}${rvListOne.rvExtn}" class="ajaxRvImg img-fluid" alt="...">
-	      
-	      <div class="course-content">
-	         <div class="d-flex justify-content-between align-items-center mb-3">
-               	<p class="ajaxRvDate price">${rvListOne.rvDate}</p>
-	         </div>
-	         <p class="ajaxRvContent">${rvListOne.rvContent}</p>
-	         <div class="trainer d-flex justify-content-between align-items-center">
-	           <div class="trainer-profile d-flex align-items-center">
-	             <span class="ajaxUserEmail">${rvListOne.userEmail}</span>
-	           </div>
-	         </div>
-	      </div>
-	      
-	  	</div>
-	    
-	</div> 
+       	<div id="rvOne" class="course-item">
+         
+           <img src="${pageContext.request.contextPath}/resources/upload/${rvListOne.rvNewImg}${rvListOne.rvExtn}" class="ajaxRvImg img-fluid" alt="리뷰이미지" style="width: 520px;height: 300px; object-fit: cover;">
+           
+           <div class="course-content">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+               	<p class="price ajaxRvDate">${rvListOne.rvDate}</p>
+              </div>
+              <p class="ajaxRvContent">${rvListOne.rvContent}</p>
+              <div class="trainer d-flex justify-content-between align-items-center">
+                <div class="trainer-profile d-flex align-items-center">
+                  <span class="ajaxUserEmail">${rvListOne.userEmail}</span>
+                </div>
+              </div>
+           </div>
+           
+           
+         </div>
+      </div>
 	
 </template>
 

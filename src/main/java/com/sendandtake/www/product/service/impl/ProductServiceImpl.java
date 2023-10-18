@@ -45,6 +45,12 @@ public class ProductServiceImpl implements ProductService {
 		return productDao.selectXyList(pNo);
 	}
 
+	@Override
+	public ReviewVO selectReview(String rvNewImg) {
+
+		return reviewDao.selectReview(rvNewImg);
+	}
+
 
 
 

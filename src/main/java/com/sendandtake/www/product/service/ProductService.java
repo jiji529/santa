@@ -17,6 +17,7 @@ public interface ProductService {
 
 	List<ChartVO> selectXyList(int pNo);
 
+	ReviewVO selectReview(String rvNewImg);
 
 
 }
