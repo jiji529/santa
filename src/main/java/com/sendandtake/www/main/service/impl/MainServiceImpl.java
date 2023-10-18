@@ -40,6 +40,11 @@ public class MainServiceImpl implements MainService {
 
 	@Override
 	public List<ProductVO> selectProductList(Pager pager) {
+		int total = productDao.total(pager);
+		
+		
+		pager.setTotal(total);
+		
 		return productDao.selectProductList(pager);
 	}
 

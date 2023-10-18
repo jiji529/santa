@@ -125,7 +125,7 @@ public class MainController {
 	String list(Model model ,Pager pager) {
 		
 //		pager.setKeyword("");
-		pager.setPerPage(3);
+		pager.setPerPage(12);
 		List<ProductVO> list = mainService.selectProductList(pager);
 		
 		model.addAttribute("list", list);

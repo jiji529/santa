@@ -39,7 +39,12 @@ public class ProductDaoImpl implements ProductDao {
 	@Override
 	public List<ProductVO> selectProductList(Pager pager) {
 		
-		return sql.selectList("product.totalList");
+		return sql.selectList("product.totalList", pager);
+	}
+
+	@Override
+	public int total(Pager pager) {
+		return sql.selectOne("product.total",pager);
 	}
 
 

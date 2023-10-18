@@ -60,11 +60,12 @@
 	<header style='height: 50px;'>
 		<!-- 메뉴 헤더 height: 50px; -->
 		<div class="menu">
-			<form id="menu_indexr" class="search" action="#">
-				<input class="search_box1" type="text" name="search"
+			<form id="menu_indexr" class="search" action="/list">
+				<input class="search_box1" type="text"  name="keyword" value="${pager.keyword}"
 					placeholder="검색어를 입력하세요.">
 				<button class="search_button1">
 					<i class="fa fa-search" aria-hidden="true"></i>
+					
 				</button>
 			</form>
 		</div>

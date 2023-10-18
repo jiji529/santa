@@ -54,18 +54,16 @@
 
 <sql id="search">
 		SELECT * FROM tbl_product
-		<where>
-				
-				pNo LIKE CONCAT(CONCAT('%', #{keyword}), '%')
-				or pName LIKE CONCAT(CONCAT('%', #{keyword}), '%')
-				or pCode LIKE CONCAT(CONCAT('%', #{keyword}), '%')
-				
-		</where> 
-		
-		ORDER BY pNo
+	<where>
+		<if test="keyword != null">
+			pNo LIKE CONCAT(CONCAT('%', #{keyword}), '%')
+			OR pName LIKE CONCAT(CONCAT('%', #{keyword}), '%')
+			OR pCode LIKE CONCAT(CONCAT('%', #{keyword}), '%')
+		</if>
+	</where>
+	
+ORDER BY pNo
 		
 </sql>
-
-
 
 </mapper>

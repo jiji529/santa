@@ -16,6 +16,8 @@ public interface ProductDao {
 
 	List<ProductVO> selectProductList(Pager pager);
 
+	int total(Pager pager);
+
 
 
 }
