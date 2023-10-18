@@ -1,5 +1,7 @@
 package com.sendandtake.www.main.web;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -7,8 +9,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.SessionAttribute;
 
 import com.sendandtake.www.main.model.MemberVO;
+import com.sendandtake.www.main.service.MailSendService;
 import com.sendandtake.www.main.service.MemberService;
 
 @Controller
@@ -19,6 +24,9 @@ public class MemberController {
 	@Autowired
 	MemberService memberservice;
 	
+	@Autowired
+	private MailSendService mailservice;
+	
 	//회원가입
 	@GetMapping("/join")
 	String join() {
@@ -26,8 +34,11 @@ public class MemberController {
 	}
 	
 	@PostMapping("/join")
-	String join (MemberVO mvo) {
-		memberservice.join(mvo);
+	String join (MemberVO mvo, String authNumber, @SessionAttribute("auth_number") String authNum) {
+		System.out.println(authNumber + ", " + authNum);
+		
+		if(authNum.equals(authNumber))
+			memberservice.join(mvo);
 		
 		return "redirect:../";
 	}
@@ -57,5 +68,21 @@ public class MemberController {
 		memberservice.delete(userNo);
 		
 		return "main";
+	}
+	
+	//이메일인증
+	@GetMapping("/mailCheck")
+	@ResponseBody
+	public String mailCheck(String email, HttpSession session) {
+		System.out.println("이메일 인증 요청");
+		System.out.println("이메일 인증 이메일 :" + email);
+		
+		String authNumber = mailservice.joinEmail(email);
+		
+		session.setAttribute("auth_number", authNumber);
+		
+		System.out.println(session.getAttribute("auth_number"));
+		
+		return authNumber;
 	}
 }

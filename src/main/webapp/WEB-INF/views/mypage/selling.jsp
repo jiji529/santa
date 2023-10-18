@@ -95,7 +95,7 @@
                         <div data-v-4cb7b681="" class="vc-popover-content-wrapper"><!----></div>
                       </span></div><span data-v-14e5ae1c="" class="swung_dash">~</span>
                     <div data-v-14e5ae1c="" class="calendar_wrap"><span data-v-14e5ae1c="">
-                        <div data-v-14e5ae1c="" class="calendar"><input data-v-14e5ae1c="" class="cal_input"><span
+                        <div data-v-14e5ae1c="" class="calendar"><input type="date" data-v-14e5ae1c="" class="cal_input"><span
                             data-v-14e5ae1c="" class="cal_btn"></span></div>
                         <div data-v-4cb7b681="" class="vc-popover-content-wrapper"><!----></div>
                       </span></div>

@@ -18,8 +18,8 @@
 	</select>
 	
 	<insert id="join">
-		INSERT INTO tbl_user (userEmail, userPwd, userNickname, userCreate, mngYn, userYn, useYn)
-    	VALUES (#{userEmail}, #{userPwd}, #{userNickname}, NOW(), '0', '0', '0')
+		INSERT INTO tbl_user (userEmail, userPwd, userCreate, mngYn, userYn, useYn)
+    	VALUES (#{userEmail}, #{userPwd},  NOW(), '0', '0', '0')
 	</insert>
 	
 	<update id="update">

@@ -26,7 +26,16 @@
                 <h2 class="h2">회원가입</h2>
                 <form id="agreeFrm" method="POST" class="wrapper-box">
                     <label>이메일</label>
-                    <input type="email" name="userEmail" class="form-control" placeholder="santa@santa.co.kr" required>
+                    <div class="input-group">
+                        <input type="email" name="userEmail" id="userEmail" class="form-control" placeholder="santa@santa.co.kr" required>
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-dark" id="mail-Check-Btn" style="margin-top: 15px; height: 45px; margin-left: 7px; ">인증</button>
+                        </div>
+                    </div>
+                    <div class="mail-check-box">
+                    	<input name="authNumber" class="form-control mail-check-input" placeholder="인증번호 6자리를 입력해주세요" disabled="disabled" maxlength="6">
+                    </div>
+                    <span id="mail-check-warm"></span>
                     <label>비밀번호</label>
                     <input type="password" name="userPwd" class="form-control" placeholder="영문,숫자,특수문자 조합 8-16자"
                         required>
@@ -241,6 +250,44 @@
                         if (valid)
                             $("#agreeFrm").submit();
                     });
+                });
+            </script>
+
+            <script>
+                $('#mail-Check-Btn').click(function(){
+                    const email = $("#userEmail").val();//이메일 주소값 가져오기
+                    console.log('완성된 이메일:' + email) //이메일 오는지 확인
+                    const checkInput = $('.mail-check-input')
+                    
+
+                    $.ajax({
+                        type : 'get',
+                        url:'<c:url value="/member/mailCheck?email="/>'+ email,
+                        success: function(data){
+                            console.log("data :" + data);
+                            checkInput.attr('disabled',false);
+                            code = data;
+                            alert('인증번호가 전송되었습니다.')
+                        }
+                    })//end ajax
+                });//end send email
+
+                //인증번호 비교
+                $('mail-check-input').blur(function(){
+                    const inputCode = $(this).val();
+                    const $resultMSg = $('#mail-check-warn');
+
+                    if(inputCode === code){
+                        $resultMSg.html('인증번호가 일치합니다');
+                        $resultMSg.css('color','green');
+                        $('#mail-Check-Btn').attr('disabled',true);
+                        $('userEmail').attr('redonly',true);
+                        // $('userEmail').attr('onFocus', 'this.initialSelect = this.selectedIndex');
+                        // $('userEmail').attr('onchang', 'this.selectedIndex = this.initialSelect');
+                    }else{
+                        $resultMSg.html('인증번호가 불일치 합니다');
+                        $resultMSg.css('color','red');
+                    }
                 });
             </script>
 </body>
