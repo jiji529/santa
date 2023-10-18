@@ -32,21 +32,12 @@ public class ProductController {
 	
 	//상세페이지
 	@GetMapping("/detail.do")
-	String detail(int pNo, Model model, ReviewVO rvo, @RequestParam(name = "loginUser", required = false) MemberVO userInfo) {
+	String detail(int pNo, Model model, ReviewVO rvo) {
 		
 		//상품 하나 불러오기
 		ProductVO productOne = productService.selectProduct(pNo);
 		
 		model.addAttribute("product", productOne);
-		
-		//테스트 부분
-		//System.out.println("제품번호는???" + pNo);
-		//System.out.println("네가 가져온 제품 한 줄의 pNo는?" + productOne.getpNo());
-		//System.out.println(productOne.getpImg1());
-		//System.out.println(productOne.getReleasePrice());
-		//System.out.println("최근거래가는???" + productOne.getRecentPrice());
-		//System.out.println("pCode" + productOne.getpCode());
-		//System.out.println("pNo 2의 즉시구매가???" + productOne.getImmediatePurchacePrice());
 		
 		//회사명 CompanyName -> ${comName}
 		int index = productOne.getpCode().indexOf("_");
@@ -60,10 +51,6 @@ public class ProductController {
 		
 		model.addAttribute("rvList", rvList);	
 		
-		//상세페이지->로그인 여부에 따른 기능 구현 위한 준비.
-		if(userInfo != null) {
-			model.addAttribute("loginUserEmail", userInfo.getUserEmail());
-		}
 		
 		return "detail/detail";
 	}

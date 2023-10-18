@@ -1,10 +1,8 @@
-
-
-const pNo = document.querySelector("input[name='pNo']");
+const pNoTochart = document.querySelector("input[name='pNo']");
 
 document.querySelector('#SchartBtn').onclick = function(){
 
-    fetch('/ajax/chartTest?pNo=' + pNo.value, {
+    fetch('/ajax/chartTest?pNo=' + pNoTochart.value, {
         method: 'GET'
     }).then(response =>response.json())
     .then(function(chartMap){
@@ -42,7 +40,6 @@ document.querySelector('#SchartBtn').onclick = function(){
                 plugins: {
                     title: {
                         display: true
-                        //, text: 'World population per region (in millions)'
                     }
                 },
                 scales: {
@@ -67,7 +64,7 @@ document.querySelector('#SchartBtn').onclick = function(){
 
 document.querySelector('#AchartBtn').onclick = function(){
 
-    fetch('/ajax/chartTest?pNo=' + pNo.value, {
+    fetch('/ajax/chartTest?pNo=' + pNoTochart.value, {
         method: 'GET'
     }).then(response =>response.json())
     .then(function(chartMap){
@@ -78,8 +75,6 @@ document.querySelector('#AchartBtn').onclick = function(){
         
         for (let i = 0; i < chartMap.AL.length; i++) {
             const s = chartMap.AL[i];
-
-            console.log(typeof s.salePrice);
 
             labels.push(s.saleEnd);
             data.push(s.salePrice);
@@ -131,7 +126,7 @@ document.querySelector('#AchartBtn').onclick = function(){
 
 document.querySelector('#BchartBtn').onclick = function(){
 
-    fetch('/ajax/chartTest?pNo=' + pNo.value, {
+    fetch('/ajax/chartTest?pNo=' + pNoTochart.value, {
         method: 'GET'
     }).then(response =>response.json())
     .then(function(chartMap){
@@ -190,4 +185,3 @@ document.querySelector('#BchartBtn').onclick = function(){
     });
 
 }
-

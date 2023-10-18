@@ -153,7 +153,7 @@
         	<input type="hidden" name="pNo" value="${product.pNo}">
         	
             아이디: <c:out value="${loginUser.userEmail}"/><br>
-            <input type="hidden" name="loginUserEmail" value="${loginUserEmail}">
+            <input type="hidden" name="loginUserEmail" value="${loginUser.userEmail}">
             
             <div id="img">
 	            리뷰사진: 

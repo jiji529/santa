@@ -27,9 +27,10 @@
             if(!rvConfirm.value) {
                 alert('로그인 후 이용해주세요.');
                 location.reload();
-            }
-            console.log(document.querySelector('.between'));
+            } 
+
             rvForm.classList.add('active');
+            
         };
         
         rvCancelBtn.onclick = function () {
