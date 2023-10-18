@@ -11,5 +11,9 @@
 	INSERT INTO tbl_rv (pNo, userNo, rvDate, rvNewImg, rvExtn, rvContent, userEmail) VALUES (#{pNo}, #{userNo}, date_format(SYSDATE(), "%y.%m.%d"),  #{rvNewImg}, #{rvExtn}, #{rvContent}, #{userEmail})
 </insert>
 
+<select id="reviewOne" resultType="Review">
+	SELECT rvDate, rvNewImg, rvExtn, rvContent, userEmail FROM tbl_rv WHERE rvNewImg = #{rvNewImg}
+</select>
+
 
 </mapper>

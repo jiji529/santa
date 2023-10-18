@@ -13,17 +13,15 @@
    <!-- ======= TOP Header ======= -->
   <jsp:include page="../header.jsp"></jsp:include>
   
+  
+  
   <!-- 상세페이지: event -->
-  <link rel="stylesheet" href="css/event.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/event.css">
   
   <!-- 리뷰추가 새창 -->
-  <link rel="stylesheet" href="css/review.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/reviews.css">
   
-  <style>
-  .card-img > img{
-  padding-bottom: 50px; 
-  }
-  </style>
+
 </head>
 <body>
   <main id="main" class="min">
@@ -32,11 +30,11 @@
     <section id="events" class="events">
       <div id="product" class="container" data-aos="fade-up">
 
-        <div class="row mmmmm">
+        <div class="row">
           <div class="col-md-6 d-flex align-items-stretch">
             <div class="card">
               <div class="card-img">
-                <img src="resources/img/${product.pImg1}" alt="제품사진">
+                <img src="${pageContext.request.contextPath}/resources/img/${product.pImg1}" alt="제품사진">
               </div>
        
             </div>
@@ -108,7 +106,7 @@
           
         </div>
 
-        <div class="row"><!-- data-aos="zoom-in" data-aos-delay="100" -->
+        <div class="row" id="bigReview"><!-- data-aos="zoom-in" data-aos-delay="100" -->
 
 		<c:if test="${rvList.size() < 1}">
 			<li>등록 된 리뷰가 없습니다</li>
@@ -118,11 +116,11 @@
 	          <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4">
 		          	<div id="rvOne" class="course-item">
 		            
-		              <img src="upload/${rvListOne.rvNewImg}${rvListOne.rvExtn}" class="ajaxRvImg rvImgSize img-fluid" alt="..." style="width: 520px;height: 300px; object-fit: cover;">
+		              <img src="/resources/upload/${rvListOne.rvNewImg}${rvListOne.rvExtn}" class="ajaxRvImg img-fluid" alt="리뷰이미지" style="width: 520px;height: 300px; object-fit: cover;">
 		              
 		              <div class="course-content">
 			                <div class="d-flex justify-content-between align-items-center mb-3">
-			                 	<p class="price">${rvListOne.rvDate}</p>
+			                 	<p class="price ajaxRvDate">${rvListOne.rvDate}</p>
 			                </div>
 			                <p class="ajaxRvContent">${rvListOne.rvContent}</p>
 			                <div class="trainer d-flex justify-content-between align-items-center">
@@ -152,7 +150,10 @@
 
         <form id="rvForm" method="POST" enctype="multipart/form-data">
         	<input type="hidden" name="pNo" value="${product.pNo}">
+        	
             아이디: <c:out value="${loginUser.userEmail}"/><br>
+            <input type="hidden" name="loginUserEmail" value="${loginUser.userEmail}">
+            
             <div id="img">
 	            리뷰사진: 
 	            <label for="rvImg">이미지 첨부</label>
@@ -170,52 +171,40 @@
 <template id="rvTemp">    
 	    
 	<div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4">
-	  	<div id="rvOne" class="course-item">
-	    
-	      <img src="upload/${rvListOne.rvNewImg}${rvListOne.rvExtn}" class="ajaxRvImg rvImgSize img-fluid" alt="...">
-	      
-	      <div class="course-content">
-	         <div class="d-flex justify-content-between align-items-center mb-3">
-               	<p class="ajaxRvDate price">${rvListOne.rvDate}</p>
-	         </div>
-	         <p class="ajaxRvContent">${rvListOne.rvContent}</p>
-	         <div class="trainer d-flex justify-content-between align-items-center">
-	           <div class="trainer-profile d-flex align-items-center">
-	             <span class="ajaxUserEmail">${rvListOne.userEmail}</span>
-	           </div>
-	         </div>
-	      </div>
-	      
-	  	</div>
-	    
-	</div> 
+       	<div id="rvOne" class="course-item">
+         
+           <img src="${pageContext.request.contextPath}/resources/upload/${rvListOne.rvNewImg}${rvListOne.rvExtn}" class="ajaxRvImg img-fluid" alt="리뷰이미지" style="width: 520px;height: 300px; object-fit: cover;">
+           
+           <div class="course-content">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+               	<p class="price ajaxRvDate">${rvListOne.rvDate}</p>
+              </div>
+              <p class="ajaxRvContent">${rvListOne.rvContent}</p>
+              <div class="trainer d-flex justify-content-between align-items-center">
+                <div class="trainer-profile d-flex align-items-center">
+                  <span class="ajaxUserEmail">${rvListOne.userEmail}</span>
+                </div>
+              </div>
+           </div>
+           
+           
+         </div>
+      </div>
 	
 </template>
 
-  
   <!-- ======= Footer ======= -->
   <jsp:include page="../footer.jsp"></jsp:include>
-
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  
-   <!-- Vendor JS Files -->
-  <script src="resources/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="resources/vendor/aos/aos.js"></script>
-  <script src="resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="resources/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="resources/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="resources/js/main.js"></script>
   
   <!-- 리뷰추가 기능 -->
-  <script src="js/reviewMaker.js"></script>
+  <script src="resources/js/reviewMaker.js"></script>
   
   <!-- 차트 만들기 기능 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   <script src="js/chart.js"></script>
-  
 
 </body>
 </html>

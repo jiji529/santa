@@ -105,6 +105,7 @@ p{
 .events .card-img img {
   max-width: 100%;
   transition: all 0.3s ease-in-out;
+  padding-bottom: 50px; 
 }
 
 .events .card-body {

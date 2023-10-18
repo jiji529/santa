@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,26 +38,14 @@ public class ProductController {
 		//상품 하나 불러오기
 		ProductVO productOne = productService.selectProduct(pNo);
 		
-		//테스트 부분
-		System.out.println("제품번호는???" + pNo);
-		System.out.println("네가 가져온 제품 한 줄의 pNo는?" + productOne.getpNo());
-		System.out.println(productOne.getpImg1());
-		System.out.println(productOne.getReleasePrice());
-		System.out.println("최근거래가는???" + productOne.getRecentPrice());
-		System.out.println("pCode" + productOne.getpCode());
-		System.out.println("pNo 2의 즉시구매가???" + productOne.getImmediatePurchacePrice());
+		model.addAttribute("product", productOne);
 		
 		//회사명 CompanyName -> ${comName}
 		int index = productOne.getpCode().indexOf("_");
 		
 		String CompanyName = productOne.getpCode().substring(0, index);
-		
-		System.out.println("회사명은??" + CompanyName);
 
 		model.addAttribute("comName", CompanyName.toUpperCase());
-		
-		model.addAttribute("product", productOne);
-		
 		
 		//리뷰 리스트 불러오기
 		List<ReviewVO> rvList = productService.selectReviewList(pNo);
@@ -70,16 +59,22 @@ public class ProductController {
 	
 	@ResponseBody
 	@PostMapping("/rvSave/ajax")
-		String rvSave (ReviewVO rvo, @SessionAttribute("loginUser") MemberVO mvo){
+	Map<String, ReviewVO> rvSave (ReviewVO rvo, @SessionAttribute("loginUser") MemberVO mvo, HttpServletRequest req){
 		
-		final String uploadPath = "/upload/";
+		Map<String, ReviewVO> rmap = new HashMap<String, ReviewVO>();
+		
+		final String webPath = "/resources/upload/";
+		
+		//상대경로 
+		final String folderPath = req.getSession().getServletContext().getRealPath(webPath);
+		
+		System.out.println("상대경로 : "+ folderPath);
 		
 		System.out.println(rvo.getpNo());
 		
 		//로그인 처리(+)
 		rvo.setUserNo(mvo.getUserNo());
 		rvo.setUserEmail(mvo.getUserEmail());
-		
 		
 		//첨부파일
 		MultipartFile file = rvo.getRvImg();
@@ -99,7 +94,10 @@ public class ProductController {
 			
 			try {
 				
-				file.transferTo(new File(uploadPath + uniquefilename + fileExtension));
+				System.out.println(uniquefilename);
+				System.out.println(fileExtension);
+				
+				file.transferTo(new File(folderPath + uniquefilename + fileExtension));
 				
 				//jsp로 이미지파일 불러오기 위한 준비(+)
 				rvo.setRvNewImg(uniquefilename);
@@ -108,13 +106,17 @@ public class ProductController {
 				
 				productService.insertReview(rvo);
 				
+				//리뷰 구역 ajax로 띄우기.
+				ReviewVO r = productService.selectReview(rvo.getRvNewImg());			
+				rmap.put("rOne", r);
+				
 			} catch (Exception e) {				
 				e.printStackTrace();
 			}
+	
 		}
 		
-		
-		return "OK";
+		return rmap;
 	}
 	
 	//상품구매

@@ -27,6 +27,12 @@ public class ReviewDaoImpl implements ReviewDao {
 		sql.insert("review.add", rvo);
 		
 	}
+
+	@Override
+	public ReviewVO selectReview(String rvNewImg) {
+
+		return sql.selectOne("review.reviewOne", rvNewImg);
+	}
 	
 
 }

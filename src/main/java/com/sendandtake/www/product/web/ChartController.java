@@ -41,21 +41,12 @@ public class ChartController {
 
 			
 			 if (cl.getGrade().equals("S")) { 
-			 System.out.println(cl.getGrade());
-			 System.out.println(cl.getSaleEnd());
-			 
-			 
 			 SList.add(cl);
-			 
 			 } 
 			 else if (cl.getGrade().equals("A")) {
-			 
 				 AList.add(cl);
-			 
 			 } else {
-			 
 				 BList.add(cl);
-			 
 			 }
 		}
 		

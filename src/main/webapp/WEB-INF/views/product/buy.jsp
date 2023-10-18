@@ -8,10 +8,10 @@
 <title>상품구매</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-  <!-- ======= TOP Header ======= -->
+  
   <jsp:include page="../header.jsp"></jsp:include>
   
-  <link href="resources/css/sellbuy.css" rel="stylesheet">
+  <link href="${pageContext.request.contextPath}/resources/css/sellbuy.css" rel="stylesheet">
   
 </head>
 <body>
@@ -70,8 +70,9 @@
         </div>
     </div>
     <!-- ======= 구매 폼 끝 ======= -->
+    
 	<!-- ======= Footer ======= -->
-		<jsp:include page="../footer.jsp"></jsp:include>
+	<jsp:include page="../footer.jsp"></jsp:include>
 	<!-- End Footer -->
 
 </body>

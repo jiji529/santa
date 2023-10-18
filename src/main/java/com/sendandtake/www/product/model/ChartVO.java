@@ -2,8 +2,9 @@ package com.sendandtake.www.product.model;
 
 
 public class ChartVO {
-	
+
 	private String grade;
+	
 	private String saleEnd;
 	private int salePrice;
 	

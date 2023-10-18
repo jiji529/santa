@@ -10,4 +10,6 @@ public interface ReviewDao {
 
 	void insertReview(ReviewVO rvo);
 
+	ReviewVO selectReview(String rvNewImg);
+
 }
