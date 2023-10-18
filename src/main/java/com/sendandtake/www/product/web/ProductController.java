@@ -32,37 +32,38 @@ public class ProductController {
 	
 	//상세페이지
 	@GetMapping("/detail.do")
-	String detail(int pNo, Model model, ReviewVO rvo) {
+	String detail(int pNo, Model model, ReviewVO rvo, @RequestParam(name = "loginUser", required = false) MemberVO userInfo) {
 		
 		//상품 하나 불러오기
 		ProductVO productOne = productService.selectProduct(pNo);
 		
+		model.addAttribute("product", productOne);
+		
 		//테스트 부분
-		System.out.println("제품번호는???" + pNo);
-		System.out.println("네가 가져온 제품 한 줄의 pNo는?" + productOne.getpNo());
-		System.out.println(productOne.getpImg1());
-		System.out.println(productOne.getReleasePrice());
-		System.out.println("최근거래가는???" + productOne.getRecentPrice());
-		System.out.println("pCode" + productOne.getpCode());
-		System.out.println("pNo 2의 즉시구매가???" + productOne.getImmediatePurchacePrice());
+		//System.out.println("제품번호는???" + pNo);
+		//System.out.println("네가 가져온 제품 한 줄의 pNo는?" + productOne.getpNo());
+		//System.out.println(productOne.getpImg1());
+		//System.out.println(productOne.getReleasePrice());
+		//System.out.println("최근거래가는???" + productOne.getRecentPrice());
+		//System.out.println("pCode" + productOne.getpCode());
+		//System.out.println("pNo 2의 즉시구매가???" + productOne.getImmediatePurchacePrice());
 		
 		//회사명 CompanyName -> ${comName}
 		int index = productOne.getpCode().indexOf("_");
 		
 		String CompanyName = productOne.getpCode().substring(0, index);
-		
-		System.out.println("회사명은??" + CompanyName);
 
 		model.addAttribute("comName", CompanyName.toUpperCase());
-		
-		model.addAttribute("product", productOne);
-		
 		
 		//리뷰 리스트 불러오기
 		List<ReviewVO> rvList = productService.selectReviewList(pNo);
 		
 		model.addAttribute("rvList", rvList);	
 		
+		//상세페이지->로그인 여부에 따른 기능 구현 위한 준비.
+		if(userInfo != null) {
+			model.addAttribute("loginUserEmail", userInfo.getUserEmail());
+		}
 		
 		return "detail/detail";
 	}
@@ -99,6 +100,9 @@ public class ProductController {
 			
 			try {
 				
+				System.out.println(uniquefilename);
+				System.out.println(fileExtension);
+				
 				file.transferTo(new File(uploadPath + uniquefilename + fileExtension));
 				
 				//jsp로 이미지파일 불러오기 위한 준비(+)
@@ -112,7 +116,6 @@ public class ProductController {
 				e.printStackTrace();
 			}
 		}
-		
 		
 		return "OK";
 	}

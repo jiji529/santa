@@ -13,17 +13,15 @@
    <!-- ======= TOP Header ======= -->
   <jsp:include page="../header.jsp"></jsp:include>
   
+  
+  
   <!-- 상세페이지: event -->
   <link rel="stylesheet" href="css/event.css">
   
   <!-- 리뷰추가 새창 -->
-  <link rel="stylesheet" href="css/review.css">
+  <link rel="stylesheet" href="css/reviews.css">
   
-  <style>
-  .card-img > img{
-  padding-bottom: 50px; 
-  }
-  </style>
+
 </head>
 <body>
   <main id="main" class="min">
@@ -104,6 +102,7 @@
         <div class="section-title">
           <h2>Review</h2>
           <p>Review</p>
+			<img alt="" src="/upload/3458d0db.png">
           <button type="button" id="rvAdd" class="btn btn-light">리뷰추가</button>
           
         </div>
@@ -118,7 +117,7 @@
 	          <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4">
 		          	<div id="rvOne" class="course-item">
 		            
-		              <img src="upload/${rvListOne.rvNewImg}${rvListOne.rvExtn}" class="ajaxRvImg rvImgSize img-fluid" alt="..." style="width: 520px;height: 300px; object-fit: cover;">
+		              <img src="/upload/${rvListOne.rvNewImg}${rvListOne.rvExtn}" class="ajaxRvImg img-fluid" alt="..." style="width: 520px;height: 300px; object-fit: cover;">
 		              
 		              <div class="course-content">
 			                <div class="d-flex justify-content-between align-items-center mb-3">
@@ -152,7 +151,10 @@
 
         <form id="rvForm" method="POST" enctype="multipart/form-data">
         	<input type="hidden" name="pNo" value="${product.pNo}">
+        	
             아이디: <c:out value="${loginUser.userEmail}"/><br>
+            <input type="hidden" name="loginUserEmail" value="${loginUserEmail}">
+            
             <div id="img">
 	            리뷰사진: 
 	            <label for="rvImg">이미지 첨부</label>
@@ -172,7 +174,7 @@
 	<div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4">
 	  	<div id="rvOne" class="course-item">
 	    
-	      <img src="upload/${rvListOne.rvNewImg}${rvListOne.rvExtn}" class="ajaxRvImg rvImgSize img-fluid" alt="...">
+	      <img src="/upload/${rvListOne.rvNewImg}${rvListOne.rvExtn}" class="ajaxRvImg img-fluid" alt="...">
 	      
 	      <div class="course-content">
 	         <div class="d-flex justify-content-between align-items-center mb-3">
@@ -210,7 +212,7 @@
   <script src="resources/js/main.js"></script>
   
   <!-- 리뷰추가 기능 -->
-  <script src="js/reviewMaker.js"></script>
+  <script src="resources/js/reviewMaker.js"></script>
   
   <!-- 차트 만들기 기능 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>

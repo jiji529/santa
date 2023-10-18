@@ -1,6 +1,5 @@
 
 
-/* ---------------------------------------------------------------------------------------------------------------------------------------- */
 const pNo = document.querySelector("input[name='pNo']");
 
 document.querySelector('#SchartBtn').onclick = function(){
@@ -108,7 +107,6 @@ document.querySelector('#AchartBtn').onclick = function(){
                 plugins: {
                     title: {
                         display: true
-                        //, text: 'World population per region (in millions)'
                     }
                 },
                 scales: {
@@ -171,7 +169,6 @@ document.querySelector('#BchartBtn').onclick = function(){
                 plugins: {
                     title: {
                         display: true
-                        //, text: 'World population per region (in millions)'
                     }
                 },
                 scales: {

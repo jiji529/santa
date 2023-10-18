@@ -1,5 +1,4 @@
 
-    window.onload = function () {
 
         //'댓글 추가' 버튼
         let rvAddBtn = document.querySelector('#rvAdd');
@@ -16,11 +15,20 @@
         //리뷰 이미지, 내용 넣는 태그 선택자
         let rvFormElm = document.querySelectorAll('#rvForm input[name="rvImg"], #rvForm input[name="rvContent"]');
 
+        //사용자 계정(이메일)
+        let rvConfirm = document.querySelector('#rvForm input[name="loginUserEmail"]');
+
+
         //리뷰 추가 템플릿 객체화
         //let rvTemp = document.querySelector('#rvTemp');
-
         
         rvAddBtn.onclick = function () {
+            //console.log(rvConfirm.value);
+            if(!rvConfirm.value) {
+                alert('로그인 후 이용해주세요.');
+                location.reload();
+            }
+            console.log(document.querySelector('.between'));
             rvForm.classList.add('active');
         };
         
@@ -95,7 +103,7 @@
             ;
         });
 
-    };
+  
 
     
 
