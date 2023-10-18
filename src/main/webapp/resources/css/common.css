@@ -302,6 +302,11 @@ main .thumbs h2 {
      background-image: url(./img/ico_freeshipping.gif);
  }
  
+ .thum {
+ 	width: 230px;
+ 	height: 230px;
+ }
+ 
 .paging{
 	padding-bottom: 20px;
 }

@@ -103,7 +103,7 @@
 							<div class="thumbs">
 								<a href="#">
 									<div class="thumb">
-										<img src="https://via.placeholder.com/230X230" alt="t1">
+										<img src="/resources/img/product/${item.pImg1}" alt="이미지를 찾을수 없습니다." class="thum">
 									</div>
 									<h2>${item.pName}</h2>
 									<p>${item.pCode}</p>
