@@ -52,9 +52,34 @@
             });
         });
        
+        
 
-        /* branch test */
-    </script>
+	//카테고리버튼
+	$(document).ready(function() {
+		showAllProducts();
+
+		$(".cgory a").click(function() {
+			var cNo = $(this).data("cno");
+			
+			if (cNo != 0) {
+				// 해당 카테고리에 해당하는 상품만 표시
+				$(".thumbs").hide();
+				<c:forEach var="item" items="${list}">
+				<c:if test="${item.cNo == cNo}">
+				$(".thumbs[data-cno='${item.cNo}']").show();
+				</c:if>
+				</c:forEach>
+			}
+		});
+
+		function showAllProducts() {
+			// 전체 상품 표시
+			$(".thumbs").show();
+		}
+	});
+
+	/* branch test */
+</script>
 </head>
 <body>
 	<header style='height: 50px;'>
@@ -78,16 +103,16 @@
 				<ul class="cgory">
 					<li><div>카테고리</div></li>
 					<li><div>
-							<a href="#">노트북</a>
+							<a href="#" data-cno="3">노트북</a>
 						</div></li>
 					<li><div>
-							<a href="#">태블릿</a>
+							<a href="#" data-cno="2">태블릿</a>
 						</div></li>
 					<li><div>
-							<a href="#">핸드폰</a>
+							<a href="#" data-cno="1">핸드폰</a>
 						</div></li>
 					<li><div>
-							<a href="#">액세서리</a>
+							<a href="#" data-cno="4">액세서리</a>
 						</div></li>
 				</ul>
 			</aside>
@@ -101,7 +126,7 @@
 					<div>
 						<c:forEach var="item" items="${list}">
 							<div class="thumbs">
-								<a href="#">
+								<a href="detail.do?pNo=${item.pNo}">
 									<div class="thumb">
 										<img src="/resources/img/product/${item.pImg1}" alt="이미지를 찾을수 없습니다." class="thum">
 									</div>

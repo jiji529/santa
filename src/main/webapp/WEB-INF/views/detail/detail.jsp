@@ -41,7 +41,7 @@
           <div class="col-md-6 d-flex align-items-stretch">
             <div class="card">
               <div class="card-img">
-                <img src="${pageContext.request.contextPath}/resources/img/${pvo.pImg1}" alt="제품사진">
+                <img src="${pageContext.request.contextPath}/resources/img/product/${pvo.pImg1}" alt="제품사진">
               </div>
        
             </div>

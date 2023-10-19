@@ -88,7 +88,7 @@
         <div class="row" ><!-- data-aos="zoom-in" data-aos-delay="100" -->
 
        	 <c:forEach var="item" items="${list}">
-          <div class="col-lg-3 col-md-6 align-items-stretch mt-4">
+          <div class="col-lg-3 col-md-6 align-items-stretch mt-4"  id="mainItem">
             <div class="course-item">
 			<img src="resources/img/product/apple_iphone14_256GB_starlight.png" class="img-fluid" alt="...">
 <%-- 			  <p>${item.pImg1}</p> <!-- 이미지 DB에 제대로 넣으면 바꿔야해! --> --%>
@@ -109,7 +109,7 @@
         
         <br>
         <div class="d-flex align-items-center justify-content-center">
-        	<a href="/list" class="btn outlinegrey medium" style="border: 1px solid #eef0ef;"> 더보기 </a>
+        	<a id='load' class="btn outlinegrey medium" style="border: 1px solid #eef0ef;"> 더보기 </a>
         </div>
 
       </div>
@@ -130,7 +130,7 @@
 	<div>
 	  <a href="#"><img src="resources/img/화살표.png"  class="back-to-top d-flex align-items-center justify-content-center" alt="..." >top</a>
 	</div>
- 
+
 
 </body>
 </html>
