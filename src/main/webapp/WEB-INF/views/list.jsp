@@ -61,15 +61,7 @@
 		$(".cgory a").click(function() {
 			var cNo = $(this).data("cno");
 			
-			if (cNo != 0) {
-				// 해당 카테고리에 해당하는 상품만 표시
-				$(".thumbs").hide();
-				<c:forEach var="item" items="${list}">
-				<c:if test="${item.cNo == cNo}">
-				$(".thumbs[data-cno='${item.cNo}']").show();
-				</c:if>
-				</c:forEach>
-			}
+			$("#list_product").load("list_product?page=1&cNo=" + cNo);
 		});
 
 		function showAllProducts() {
@@ -123,7 +115,7 @@
 						<span>전체 상품</span>
 					</h3>
 
-					<div>
+					<div id="list_product">
 						<c:forEach var="item" items="${list}">
 							<div class="thumbs">
 								<a href="detail.do?pNo=${item.pNo}">
@@ -162,5 +154,6 @@
 		<jsp:include page="footer.jsp"></jsp:include>
 	</div>
 	<!-- End Footer -->
+
 </body>
 </html>

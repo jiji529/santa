@@ -60,6 +60,10 @@
 			OR pName LIKE CONCAT(CONCAT('%', #{keyword}), '%')
 			OR pCode LIKE CONCAT(CONCAT('%', #{keyword}), '%')
 		</if>
+		
+		<if test="cNo != 0">
+			AND cNo=#{cNo}
+		</if>
 	</where>
 	
 ORDER BY pNo

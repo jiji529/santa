@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.sendandtake.www.main.model.MemberVO;
 import com.sendandtake.www.main.pager.Pager;
@@ -132,6 +133,28 @@ public class MainController {
 		model.addAttribute("list", list);
 		
 		return "list";
+	}
+	
+	//카테고리페이지
+		@GetMapping("/list_product")
+		String list_product(Model model ,Pager pager) {
+			
+//			pager.setKeyword("");
+			pager.setPerPage(12);
+			List<ProductVO> list = mainService.selectProductList(pager);
+			
+			model.addAttribute("list", list);
+			
+			return "list_product";
+		}
+	
+	@ResponseBody
+	@GetMapping("/getList")
+	List<ProductVO> getList(Model model ,Pager pager) {
+		
+//		pager.setKeyword("");
+		pager.setPerPage(12);
+		 return mainService.selectProductList(pager);
 	}
 
 }
