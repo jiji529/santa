@@ -33,4 +33,9 @@ public class MemberDaoImpl implements MemberDao {
 		sql.delete("member.delete", userNo);
 	}
 
+	@Override
+	public int emailCheck(String email) {
+		return sql.selectOne("member.emailCheck",email);
+	}
+
 }

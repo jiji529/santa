@@ -15,6 +15,17 @@
     
   <!-- ======= TOP Header ======= -->
   <jsp:include page="../header.jsp"></jsp:include>
+	<style>
+		.id_ok{
+		color:#008000;
+		display: none;
+		}
+		
+		.id_already{
+		color:#6A82FB; 
+		display: none;
+		}
+	</style>
     
 </head>
 
@@ -27,7 +38,9 @@
                 <form id="agreeFrm" method="POST" class="wrapper-box">
                     <label>이메일</label>
                     <div class="input-group">
-                        <input type="email" name="userEmail" id="userEmail" class="form-control" placeholder="santa@santa.co.kr" required>
+                        <input type="email" name="userEmail" id="userEmail"  oninput = "checkEmail()" class="form-control" placeholder="santa@santa.co.kr" required>
+                        	<span class="id_ok">사용 가능한 아이디입니다.</span>
+							<span class="id_already">아이디를 사용하고 있어요.</span>
                         <div class="input-group-append">
                             <button type="button" class="btn btn-dark" id="mail-Check-Btn" style="margin-top: 15px; height: 45px; margin-left: 7px; ">인증</button>
                         </div>
@@ -254,6 +267,7 @@
             </script>
 
             <script>
+            	let code;
                 $('#mail-Check-Btn').click(function(){
                     const email = $("#userEmail").val();//이메일 주소값 가져오기
                     console.log('완성된 이메일:' + email) //이메일 오는지 확인
@@ -277,7 +291,7 @@
                     const inputCode = $(this).val();
                     const $resultMSg = $('#mail-check-warn');
 
-                    if(inputCode === code){
+                    if(code && inputCode === code){
                         $resultMSg.html('인증번호가 일치합니다');
                         $resultMSg.css('color','green');
                         $('#mail-Check-Btn').attr('disabled',true);
@@ -287,8 +301,35 @@
                     }else{
                         $resultMSg.html('인증번호가 불일치 합니다');
                         $resultMSg.css('color','red');
+                        alert('인증번호가 불일치 합니다 . 다시 확인해주세요')
                     }
                 });
+            </script>
+            
+            <script>
+            function checkEmail(){
+            	  var id = $('#userEmail').val();//id값이 "id"인 입력란의 값을 저장
+            	  $.ajax({
+            	    url:'/checkEmail', //controller에서 요청받을 주소
+            	    type:'post', //POST방식으로 전달
+            	    data:{email:userEmail},
+            	    success:function(cnt){//컨트롤러에서 넘어온 cnt값을 받는다
+            	      if(cnt===0){//cnt가 1이 아니면(=0일 경우) -> 사용 가능한 아이디
+            	        $('.id_ok').css("display","inline-block"); 
+            	        $('.id_already').css("display", "none");
+            	    } else { // cnt가 1일 경우 -> 이미 존재하는 아이디
+            	        $('.id_already').css("display","inline-block");
+            	        $('.id_ok').css("display", "none");
+            	        alert("아이디를 다시 입력해주세요");
+            	        $('#userEmail').val('');
+            	      }
+            	    },
+            	    error:function(){
+            	      alert("에러입니다");
+            	  }
+            	    });
+            	};
+            
             </script>
 </body>
 

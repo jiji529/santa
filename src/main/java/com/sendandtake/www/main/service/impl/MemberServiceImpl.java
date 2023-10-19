@@ -35,5 +35,12 @@ public class MemberServiceImpl implements MemberService {
 	public void delete(int userNo) {
 		memberdao.delete(userNo);
 	}
+	//아이디 중복체크
+	@Override
+	public int emailCheck(String email) {
+//		int cnt = memberdao.emailCheck(email);
+//		System.out.println("cnt :" +cnt);
+		return memberdao.emailCheck(email) ;
+	}
 
 }

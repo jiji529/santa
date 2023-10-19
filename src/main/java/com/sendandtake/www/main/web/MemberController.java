@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
@@ -33,14 +34,13 @@ public class MemberController {
 		return path +"join";
 	}
 	
-	@PostMapping("/join")
-	String join (MemberVO mvo, String authNumber, @SessionAttribute("auth_number") String authNum) {
-		System.out.println(authNumber + ", " + authNum);
-		
-		if(authNum.equals(authNumber))
-			memberservice.join(mvo);
-		
-		return "redirect:../";
+
+	//아이디 중복체크
+	@PostMapping("/checkEmail")
+	@ResponseBody
+	public int idCheck(@RequestParam("email")String email) {
+		int cnt = memberservice.emailCheck(email);
+		return cnt;
 	}
 	
 	//회원정보 수정
@@ -85,4 +85,15 @@ public class MemberController {
 		
 		return authNumber;
 	}
+	//이메일 인증
+	@PostMapping("/join")
+	String join (MemberVO mvo, String authNumber, @SessionAttribute("auth_number") String authNum) {
+		System.out.println(authNumber + ", " + authNum);
+		
+		if(authNum.equals(authNumber))
+			memberservice.join(mvo);
+		
+		return "redirect:../";
+	}
+	
 }

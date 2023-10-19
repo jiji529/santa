@@ -12,4 +12,6 @@ public interface MemberDao {
 
 	void delete(int userNo);
 
+	int emailCheck(String email);
+
 }
