@@ -23,20 +23,20 @@
       <div data-v-e2abb636="" data-v-520bec6f="" class="layout_base lg has_bottom_nav wrap lg win_os" tabindex="0">
 
         <div data-v-520bec6f="" data-v-e2abb636="" class="container my lg">
-          <div data-v-520bec6f="" class="snb_area" data-v-e2abb636=""><a data-v-520bec6f="" href="/mypage" class="">
+          <div data-v-520bec6f="" class="snb_area" data-v-e2abb636=""><a data-v-520bec6f="" href="/mypage" class="" style="text-decoration-line: none;color :black;">
               <h2 data-v-520bec6f="" class="snb_main_title">마이 페이지</h2>
             </a>
             <nav data-v-7bcac446="" data-v-520bec6f="" class="snb">
               <div data-v-7bcac446="" class="snb_list"><strong data-v-7bcac446="" class="snb_title">쇼핑 정보</strong>
                 <ul data-v-7a824f04="" data-v-7bcac446="" class="snb_menu">
-                  <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href="/buying" class="menu_link"> 구매 내역 </a>
+                  <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href="/buying" class="menu_link" style="text-decoration-line: none;color :#222222cc;"> 구매 내역 </a>
                   </li>
-                  <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href="/selling" class="menu_link"> 판매 내역 </a>
+                  <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href="/selling" class="menu_link" style="text-decoration-line: none;color :#222222cc;"> 판매 내역 </a>
                   </li>
-                  <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href="" class="menu_link"> 보관 판매 </a>
+                  <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href="" class="menu_link" style="text-decoration-line: none;color :#222222cc;"> 보관 판매 </a>
                   </li>
                   <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href=""
-                      class="menu_link nuxt-link-exact-active active" aria-current="page"> 관심 상품 </a></li>
+                      class="menu_link nuxt-link-exact-active active" aria-current="page" style="text-decoration-line: none;color :#222222cc;"> 관심 상품 </a></li>
                 </ul>
               </div>
             </nav>

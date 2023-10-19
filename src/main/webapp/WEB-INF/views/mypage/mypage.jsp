@@ -23,18 +23,18 @@
           <div tabindex="0" class="layout_base lg has_bottom_nav wrap lg win_os" data-v-e2abb636="" data-v-520bec6f="">
             <div data-v-520bec6f="" data-v-e2abb636="" class="container my lg">
               <div data-v-520bec6f="" class="snb_area" data-v-e2abb636="">
-              <a data-v-520bec6f="" href="/mypage" aria-current="page" class="nuxt-link-exact-active nuxt-link-active">
+              <a data-v-520bec6f="" href="/mypage" aria-current="page" class="nuxt-link-exact-active nuxt-link-active" style="text-decoration-line: none;  color :black;">
                   <h2 data-v-520bec6f="" class="snb_main_title">마이 페이지</h2></a>
                 <nav class="snb">
                   <div class="snb_list"><strong data-v-7bcac446="" class="snb_title">쇼핑 정보</strong>
                     <ul data-v-7a824f04="" data-v-7bcac446="" class="snb_menu">
-                      <li class="menu_item"><a data-v-7a824f04="" href="/buying" class="menu_link"> 구매 내역 </a></li>
+                      <li class="menu_item"><a data-v-7a824f04="" href="/buying" class="menu_link" style="text-decoration-line: none;color :#222222cc;"> 구매 내역 </a></li>
                       <li data-v-7a824f04="" class="menu_item">
-                      <a data-v-7a824f04="" href="/selling" class=" menu_link"> 판매 내역</a></li>
+                      <a data-v-7a824f04="" href="/selling" class=" menu_link" style="text-decoration-line: none;color :#222222cc;"> 판매 내역</a></li>
                       <li data-v-7a824f04="" class="menu_item">
-                      <a data-v-7a824f04="" href="" class="menu_link"> 보관 판매</a></li>
+                      <a data-v-7a824f04="" href="" class="menu_link" style="text-decoration-line: none;color :#222222cc;"> 보관 판매</a></li>
                       <li data-v-7a824f04="" class="menu_item">
-                      <a data-v-7a824f04="" href="/saved" class="menu_link"> 관심 상품 </a></li>
+                      <a data-v-7a824f04="" href="/saved" class="menu_link" style="text-decoration-line: none;color :#222222cc;"> 관심 상품 </a></li>
                     </ul>
                   </div>
                 </nav>
@@ -57,16 +57,16 @@
                       </div>
                     </div>
                     <div data-v-d487a8ba="" data-v-ffa2bac2="" class="membership-menu"><a data-v-d487a8ba="" href=""
-                        class="menu-item">
+                        class="menu-item" style="text-decoration-line: none;color :#222222cc;">
                         <div data-v-d487a8ba="" class="icon-wrap"><img data-v-d487a8ba=""
                             src="/resources/img/mypage/ico-my-shortcut-point.bb8c04e.svg" name="ico-my-shortcut-point"
-                            width="28" height="28" class="icon"></div><span data-v-d487a8ba="" class="name">0P</span>
-                      </a><a data-v-d487a8ba="" href="" class="menu-item">
+                            width="28" height="28" class="icon"></div><span data-v-d487a8ba="" class="name" >0P</span>
+                      </a><a data-v-d487a8ba="" href="" class="menu-item" style="text-decoration-line: none;color :#222222cc;">
                         <div data-v-d487a8ba="" class="icon-wrap"><img data-v-d487a8ba=""
                             src="/resources/img/mypage/ico-my-shortcut-coupon.b9a7693.svg" name="ico-my-shortcut-coupon"
                             width="28" height="28" class="icon"><!----></div><span data-v-d487a8ba="" class="name">쿠폰
                           0</span>
-                      </a><a data-v-d487a8ba="" href="" class="menu-item">
+                      </a><a data-v-d487a8ba="" href="" class="menu-item" style="text-decoration-line: none;color :#222222cc;">
                         <div data-v-d487a8ba="" class="icon-wrap"><img data-v-d487a8ba=""
                             src="/resources/img/mypage/ico-my-shortcut-announce.a1e286c.svg"
                             name="ico-my-shortcut-announce" width="28" height="28" class="icon"><!----></div><span
@@ -77,31 +77,31 @@
                     <div data-v-3e19b064="" data-v-52a917ff="">
                       <div data-v-6752ceb2="" data-v-3e19b064="" class="my_home_title">
                         <h3 data-v-6752ceb2="" class="title"> 보관 판매 내역 </h3><a data-v-6752ceb2="" href=""
-                          class="btn_more"><span data-v-6752ceb2="" class="btn_txt">더보기</span><svg data-v-6752ceb2=""
+                          class="btn_more" style="text-decoration-line: none;"><span data-v-6752ceb2="" class="btn_txt">더보기</span><svg data-v-6752ceb2=""
                             class="icon sprite-icons arr-right-gray">
                             <use data-v-6752ceb2="" href=""></use>
                           </svg></a>
                       </div>
                       <div data-v-3e19b064="" class="purchase_list_tab inventory">
-                        <div data-v-3e19b064="" class="tab_item total"><a data-v-3e19b064="" href="" class="tab_link">
+                        <div data-v-3e19b064="" class="tab_item total"><a data-v-3e19b064="" href="" class="tab_link" style="text-decoration-line: none;color :#222222cc;">
                             <dl data-v-3e19b064="" class="tab_box">
                               <dt data-v-3e19b064="" class="title">발송요청</dt>
                               <dd data-v-3e19b064="" class="count">0</dd>
                             </dl>
                           </a></div>
-                        <div data-v-3e19b064="" class="tab_item"><a data-v-3e19b064="" href="" class="tab_link">
+                        <div data-v-3e19b064="" class="tab_item"><a data-v-3e19b064="" href="" class="tab_link" style="text-decoration-line: none;color :#222222cc;">
                             <dl data-v-3e19b064="" class="tab_box">
                               <dt data-v-3e19b064="" class="title">판매대기</dt>
                               <dd data-v-3e19b064="" class="count">0</dd>
                             </dl>
                           </a></div>
-                        <div data-v-3e19b064="" class="tab_item"><a data-v-3e19b064="" href="" class="tab_link">
+                        <div data-v-3e19b064="" class="tab_item"><a data-v-3e19b064="" href="" class="tab_link" style="text-decoration-line: none;color :#222222cc;">
                             <dl data-v-3e19b064="" class="tab_box">
                               <dt data-v-3e19b064="" class="title">판매 중</dt>
                               <dd data-v-3e19b064="" class="count">0</dd>
                             </dl>
                           </a></div>
-                        <div data-v-3e19b064="" class="tab_item"><a data-v-3e19b064="" href="" class="tab_link">
+                        <div data-v-3e19b064="" class="tab_item"><a data-v-3e19b064="" href="" class="tab_link" style="text-decoration-line: none;color :#222222cc;">
                             <dl data-v-3e19b064="" class="tab_box">
                               <dt data-v-3e19b064="" class="title">정산완료</dt>
                               <dd data-v-3e19b064="" class="count">0</dd>
@@ -110,7 +110,7 @@
                       </div>
                     </div>
                     <div data-v-7e421ebe="" data-v-52a917ff="" class="banner_inventory available"><a data-v-7e421ebe=""
-                        href="" class="banner_link">
+                        href="" class="banner_link" style="text-decoration-line: none;">
                         <div data-v-7e421ebe="" class="banner_detail">
                           <p data-v-7e421ebe="" class="banner_title">보관 신청하기</p>
                           <p data-v-7e421ebe="" class="banner_desc">한 번에 신청하고 한 번에 발송하세요.</p>
@@ -119,32 +119,32 @@
                   </div>
                   <div data-v-6752ceb2="" data-v-52a917ff="" class="my_home_title">
                     <h3 data-v-6752ceb2="" class="title"> 구매 내역 </h3><a data-v-6752ceb2="" href="/buying"
-                      class="btn_more"><span data-v-6752ceb2="" class="btn_txt">더보기</span><svg data-v-6752ceb2=""
+                      class="btn_more" style="text-decoration-line: none;color :#222222cc;"><span data-v-6752ceb2="" class="btn_txt">더보기</span><svg data-v-6752ceb2=""
                         class="icon sprite-icons arr-right-gray">
                         <use data-v-6752ceb2="" href=""></use>
                       </svg></a>
                   </div>
                   <div data-v-52a917ff="" class="recent_purchase">
                     <div data-v-2cbb289b="" data-v-52a917ff="" class="purchase_list_tab">
-                      <div data-v-2cbb289b="" class="tab_item total"><a data-v-2cbb289b="" href="" class="tab_link">
+                      <div data-v-2cbb289b="" class="tab_item total"><a data-v-2cbb289b="" href="" class="tab_link" style="text-decoration-line: none;color :#222222cc;">
                           <dl data-v-2cbb289b="" class="tab_box">
                             <dt data-v-2cbb289b="" class="title">전체</dt>
                             <dd data-v-2cbb289b="" class="count">0</dd>
                           </dl>
                         </a></div>
-                      <div data-v-2cbb289b="" class="tab_item tab_on"><a data-v-2cbb289b="" href="" class="tab_link">
+                      <div data-v-2cbb289b="" class="tab_item tab_on"><a data-v-2cbb289b="" href="" class="tab_link" style="text-decoration-line: none;color :#222222cc;">
                           <dl data-v-2cbb289b="" class="tab_box">
                             <dt data-v-2cbb289b="" class="title">입찰 중</dt>
                             <dd data-v-2cbb289b="" class="count">0</dd>
                           </dl>
                         </a></div>
-                      <div data-v-2cbb289b="" class="tab_item"><a data-v-2cbb289b="" href="" class="tab_link">
+                      <div data-v-2cbb289b="" class="tab_item"><a data-v-2cbb289b="" href="" class="tab_link" style="text-decoration-line: none;color :#222222cc;">
                           <dl data-v-2cbb289b="" class="tab_box">
                             <dt data-v-2cbb289b="" class="title">진행 중</dt>
                             <dd data-v-2cbb289b="" class="count">0</dd><!---->
                           </dl>
                         </a></div>
-                      <div data-v-2cbb289b="" class="tab_item"><a data-v-2cbb289b="" href="" class="tab_link">
+                      <div data-v-2cbb289b="" class="tab_item"><a data-v-2cbb289b="" href="" class="tab_link" style="text-decoration-line: none;color :#222222cc;">
                           <dl data-v-2cbb289b="" class="tab_box">
                             <dt data-v-2cbb289b="" class="title">종료</dt>
                             <dd data-v-2cbb289b="" class="count">0</dd>
@@ -162,32 +162,32 @@
                   </div>
                   <div data-v-6752ceb2="" data-v-52a917ff="" class="my_home_title">
                     <h3 data-v-6752ceb2="" class="title"> 판매 내역 </h3><a data-v-6752ceb2="" href="/selling"
-                      class="btn_more"><span data-v-6752ceb2="" class="btn_txt">더보기</span><svg data-v-6752ceb2=""
+                      class="btn_more" style="text-decoration-line: none;color :#222222cc;"><span data-v-6752ceb2="" class="btn_txt">더보기</span><svg data-v-6752ceb2=""
                         class="icon sprite-icons arr-right-gray">
                         <use data-v-6752ceb2="" href=""></use>
                       </svg></a>
                   </div>
                   <div data-v-52a917ff="" class="recent_purchase">
                     <div data-v-2cbb289b="" data-v-52a917ff="" class="purchase_list_tab sell">
-                      <div data-v-2cbb289b="" class="tab_item total"><a data-v-2cbb289b="" href="" class="tab_link">
+                      <div data-v-2cbb289b="" class="tab_item total"><a data-v-2cbb289b="" href="" class="tab_link" style="text-decoration-line: none;color :#222222cc;">
                           <dl data-v-2cbb289b="" class="tab_box">
                             <dt data-v-2cbb289b="" class="title">전체</dt>
                             <dd data-v-2cbb289b="" class="count">0</dd>
                           </dl>
                         </a></div>
-                      <div data-v-2cbb289b="" class="tab_item tab_on"><a data-v-2cbb289b="" href="" class="tab_link">
+                      <div data-v-2cbb289b="" class="tab_item tab_on"><a data-v-2cbb289b="" href="" class="tab_link" style="text-decoration-line: none;color :#222222cc;">
                           <dl data-v-2cbb289b="" class="tab_box">
                             <dt data-v-2cbb289b="" class="title">입찰 중</dt>
                             <dd data-v-2cbb289b="" class="count">0</dd>
                           </dl>
                         </a></div>
-                      <div data-v-2cbb289b="" class="tab_item"><a data-v-2cbb289b="" href="" class="tab_link">
+                      <div data-v-2cbb289b="" class="tab_item"><a data-v-2cbb289b="" href="" class="tab_link" style="text-decoration-line: none;color :#222222cc;">
                           <dl data-v-2cbb289b="" class="tab_box">
                             <dt data-v-2cbb289b="" class="title">진행 중</dt>
                             <dd data-v-2cbb289b="" class="count">0</dd><!---->
                           </dl>
                         </a></div>
-                      <div data-v-2cbb289b="" class="tab_item"><a data-v-2cbb289b="" href="" class="tab_link">
+                      <div data-v-2cbb289b="" class="tab_item"><a data-v-2cbb289b="" href="" class="tab_link" style="text-decoration-line: none;color :#222222cc;">
                           <dl data-v-2cbb289b="" class="tab_box">
                             <dt data-v-2cbb289b="" class="title">종료</dt>
                             <dd data-v-2cbb289b="" class="count">0</dd>
@@ -205,7 +205,7 @@
                   </div>
                   <div data-v-6752ceb2="" data-v-52a917ff="" class="my_home_title">
                     <h3 data-v-6752ceb2="" class="title"> 관심 상품 </h3><a data-v-6752ceb2="" href="/saved"
-                      class="btn_more"><span data-v-6752ceb2="" class="btn_txt">더보기</span><svg data-v-6752ceb2=""
+                      class="btn_more" style="text-decoration-line: none;color :#222222cc;"><span data-v-6752ceb2="" class="btn_txt">더보기</span><svg data-v-6752ceb2=""
                         class="icon sprite-icons arr-right-gray">
                         <use data-v-6752ceb2="" href=""></use>
                       </svg></a>

@@ -21,19 +21,19 @@
     <div id="__layout">
       <div tabindex="0" class="layout_base lg wrap lg win_os" data-v-e2abb636="" data-v-520bec6f="">
         <div class="container my lg" data-v-e2abb636="" data-v-520bec6f="">
-          <div data-v-520bec6f="" class="snb_area"><a data-v-520bec6f="" href="/mypage" class="nuxt-link-active">
+          <div data-v-520bec6f="" class="snb_area"><a data-v-520bec6f="" href="/mypage" class="nuxt-link-active" style="text-decoration-line: none;color :black;">
               <h2 data-v-520bec6f="" class="snb_main_title">마이 페이지</h2>
             </a>
             <nav data-v-7bcac446="" data-v-520bec6f="" class="snb">
               <div data-v-7bcac446="" class="snb_list"><strong data-v-7bcac446="" class="snb_title">쇼핑 정보</strong>
                 <ul data-v-7a824f04="" data-v-7bcac446="" class="snb_menu">
-                  <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href="/buying" class="menu_link"> 구매 내역 </a>
+                  <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href="/buying" class="menu_link" style="text-decoration-line: none;color :#222222cc;"> 구매 내역 </a>
                   </li>
                   <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href=""
-                      class="menu_link nuxt-link-exact-active active" aria-current="page"> 판매 내역 </a></li>
-                  <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href="" class="menu_link"> 보관 판매 </a>
+                      class="menu_link nuxt-link-exact-active active" aria-current="page" style="text-decoration-line: none;color :#222222cc;"> 판매 내역 </a></li>
+                  <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href="" class="menu_link" style="text-decoration-line: none;color :#222222cc;"> 보관 판매 </a>
                   </li>
-                  <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href="/saved" class="menu_link"> 관심 상품 </a>
+                  <li data-v-7a824f04="" class="menu_item"><a data-v-7a824f04="" href="/saved" class="menu_link" style="text-decoration-line: none;color :#222222cc;"> 관심 상품 </a>
                   </li>
                 </ul>
               </div>
@@ -54,19 +54,19 @@
                       <dd data-v-2cbb289b="" class="count">0</dd>
                     </dl>
                   </a></div>
-                <div data-v-2cbb289b="" class="tab_item tab_on"><a data-v-2cbb289b="" href="" class="tab_link">
+                <div data-v-2cbb289b="" class="tab_item tab_on"><a data-v-2cbb289b="" href="" class="tab_link" style="text-decoration-line: none;">
                     <dl data-v-2cbb289b="" class="tab_box">
                       <dt data-v-2cbb289b="" class="title">판매 입찰</dt>
                       <dd data-v-2cbb289b="" class="count">0</dd>
                     </dl>
                   </a></div>
-                <div data-v-2cbb289b="" class="tab_item"><a data-v-2cbb289b="" href="" class="tab_link">
+                <div data-v-2cbb289b="" class="tab_item"><a data-v-2cbb289b="" href="" class="tab_link" style="text-decoration-line: none;color :#222222cc;">
                     <dl data-v-2cbb289b="" class="tab_box">
                       <dt data-v-2cbb289b="" class="title">진행 중</dt>
                       <dd data-v-2cbb289b="" class="count">0</dd><!---->
                     </dl>
                   </a></div>
-                <div data-v-2cbb289b="" class="tab_item"><a data-v-2cbb289b="" href="" class="tab_link">
+                <div data-v-2cbb289b="" class="tab_item"><a data-v-2cbb289b="" href="" class="tab_link" style="text-decoration-line: none;color :#222222cc;">
                     <dl data-v-2cbb289b="" class="tab_box">
                       <dt data-v-2cbb289b="" class="title">종료</dt>
                       <dd data-v-2cbb289b="" class="count">0</dd>
@@ -76,11 +76,11 @@
               <div data-v-77765e40="" data-v-9f565f6e="" class="period_search">
                 <div data-v-77765e40="" class="period_month">
                   <ul data-v-77765e40="" class="month_list">
-                    <li data-v-77765e40="" class="month_item"><a data-v-77765e40="" href="" class="month_link">최근
+                    <li data-v-77765e40="" class="month_item"><a data-v-77765e40="" href="" class="month_link" style="text-decoration-line: none;color :#222222cc;">최근
                         2개월</a></li>
-                    <li data-v-77765e40="" class="month_item"><a data-v-77765e40="" href="" class="month_link">4개월</a>
+                    <li data-v-77765e40="" class="month_item"><a data-v-77765e40="" href="" class="month_link" style="text-decoration-line: none;color :#222222cc;">4개월</a>
                     </li>
-                    <li data-v-77765e40="" class="month_item"><a data-v-77765e40="" href="" class="month_link">6개월</a>
+                    <li data-v-77765e40="" class="month_item"><a data-v-77765e40="" href="" class="month_link" style="text-decoration-line: none;color :#222222cc;">6개월</a>
                     </li>
                     <li data-v-77765e40="" class="month_item custom"><a data-v-77765e40="" href=""
                         class="month_link">기간조회</a></li>
@@ -114,7 +114,7 @@
               </ul>
               <div data-v-7a0ddb52="" data-v-9f565f6e="" class="purchase_list bidding ask">
                 <div data-v-7a0ddb52="" class="purchase_head">
-                  <div data-v-7a0ddb52="" class="head_product"><a data-v-7a0ddb52="" href="" class="btn_filter"> 전체 <svg
+                  <div data-v-7a0ddb52="" class="head_product"><a data-v-7a0ddb52="" href="" class="btn_filter" style="text-decoration-line: none;color :black;"> 전체 <svg
                         data-v-7a0ddb52="" xmlns="http://www.w3.org/2000/svg"
                         class="ico-arr-dir-down-circle icon sprite-icons">
                         <use data-v-7a0ddb52="" href=""
@@ -122,15 +122,15 @@
                       </svg></a></div>
                   <div data-v-7a0ddb52="" class="head_status">
                     <div data-v-7a0ddb52="" class="status_box field_price"><a data-v-7a0ddb52="" href=""
-                        class="status_link"><span data-v-7a0ddb52="" class="status_txt">판매 희망가</span></a></div>
+                        class="status_link" style="text-decoration-line: none;color :black;"><span data-v-7a0ddb52="" class="status_txt" >판매 희망가</span></a></div>
                     <div data-v-7a0ddb52="" class="status_box field_date_purchased"><a data-v-7a0ddb52="" href=""
-                        class="status_link"><span data-v-7a0ddb52="" class="status_txt">구매일</span></a></div>
+                        class="status_link" style="text-decoration-line: none;color :black;"><span data-v-7a0ddb52="" class="status_txt">구매일</span></a></div>
                     <div data-v-7a0ddb52="" class="status_box field_date_paid"><a data-v-7a0ddb52="" href=""
-                        class="status_link"><span data-v-7a0ddb52="" class="status_txt">정산일</span></a></div>
+                        class="status_link" style="text-decoration-line: none;color :black;"><span data-v-7a0ddb52="" class="status_txt">정산일</span></a></div>
                     <div data-v-7a0ddb52="" class="status_box field_expires_at"><a data-v-7a0ddb52="" href=""
-                        class="status_link"><span data-v-7a0ddb52="" class="status_txt">만료일</span></a></div>
+                        class="status_link" style="text-decoration-line: none;color :black;"><span data-v-7a0ddb52="" class="status_txt">만료일</span></a></div>
                     <div data-v-7a0ddb52="" class="status_box field_status ascending"><a data-v-7a0ddb52="" href=""
-                        class="status_link"><span data-v-7a0ddb52="" class="status_txt">상태</span></a></div>
+                        class="status_link" style="text-decoration-line: none;color :black;"><span data-v-7a0ddb52="" class="status_txt">상태</span></a></div>
                   </div>
                 </div>
                 <div data-v-6abf8c64="" data-v-7a0ddb52="" class="empty_area">
