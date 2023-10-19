@@ -24,6 +24,13 @@
 
 </head>
 <body>
+<c:url var="buyUrl" value="/buy">
+	<c:param name="pNo" value="${pvo.pNo}" />
+</c:url>
+<c:url var="sellUrl" value="/sell">
+	<c:param name="pNo" value="${pvo.pNo}" />
+</c:url>
+
   <main id="main" class="min">
     <!-- ======= 상세페이지 section ======= -->
     
@@ -34,7 +41,7 @@
           <div class="col-md-6 d-flex align-items-stretch">
             <div class="card">
               <div class="card-img">
-                <img src="${pageContext.request.contextPath}/resources/img/${product.pImg1}" alt="제품사진">
+                <img src="${pageContext.request.contextPath}/resources/img/${pvo.pImg1}" alt="제품사진">
               </div>
        
             </div>
@@ -45,32 +52,32 @@
               	
               	
                 <p><a href="#"><strong>${comName}</strong></a></p>
-                <h5 class="card-title">${product.pName}</h5>
-                <h5 class="pCodeWrite">${product.pCode}</h5>
-                <p>발매가 : ${product.releasePrice}원</p>
+                <h5 class="card-title">${pvo.pName}</h5>
+                <h5 class="pCodeWrite">${pvo.pCode}</h5>
+                <p>발매가 : ${pvo.releasePrice}원</p>
                 <hr>
-                <p>최근거래가 : <fmt:formatNumber value="${product.recentPrice}" pattern="#,###,###"/>원</p>
+                <p>최근거래가 : <fmt:formatNumber value="${pvo.recentPrice}" pattern="#,###,###"/>원</p>
                 
                 <div id="redBlueButton">
-                	<button type="button" class="OneRedBtn btn btn-danger">
+                	<a class="OneRedBtn btn btn-danger" href="${buyUrl}">
                 		<div class="btnDesign" id="FrontRed">구매</div>
                 		<div class="btnDesign" id="BackRed">
                 			<p class="p1">
-                				<fmt:formatNumber value="${product.immediatePurchacePrice}" pattern="#,###,###"/><span class="p2">원</span>
+                				<fmt:formatNumber value="${pvo.immediatePurchacePrice}" pattern="#,###,###"/><span class="p2">원</span>
                 			</p>
                 			<p class="p3">즉시 구매가</p>
                 		</div>
-                	</button>
+                	</a>
                 	
-                	<button type="button" class="btn btn-success">
+                	<a class="OneRedBtn btn btn-success" href="${sellUrl}">
                 		<div class="btnDesign" id="FrontRed">판매</div>
                 		<div class="btnDesign" id="BackRed">
                 			<p class="p1">
-                				<fmt:formatNumber value="${product.immediateSellingPrice}" pattern="#,###,###"/><span class="p2">원</span>
+                				<fmt:formatNumber value="${pvo.immediateSellingPrice}" pattern="#,###,###"/><span class="p2">원</span>
                 			</p>
                 			<p class="p3">즉시 판매가</p>
                 		</div>
-                	</button>
+					</a>
                 </div>
                 <div class="d-grid gap-1">
                 	<button type="button" class="btn btn-light btn-lg">
@@ -159,7 +166,7 @@
   
 
         <form id="rvForm" method="POST" enctype="multipart/form-data">
-        	<input type="hidden" name="pNo" value="${product.pNo}">
+        	<input type="hidden" name="pNo" value="${pvo.pNo}">
         	
             아이디: <c:out value="${loginUser.userEmail}"/><br>
             <input type="hidden" name="loginUserEmail" value="${loginUser.userEmail}">

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +14,7 @@
   
   <link href="${pageContext.request.contextPath}/resources/css/sellbuy.css" rel="stylesheet">
   
+  <script src="${pageContext.request.contextPath}/resources/js/buy.js"></script>
 </head>
 <body>
 
@@ -24,11 +26,11 @@
         <div class="wrap ctn">
             <div id="item_info">
                 <div id="item_img">
-                    <img src="${pageContext.request.contextPath}/resources/img/iphone15protita.png" alt="상품이미지">
+                    <img src="${pageContext.request.contextPath}/resources/img/${pvo.pImg1}" alt="상품이미지">
                 </div>
                 <div id="item_detail">
-                    <span>apple_iphone14pro_128G_silver</span>
-                    <span>아이폰 14 프로 128기가 실버</span>
+                    <span>${pvo.pCode}</span>
+                    <span>${pvo.pName}</span>
                 </div>
             </div>
             <div id="grade_select">
@@ -37,7 +39,7 @@
                         <button>
                             <div>
                                 <span>S</span><br>
-                                <span class="buy">1,000,000</span>
+                                <span class="buy price"><fmt:formatNumber value="${Sprice}" pattern="#,###,###"/></span>
                             </div>
                         </button>
                     </li>
@@ -45,7 +47,7 @@
                         <button>
                             <div>
                                 <span>A</span><br>
-                                <span class="buy">900,000</span>
+                                <span class="buy price"><fmt:formatNumber value="${Aprice}" pattern="#,###,###"/></span>
                             </div>
                         </button>
                     </li>
@@ -53,16 +55,16 @@
                         <button>
                             <div>
                                 <span>B</span><br>
-                                <span class="buy">850,000</span>
+                                <span class="buy price"><fmt:formatNumber value="${Bprice}" pattern="#,###,###"/></span>
                             </div>
                         </button>
                     </li>
                 </ul>			
             </div>
-            <div class="sub">
+            <div class="sub hide">
                 <button>
                     <div>
-                        <span>1,000,000</span><br>
+                        <span id="selectPrice"></span><br>
                         <span>일반배송</span>
                     </div>
                 </button>

@@ -6,12 +6,13 @@
 		<typeAlias type="com.sendandtake.www.main.model.MemberVO" alias="Member"/>
 		<typeAlias type="com.sendandtake.www.product.model.ProductVO" alias="Product"/>
 		<typeAlias type="com.sendandtake.www.product.model.ReviewVO" alias="Review"/>
-		<typeAlias type="com.sendandtake.www.product.model.ChartVO" alias="Chart"/>
+		<typeAlias type="com.sendandtake.www.product.model.SaleProductVO" alias="SaleProduct"/>
 	</typeAliases>
 	
 	<mappers>
 		<mapper resource="mybatis/member.xml"/>
 		<mapper resource="mybatis/product.xml"/>
 		<mapper resource="mybatis/review.xml"/>
+		<mapper resource="mybatis/deal.xml"/>
 	</mappers>
 </configuration>

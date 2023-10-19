@@ -56,7 +56,7 @@
                 </ul>
 
                 <div class="tab-content">
-                    <div id="buy_bid" class="buy_hide">
+                    <div id="buy_bid" class="hide">
 
                         <form action="/" method="post">
 

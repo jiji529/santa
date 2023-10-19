@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.sendandtake.www.product.dao.ProductDao;
 import com.sendandtake.www.product.dao.ReviewDao;
-import com.sendandtake.www.product.model.ChartVO;
+import com.sendandtake.www.product.model.SaleProductVO;
 import com.sendandtake.www.product.model.ProductVO;
 import com.sendandtake.www.product.model.ReviewVO;
 import com.sendandtake.www.product.service.ProductService;
@@ -40,7 +40,7 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public List<ChartVO> selectXyList(int pNo) {
+	public List<SaleProductVO> selectXyList(int pNo) {
 
 		return productDao.selectXyList(pNo);
 	}
@@ -49,6 +49,12 @@ public class ProductServiceImpl implements ProductService {
 	public ReviewVO selectReview(String rvNewImg) {
 
 		return reviewDao.selectReview(rvNewImg);
+	}
+
+	@Override
+	public List<SaleProductVO> selectPriceList(int pNo) {
+
+		return productDao.selectPriceList(pNo);
 	}
 
 

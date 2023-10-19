@@ -9,14 +9,14 @@ window.onload = () => {
     if(e.target.textContent == '구매 입찰'){
       document.querySelector('.tab-group li:nth-child(1)').classList.add('active');
       document.querySelector('.tab-group li:nth-child(2)').classList.remove('active');
-      document.querySelector('#buy_bid').classList.remove('buy_hide');
-      document.querySelector('#buy_imd').classList.add('buy_hide');
+      document.querySelector('#buy_bid').classList.remove('hide');
+      document.querySelector('#buy_imd').classList.add('hide');
     };
     if(e.target.textContent == '즉시 구매'){
       document.querySelector('.tab-group li:nth-child(2)').classList.add('active');
       document.querySelector('.tab-group li:nth-child(1)').classList.remove('active');
-      document.querySelector('#buy_bid').classList.add('buy_hide');
-      document.querySelector('#buy_imd').classList.remove('buy_hide');
+      document.querySelector('#buy_bid').classList.add('hide');
+      document.querySelector('#buy_imd').classList.remove('hide');
     };
 
   });

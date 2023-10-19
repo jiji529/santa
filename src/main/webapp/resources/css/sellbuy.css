@@ -104,6 +104,7 @@ header{background: black; height: 90px;font-weight: 700;box-sizing: border-box; 
 #bid_date a.act{border: 1px solid #22222280; font-weight: 600;color: #000;}
 #bid_date a.act:hover{background: none;}
 a.act{border: 1px solid #000 !important; font-weight: 600;color: #000;}
+.act{border: 1px solid #000 !important; font-weight: 600;color: #000;}
 
 /* */
 #buy_imd > form > div{padding: 16px 0;}
@@ -114,7 +115,7 @@ a.act{border: 1px solid #000 !important; font-weight: 600;color: #000;}
 #buy_imd dd input:focus{outline: none;}
 #buy_imd dd input::placeholder{border: 0;font-weight: 600;text-align: right;color: #b6b6b6;}
 
-.form_select .buy_hide{display: none;}
+.hide{display: none !important;}
 
 .address{
     border-top: 1px solid #d3d3d3 !important;

@@ -13,6 +13,7 @@ public class ProductVO {
 	private String pDetail;
 	private String releasePrice;
 	
+	
 	//'최근거래가' -> selectProduct 메소드 실행 시 가져옴.
 	private int recentPrice;
 	
@@ -21,6 +22,8 @@ public class ProductVO {
 	
 	//'즉시판매가' -> selectProduct 메소드 실행 시 가져옴.
 	private int immediateSellingPrice;
+	
+	
 	
 	public int getImmediateSellingPrice() {
 		return immediateSellingPrice;

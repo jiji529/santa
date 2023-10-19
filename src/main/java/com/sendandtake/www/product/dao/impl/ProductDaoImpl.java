@@ -8,8 +8,8 @@ import org.springframework.stereotype.Repository;
 
 import com.sendandtake.www.main.pager.Pager;
 import com.sendandtake.www.product.dao.ProductDao;
-import com.sendandtake.www.product.model.ChartVO;
 import com.sendandtake.www.product.model.ProductVO;
+import com.sendandtake.www.product.model.SaleProductVO;
 
 @Repository
 public class ProductDaoImpl implements ProductDao {
@@ -31,7 +31,7 @@ public class ProductDaoImpl implements ProductDao {
 	}
 
 	@Override
-	public List<ChartVO> selectXyList(int pNo) {
+	public List<SaleProductVO> selectXyList(int pNo) {
 
 		return sql.selectList("product.chart", pNo);
 	}
@@ -40,6 +40,12 @@ public class ProductDaoImpl implements ProductDao {
 	public List<ProductVO> selectProductList(Pager pager) {
 		
 		return sql.selectList("product.totalList", pager);
+	}
+	
+	@Override
+	public List<SaleProductVO> selectPriceList(int pNo) {
+
+		return sql.selectList("deal.priceList", pNo);
 	}
 
 	@Override

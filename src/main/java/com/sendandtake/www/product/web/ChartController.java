@@ -10,7 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.sendandtake.www.product.model.ChartVO;
+import com.sendandtake.www.product.model.SaleProductVO;
 import com.sendandtake.www.product.service.ProductService;
 
 @Controller
@@ -28,16 +28,16 @@ public class ChartController {
 	
 	@ResponseBody
 	@GetMapping("/ajax/chartTest")
-	Map<String, List<ChartVO>> chart(int pNo) {
+	Map<String, List<SaleProductVO>> chart(int pNo) {
 
-		List<ChartVO> chartList = productService.selectXyList(pNo);
+		List<SaleProductVO> chartList = productService.selectXyList(pNo);
 
-		List<ChartVO> SList = new ArrayList<ChartVO>(); 
-		List<ChartVO> AList = new ArrayList<ChartVO>(); 
-		List<ChartVO> BList = new ArrayList<ChartVO>();
+		List<SaleProductVO> SList = new ArrayList<SaleProductVO>(); 
+		List<SaleProductVO> AList = new ArrayList<SaleProductVO>(); 
+		List<SaleProductVO> BList = new ArrayList<SaleProductVO>();
 		
 
-		for (ChartVO cl : chartList) {
+		for (SaleProductVO cl : chartList) {
 
 			
 			 if (cl.getGrade().equals("S")) { 
@@ -50,7 +50,7 @@ public class ChartController {
 			 }
 		}
 		
-		Map<String, List<ChartVO>> chartMap = new HashMap<String, List<ChartVO>>();
+		Map<String, List<SaleProductVO>> chartMap = new HashMap<String, List<SaleProductVO>>();
 		
 		chartMap.put("SL", SList);
 		chartMap.put("AL", AList);

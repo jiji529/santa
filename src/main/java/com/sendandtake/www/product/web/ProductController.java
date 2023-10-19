@@ -33,17 +33,18 @@ public class ProductController {
 	
 	//상세페이지
 	@GetMapping("/detail.do")
-	String detail(int pNo, Model model, ReviewVO rvo) {
+	String detail(int pNo, Model model, ReviewVO rvo, HttpSession session) {
 		
 		//상품 하나 불러오기
-		ProductVO productOne = productService.selectProduct(pNo);
+		ProductVO pvo = productService.selectProduct(pNo);
 		
-		model.addAttribute("product", productOne);
+		model.addAttribute("pvo", pvo);
+		session.setAttribute("productVO", pvo);
 		
 		//회사명 CompanyName -> ${comName}
-		int index = productOne.getpCode().indexOf("_");
+		int index = pvo.getpCode().indexOf("_");
 		
-		String CompanyName = productOne.getpCode().substring(0, index);
+		String CompanyName = pvo.getpCode().substring(0, index);
 
 		model.addAttribute("comName", CompanyName.toUpperCase());
 		
