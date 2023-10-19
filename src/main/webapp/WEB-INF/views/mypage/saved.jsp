@@ -11,6 +11,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.5/angular.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/mypage.css">
+      
       <title>관심상품</title>
       
         <jsp:include page="../header.jsp"></jsp:include>
@@ -42,8 +43,8 @@
             </nav>
           </div>
           <div data-v-512d9435="" data-v-520bec6f="" class="content_area my-page-content" >
-            <div data-v-61e7a8a3="" data-v-512d9435="" class="content_title border" style="border-bottom: 3px solid #222;
-            padding-bottom: 16px">
+            <div  style="border-bottom: 3px solid #222; 
+            padding-bottom: 16px" >
               <div data-v-61e7a8a3="" class="title">
                 <h3 data-v-61e7a8a3="">관심 상품</h3><!---->
               </div><!---->
