@@ -23,7 +23,7 @@ public class MainController {
 	
 	//홈페이지
 	@GetMapping("/")
-	String main (Model model, HttpSession session) {
+	String main (Model model, HttpSession session, Pager pager) {
 		
 		String msg = (String)session.getAttribute("msg");
 		
@@ -32,7 +32,8 @@ public class MainController {
 			session.removeAttribute("msg");
 		}
 			
-		List<ProductVO> list = mainService.selectProductList();
+		pager.setPerPage(8);
+		List<ProductVO> list = mainService.selectProductList(pager);
 		
 		
 		model.addAttribute("list", list);

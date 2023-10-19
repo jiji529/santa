@@ -90,7 +90,7 @@
        	 <c:forEach var="item" items="${list}">
           <div class="col-lg-3 col-md-6 align-items-stretch mt-4"  id="mainItem">
             <div class="course-item">
-			<img src="resources/img/product/apple_iphone14_256GB_starlight.png" class="img-fluid" alt="...">
+			<img src="/resources/img/product/${item.pImg1}" class="img-fluid" alt="...">
 <%-- 			  <p>${item.pImg1}</p> <!-- 이미지 DB에 제대로 넣으면 바꿔야해! --> --%>
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
