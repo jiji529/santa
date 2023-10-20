@@ -44,15 +44,23 @@ public class DealController {
 	
 	//상품구매동의
 	@GetMapping("/buycheck")
-	String buycheck() {
+	String buycheck(String grade, @SessionAttribute("productVO") ProductVO pvo, Model model) {
 		
+		System.out.println("grade : " + grade);
+		
+		pvo.setGrade(grade);
+		
+		model.addAttribute("pvo", pvo);
 		
 		return "product/buycheck";
 	}
 	
 	//상품구매종류선택
 	@GetMapping("/buyinput")
-	String buyinput() {
+	String buyinput(@SessionAttribute("productVO") ProductVO pvo, Model model) {
+		
+		model.addAttribute("pvo", pvo);
+		
 		return "product/buyinput";
 	}
 	

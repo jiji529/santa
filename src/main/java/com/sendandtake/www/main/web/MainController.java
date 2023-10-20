@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.sendandtake.www.main.model.MemberVO;
@@ -99,6 +100,11 @@ public class MainController {
 			return "redirect:/";
 		}
 		
+	}
+	//카카오로그인
+	@GetMapping("/kakao/callback")
+	public String kakaoCallback(@RequestParam String code, HttpSession session) {
+		return "redirect:/";
 	}
 	
 	//로그아웃

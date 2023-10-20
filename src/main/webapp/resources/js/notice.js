@@ -8,10 +8,13 @@ window.onload = () => {
       }else{
         i.setAttribute('checked', true);
       }
+
       let check = true;
+
       document.querySelectorAll('.notice label input').forEach((j) => {
         if(!j.hasAttribute('checked')) check=false;
       });
+      
       if(check){
         document.querySelector('.sub button').classList.remove('btn_not_active');
       }else{

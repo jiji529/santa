@@ -27,15 +27,15 @@
             </div>
             <div id="item_info">
                 <div id="item_img">
-                    <img src="${pageContext.request.contextPath}/resources/img/iphone15protita.png" alt="상품이미지">
+                    <img src="${pageContext.request.contextPath}/resources/img/product/${pvo.pImg1}" alt="상품이미지">
                 </div>
                 <div id="item_detail">
-                    <span>apple_iphone14pro_128G_silver</span>
-                    <span>아이폰 14 프로 128기가 실버</span>
-                    <span>S</span>
+                    <span>${pvo.pCode}</span>
+                    <span>${pvo.pName}</span>
+                    <span>${pvo.grade}</span>
                 </div>
             </div>
-            <form action="" id="notice_form">
+            <form action="${pageContext.request.contextPath}/buyinput" id="notice_form">
 	            <div id="notice_select">
 	                <ul>
 	                    <li>
@@ -82,7 +82,7 @@
 	                </ul>			
 	            </div>
 	            <div class="sub">
-	                <button id="btn_not_active">
+	                <button class="btn_not_active">
 	                    <div>
 	                        <span>구매 계속</span>
 	                    </div>

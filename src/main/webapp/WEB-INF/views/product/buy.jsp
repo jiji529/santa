@@ -26,7 +26,7 @@
         <div class="wrap ctn">
             <div id="item_info">
                 <div id="item_img">
-                    <img src="${pageContext.request.contextPath}/resources/img/${pvo.pImg1}" alt="상품이미지">
+                    <img src="${pageContext.request.contextPath}/resources/img/product/${pvo.pImg1}" alt="상품이미지">
                 </div>
                 <div id="item_detail">
                     <span>${pvo.pCode}</span>
@@ -62,12 +62,15 @@
                 </ul>			
             </div>
             <div class="sub hide">
-                <button>
-                    <div>
-                        <span id="selectPrice"></span><br>
-                        <span>일반배송</span>
-                    </div>
-                </button>
+            	<form action="${pageContext.request.contextPath}/buycheck" id="buy_form">
+            		<input type="hidden" name="grade" value="">
+	                <button id="buy_btn">
+	                    <div>
+	                        <span id="selectPrice"></span><br>
+	                        <span>일반배송</span>
+	                    </div>
+	                </button>
+                </form>
             </div>
         </div>
     </div>
