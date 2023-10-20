@@ -27,10 +27,10 @@
 		<div class="menu_index">
 			<ul>
 				<li><div><a href="/list">전체상품</a></div></li>
-				<li><div><a href="#">노트북</a></div></li>
-				<li><div><a href="#">태블릿</a></div></li>
-				<li><div><a href="#">핸드폰</a></div></li>
-				<li><div><a href="#">액세서리</a></div></li>
+				<li><div><a href="/list?cNo=3">노트북</a></div></li>
+				<li><div><a href="/list?cNo=2">태블릿</a></div></li>
+				<li><div><a href="/list?cNo=1">핸드폰</a></div></li>
+				<li><div><a href="/list?cNo=3">액세서리</a></div></li>
 			</ul>
 			<form id="menu_indexr" class="search" action="#">
 				<input class="search_box1" type="text" name="search" placeholder="검색어를 입력하세요." >
