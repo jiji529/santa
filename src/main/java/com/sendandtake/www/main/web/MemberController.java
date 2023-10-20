@@ -3,6 +3,7 @@ package com.sendandtake.www.main.web;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -38,9 +39,16 @@ public class MemberController {
 	//아이디 중복체크
 	@PostMapping("/checkEmail")
 	@ResponseBody
-	public int idCheck(@RequestParam("email")String email) {
-		int cnt = memberservice.emailCheck(email);
-		return cnt;
+	public ResponseEntity<String> emailCheck(@RequestParam("email") String email) {
+	    int count = memberservice.emailCheck(email);
+	    
+	    if (count == 0) {
+	        // 중복되지 않은 Email 
+	        return ResponseEntity.ok("0");
+	    } else {
+	        // 중복된 Email 
+	        return ResponseEntity.ok("1");
+	    }
 	}
 	
 	//회원정보 수정

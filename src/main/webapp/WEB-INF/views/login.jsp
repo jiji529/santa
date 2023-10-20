@@ -22,13 +22,13 @@
                 <input type="password" name="userPwd" class="form-control" placeholder="Password" required>
                 <a href="${pageContext.request.contextPath}/main.do"><button type="submit" class="btn1">Login</button></a>
             </form>
-            <div>
-                <a href="${pageContext.request.contextPath}/member/join"><button type="submit" class="btn1">회원가입</button></a>
-            </div>
             <div class="btn-cont">
-                <a class="btn-kakao" href="#" data-type="login">
+                <a class="btn-kakao" href="#" data-type="login" onclick="kakaoLogin();">
                     <img src="/resources/img/kakaologin.png" width="340" height="48"  alt="카카오 로그인 버튼"/>
                 </a>
+            </div>
+            <div>
+                <a href="${pageContext.request.contextPath}/member/join"><button type="submit" class="btn1">회원가입</button></a>
             </div>
         </div>
     </div>
@@ -45,5 +45,49 @@
 	if(msg)
 		alert(msg);
 	</script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+        Kakao.init('526623ee8b7d0f83434205bd9b90b585'); // Replace with your Kakao JavaScript Key
+
+        // Function to handle Kakao login
+        function kakaoLogin() {
+            Kakao.Auth.login({
+                success: function (response) {
+                    Kakao.API.request({
+                        url: '/v2/user/me',
+                        success: function (response) {
+                            console.log(response);
+                            // You can handle the user data here
+                        },
+                        fail: function (error) {
+                            console.log(error);
+                        },
+                    });
+                },
+                fail: function (error) {
+                    console.log(error);
+                },
+            });
+        }
+
+/*         // Function to handle Kakao logout
+        function kakaoLogout() {
+            if (Kakao.Auth.getAccessToken()) {
+                Kakao.API.request({
+                    url: '/v1/user/unlink',
+                    success: function (response) {
+                        console.log(response);
+                        // Handle logout success
+                    },
+                    fail: function (error) {
+                        console.log(error);
+                    },
+                });
+                Kakao.Auth.setAccessToken(undefined);
+            }
+        } */
+    </script>
+
+
 </body>
 </html>
