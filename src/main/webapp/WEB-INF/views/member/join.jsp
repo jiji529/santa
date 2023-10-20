@@ -298,7 +298,7 @@
                             const checkInput = $('.mail-check-input')
 
                             if (!email) {
-                                alert('Please enter your email address');
+                                alert('이메일을 입력해주세요');
                             } else {
                                 emailEntered = true;
 

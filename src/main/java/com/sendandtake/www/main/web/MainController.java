@@ -2,12 +2,15 @@ package com.sendandtake.www.main.web;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -119,31 +122,31 @@ public class MainController {
 		
 	}
 	//카카오로그인
-//	@PostMapping("/kakao/callback")
-//	public String kakaoCallback(@ModelAttribute("mvo") MemberVO member, HttpServletRequest request,ModelMap model,HttpSession session) {
-//		member.setUserPwd(member.getUserEmail());
-//		MemberVO mvo = mainService.selectLogin(member);
-//		if(mvo != null && mvo.getUserEmail() != null && !mvo.getUserEmail().equals("")) {
-//			
-//			if(mvo.getUserEmail() != null) {
-//				request.getSession().setAttribute("member", mvo);
-//				return "redirect:/";
-//			}else {
-//				session.setAttribute("msg", "로그인 정보가 올바르지 않습니다.");
-//				return "redirect:/login.do";
-//			}
+	@PostMapping("/kakao/callback")
+	public String kakaoCallback(@ModelAttribute("mvo") MemberVO member, HttpServletRequest request,ModelMap model,HttpSession session) {
+		member.setUserPwd(member.getUserEmail());
+		MemberVO mvo = mainService.selectLogin(member);
+		if(mvo != null && mvo.getUserEmail() != null && !mvo.getUserEmail().equals("")) {
+			
+			if(mvo.getUserEmail() != null) {
+				request.getSession().setAttribute("member", mvo);
+				return "redirect:/";
+			}else {
+				session.setAttribute("msg", "로그인 정보가 올바르지 않습니다.");
+				return "redirect:/login.do";
+			}
 //		}else {
 //			MemberVO kakao = member;
-//			kakao.setUserEmail(member.getUserEmail());
+//		kakao.setUserEmail(member.getUserEmail());
 //			kakao.setUserPwd("");
-////			mainService.addKakao(kakao);
+//			mainService.addKakao(kakao);
 //			
-//			session.setAttribute("member", kakao);
+//		session.setAttribute("member", kakao);
 //			
-//		}
-//		
-//		return "redirect:/";
-//	}
+		}
+	
+		return "redirect:/";
+	}
 	
 	//로그아웃
 	@GetMapping("/logout")
