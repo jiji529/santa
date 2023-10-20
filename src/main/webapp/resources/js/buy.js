@@ -13,4 +13,7 @@ window.onload = () => {
     });
   });
 
+  document.querySelector('#buy_btn').addEventListener('click', () => {
+    document.querySelector('input[name="grade"]').value = document.querySelector("button.act > div > span:first-child").textContent;
+  });
 }

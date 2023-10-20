@@ -25,12 +25,12 @@
         <div class="wrap ctn">
             <div id="item_info">
                 <div id="item_img">
-                    <img src="${pageContext.request.contextPath}/resources/img/iphone15protita.png" alt="상품이미지">
+                    <img src="${pageContext.request.contextPath}/resources/img/product/${pvo.pImg1}" alt="상품이미지">
                 </div>
                 <div id="item_detail">
-                    <span>apple_iphone14pro_128G_silver</span>
-                    <span>아이폰 14 프로 128기가 실버</span>
-                    <span>S</span>
+                    <span>${pvo.pCode}</span>
+                    <span>${pvo.pName}</span>
+                    <span>${pvo.grade}</span>
                 </div>
             </div>
             <div id="input_select">
@@ -38,11 +38,11 @@
                     <ul>
                         <li class="now_price">
                             <p>즉시 구매가</p>
-                            <p><span>1,000,000</span>원</p>
+                            <p><span>${pvo.immediatePurchacePrice}</span>원</p>
                         </li>
                         <li class="now_price">
                             <p>즉시 판매가</p>
-                            <p><span>900,000</span>원</p>
+                            <p><span>${pvo.immediateSellingPrice}</span>원</p>
                         </li>
                     </ul>
                 </div>
@@ -106,7 +106,7 @@
                                 <dl>
                                     <dt>즉시 구매가</dt>
                                     <dd>
-                                        <span>1,000,000</span>
+                                        <span>${pvo.immediatePurchacePrice}</span>
                                         <span>원</span>
                                     </dd>
                                 </dl>

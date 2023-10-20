@@ -13,8 +13,8 @@
 <link href="${pageContext.request.contextPath}/resources/css/style.css" rel="stylesheet">
  <!-- 메인화면 JS File -->
 <script src="resources/js/main.js"></script>
-  <!-- 슬라이더 JS File -->
-<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <!-- 제이쿼리 -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 <!-- ======= TOP Header ======= -->
 <jsp:include page="header.jsp"></jsp:include>
@@ -128,7 +128,7 @@
 	<!-- End Footer -->
 
 	<div>
-	  <a href="#"><img src="resources/img/화살표.png"  class="back-to-top d-flex align-items-center justify-content-center" alt="..." >top</a>
+	  <a href="#"><img src="${pageContext.request.contextPath}/resources/img/화살표.png"  class="back-to-top d-flex align-items-center justify-content-center" alt="..." >top</a>
 	</div>
 
 

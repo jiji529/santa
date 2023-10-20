@@ -12,7 +12,7 @@ public class ProductVO {
 	private String pImg3;
 	private String pDetail;
 	private String releasePrice;
-	
+	private String grade;
 	
 	//'최근거래가' -> selectProduct 메소드 실행 시 가져옴.
 	private int recentPrice;
@@ -103,5 +103,12 @@ public class ProductVO {
 	public void setpDetail(String pDetail) {
 		this.pDetail = pDetail;
 	}
+	public String getGrade() {
+		return grade;
+	}
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+	
 	
 }
