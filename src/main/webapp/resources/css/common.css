@@ -331,3 +331,12 @@ main .thumbs h2 {
   text-decoration: none;
   font-weight:bold;
 }
+
+.detail_view{
+	font-weight: bolder; 
+	padding-left:12px; 
+	margin:auto; 
+	border: 2px solid; 
+	width: 100px; 
+	border-radius:30px;
+}

@@ -11,6 +11,7 @@
 									</div>
 									<h2>${item.pName}</h2>
 									<p>${item.pCode}</p>
+									<h3>자세히보기</h3>
 <!-- 									<div class="org_price"> -->
 <!-- 										<del>30,000</del> -->
 <!-- 										<span> 10% </span> -->
