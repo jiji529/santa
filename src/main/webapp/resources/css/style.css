@@ -136,7 +136,7 @@ header > .menu > div > ul > li > div > a:hover {
 .back-to-top {
   position: fixed;
   visibility: hidden;
-  opacity: 0;
+/*   opacity: 0; */
   right: 15px;
   bottom: 15px;
   z-index: 996;

@@ -34,6 +34,9 @@ public class Pager {
 		if(search > 0 && keyword != null)
 			queryString += "&keyword=" + keyword;
 		
+		else if(search > 0 && cNo != 0)
+			queryString += "&cNo=" + cNo;
+		
 		return queryString;
 	}
 	
