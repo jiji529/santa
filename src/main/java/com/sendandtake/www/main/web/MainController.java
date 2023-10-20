@@ -118,11 +118,29 @@ public class MainController {
 		}
 		
 	}
-//	//카카오로그인
+	//카카오로그인
 //	@PostMapping("/kakao/callback")
-//	public String kakaoCallback(@ModelAttribute("mvo") MemberVO mvo, HttpServletRequest request,ModelMap model,HttpSession session) {
-//		mvo.setUserPwd(mvo.getUserEmail());
-////		MemberVO mvo = memberservice.
+//	public String kakaoCallback(@ModelAttribute("mvo") MemberVO member, HttpServletRequest request,ModelMap model,HttpSession session) {
+//		member.setUserPwd(member.getUserEmail());
+//		MemberVO mvo = mainService.selectLogin(member);
+//		if(mvo != null && mvo.getUserEmail() != null && !mvo.getUserEmail().equals("")) {
+//			
+//			if(mvo.getUserEmail() != null) {
+//				request.getSession().setAttribute("member", mvo);
+//				return "redirect:/";
+//			}else {
+//				session.setAttribute("msg", "로그인 정보가 올바르지 않습니다.");
+//				return "redirect:/login.do";
+//			}
+//		}else {
+//			MemberVO kakao = member;
+//			kakao.setUserEmail(member.getUserEmail());
+//			kakao.setUserPwd("");
+////			mainService.addKakao(kakao);
+//			
+//			session.setAttribute("member", kakao);
+//			
+//		}
 //		
 //		return "redirect:/";
 //	}

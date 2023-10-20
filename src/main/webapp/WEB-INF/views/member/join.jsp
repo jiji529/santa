@@ -39,7 +39,7 @@
                             <label>이메일</label>
                             <div class="input-group">
                                 <input type="email" name="userEmail" id="userEmail" 
-                                    class="form-control" placeholder="santa@santa.co.kr" required>
+                                    class="form-control" placeholder="santa@santa.co.kr" >
                                 <div class="input-group-append">
                                     <button type="button" class="btn btn-dark" id="mail-Check-Btn"
                                         style="margin-top: 15px; height: 45px; margin-left: 7px; ">메일인증</button>
@@ -56,7 +56,7 @@
                             <span id="mail-check-warm"></span>
                             <label>비밀번호</label>
                             <input type="password" name="userPwd" class="form-control" placeholder="영문,숫자,특수문자 조합 8-16자"
-                                required>
+                                >
                             <div>
                                 <input type="checkbox" id="check_all">
                                 <label>[필수] 만 14세 이상이며 모두 동의합니다</label>
@@ -83,7 +83,7 @@
                     </div>
                 </div>
             </div>
-
+		<br>
 
 
             <div class="footer">
@@ -291,10 +291,18 @@
                     <!-- 이메일 인증확인 -->
                     <script>
                         let code;
+                        let emailEntered = false;
                         $('#mail-Check-Btn').click(function () {
                             const email = $("#userEmail").val();//이메일 주소값 가져오기
                             console.log('완성된 이메일:' + email) //이메일 오는지 확인
                             const checkInput = $('.mail-check-input')
+
+                            if (!email) {
+                                alert('Please enter your email address');
+                            } else {
+                                emailEntered = true;
+
+
 
                             $.ajax({
                                 type: 'get',
@@ -310,7 +318,8 @@
                                     	alert('인증번호가 전송되었습니다.');
                                     }
                                 }
-                            })//end ajax
+                            });//end ajax
+                        }
                         });//end send email
 
                         //인증번호 비교
