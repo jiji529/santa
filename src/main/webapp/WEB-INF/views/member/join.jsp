@@ -38,24 +38,25 @@
                         <form id="agreeFrm" method="POST" class="wrapper-box">
                             <label>이메일</label>
                             <div class="input-group">
-                                <input type="email" name="userEmail" id="userEmail" oninput="checkEmail()"
+                                <input type="email" name="userEmail" id="userEmail" 
                                     class="form-control" placeholder="santa@santa.co.kr" required>
-                                <span class="id_ok">사용 가능한 아이디입니다.</span>
-                                <span class="id_already">아이디를 사용하고 있어요.</span>
                                 <div class="input-group-append">
                                     <button type="button" class="btn btn-dark" id="mail-Check-Btn"
-                                        style="margin-top: 15px; height: 45px; margin-left: 7px; ">인증</button>
+                                        style="margin-top: 15px; height: 45px; margin-left: 7px; ">메일인증</button>
                                 </div>
                             </div>
-                            <div class="mail-check-box">
+                            <div class="mail-check-box input-group">
                                 <input name="authNumber" class="form-control mail-check-input"
-                                    placeholder="인증번호 6자리를 입력해주세요" disabled="disabled" maxlength="6">
+                                    placeholder="인증번호 6자리를 입력해주세요" disabled="disabled" maxlength="6" style="width:250px;">
+                                 <div class="input-group-append">
+                                    <button type="button" class="btn btn-dark" id="mail-check"
+                                        style="margin-top: 15px; height: 45px; margin-left: 7px; width: 83px;">확인</button>
+                                </div>
                             </div>
                             <span id="mail-check-warm"></span>
                             <label>비밀번호</label>
                             <input type="password" name="userPwd" class="form-control" placeholder="영문,숫자,특수문자 조합 8-16자"
                                 required>
-
                             <div>
                                 <input type="checkbox" id="check_all">
                                 <label>[필수] 만 14세 이상이며 모두 동의합니다</label>
@@ -297,63 +298,54 @@
 
                             $.ajax({
                                 type: 'get',
-                                url: '<c:url value="/member/mailCheck?email="/>' + email,
+                                url: '/member/mailCheck?email=' + email,
                                 success: function (data) {
                                     console.log("data :" + data);
-                                    checkInput.attr('disabled', false);
-                                    code = data;
-                                    alert('인증번호가 전송되었습니다.')
+                                    
+                                    if(data == "FAIL") {
+                                    	alert('이미 가입 된 이메일 입니다');	
+                                    } else {
+                                    	checkInput.attr('disabled', false);
+                                    	code = data;
+                                    	alert('인증번호가 전송되었습니다.');
+                                    }
                                 }
                             })//end ajax
                         });//end send email
 
                         //인증번호 비교
-                        $('mail-check-input').blur(function () {
-                            const inputCode = $(this).val();
+                        $('#mail-check').click(function () {
+                            const inputCode = $('.mail-check-input').val();
                             const $resultMSg = $('#mail-check-warn');
-
-                            if (code && inputCode === code) {
-                                $resultMSg.html('인증번호가 일치합니다');
-                                $resultMSg.css('color', 'green');
-                                $('#mail-Check-Btn').attr('disabled', true);
-                                $('userEmail').attr('redonly', true);
-                                // $('userEmail').attr('onFocus', 'this.initialSelect = this.selectedIndex');
-                                // $('userEmail').attr('onchang', 'this.selectedIndex = this.initialSelect');
-                            } else {
-                                $resultMSg.html('인증번호가 불일치 합니다');
-                                $resultMSg.css('color', 'red');
-                                alert('인증번호가 불일치 합니다 . 다시 확인해주세요')
+                            
+                            if(!inputCode) {
+                            	alert('인증번호를 입력해주세요');
                             }
+                            
+                            $.ajax({
+                                type: 'post',
+                                url: '/member/authCheck/' + inputCode,
+                                success: function (data) {
+                                	if (data === "OK") {
+                                        $resultMSg.html('인증번호가 일치합니다');
+                                        $resultMSg.css('color', 'green');
+                                        $('#mail-Check-Btn').attr('disabled', true);
+                                        $('userEmail').attr('redonly', true);
+                                        // $('userEmail').attr('onFocus', 'this.initialSelect = this.selectedIndex');
+                                        // $('userEmail').attr('onchang', 'this.selectedIndex = this.initialSelect');
+                                    } else {
+                                        $resultMSg.html('인증번호가 불일치 합니다');
+                                        $resultMSg.css('color', 'red');
+                                        alert('인증번호가 불일치 합니다 . 다시 확인해주세요')
+                                    }                                    
+                                }
+                            })//end ajax
+
+                            
                         });
                     </script>
 
-                    이메일 중복확인
-                    <script>
-                        function checkEmail() {
-                            var email = $('#userEmail').val();//id값이 "id"인 입력란의 값을 저장
-                            $.ajax({
-                                url: '/checkEmail', //controller에서 요청받을 주소
-                                type: 'post', //POST방식으로 전달
-                                data: { email: email },
-                                success: function (cnt) {//컨트롤러에서 넘어온 cnt값을 받는다
-                                    if (cnt === 1) {// cnt가 1일 경우 -> 이미 존재하는 아이디
-                                        $('.id_already').css("display", "inline-block");
-                                        $('.id_ok').css("display", "none");
-                                        alert("아이디를 다시 입력해주세요");
-                                        $('#userEmail').val('');
-                                    } else {//cnt가 1이 아니면(=0일 경우) -> 사용 가능한 아이디
-                                        $('.id_ok').css("display", "inline-block");
-                                        $('.id_already').css("display", "none");
-                                        
-                                                 
-                                    }
-                                },
-                                error: function () {
-                                    alert("에러입니다");
-                                }
-                            });
-                        };
-                    </script>
+
         </body>
 
         </html>

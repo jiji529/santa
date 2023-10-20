@@ -35,7 +35,7 @@ public class MemberDaoImpl implements MemberDao {
 
 	@Override
 	public int emailCheck(String email) {
-		return sql.selectOne("member.emailCheck",email);
+		return sql.selectOne("member.mailCheck",email);
 	}
 
 }
