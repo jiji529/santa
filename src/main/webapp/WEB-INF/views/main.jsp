@@ -30,7 +30,7 @@
 				<li><div><a href="/list?cNo=3">노트북</a></div></li>
 				<li><div><a href="/list?cNo=2">태블릿</a></div></li>
 				<li><div><a href="/list?cNo=1">핸드폰</a></div></li>
-				<li><div><a href="/list?cNo=3">액세서리</a></div></li>
+				<li><div><a href="/list?cNo=4">액세서리</a></div></li>
 			</ul>
 			<form id="menu_indexr" class="search" action="#">
 				<input class="search_box1" type="text" name="search" placeholder="검색어를 입력하세요." >
@@ -94,7 +94,7 @@
 <%-- 			  <p>${item.pImg1}</p> <!-- 이미지 DB에 제대로 넣으면 바꿔야해! --> --%>
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>apple</h4>
+                  <h4>${item.comName}</h4>
                   <p class="price"><a href="detail.do?pNo=${item.pNo}">${item.pName}</a></p>
                 </div>
 
