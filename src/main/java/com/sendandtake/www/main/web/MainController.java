@@ -1,19 +1,14 @@
 package com.sendandtake.www.main.web;
 
-import java.lang.reflect.Member;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.sendandtake.www.main.model.MemberVO;
@@ -21,12 +16,16 @@ import com.sendandtake.www.main.pager.Pager;
 import com.sendandtake.www.main.service.MainService;
 import com.sendandtake.www.main.service.MemberService;
 import com.sendandtake.www.product.model.ProductVO;
+import com.sendandtake.www.product.service.ProductService;
 
 @Controller
 public class MainController {
 	
 	@Autowired
 	MainService mainService;
+	
+	@Autowired
+	ProductService productService;
 	
 	@Autowired
 	MemberService memberservice;
@@ -46,8 +45,18 @@ public class MainController {
 		List<ProductVO> list = mainService.selectProductList(pager);
 		
 		
+		for (ProductVO product : list) {
+		    int pNo = product.getpNo();
+		    ProductVO pvo = productService.selectProduct(pNo);
+		    
+		    int index = pvo.getpName().indexOf(" ");
+		    String CompanyName = pvo.getpName().substring(0, index);
+		    
+		    // comName을 각 ProductVO에 추가
+		    product.setComName(CompanyName.toUpperCase());
+		}
+		
 		model.addAttribute("list", list);
-	
 	
 		
 		return "main";

@@ -14,6 +14,17 @@ public class ProductVO {
 	private String releasePrice;
 	private String grade;
 	
+	private String comName; // comName 필드 추가
+
+    // Getter 및 Setter 메서드
+    public String getComName() {
+        return comName;
+    }
+
+    public void setComName(String comName) {
+        this.comName = comName;
+    }
+	
 	//'최근거래가' -> selectProduct 메소드 실행 시 가져옴.
 	private int recentPrice;
 	
