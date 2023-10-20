@@ -95,16 +95,16 @@
 				<ul class="cgory">
 					<li><div>카테고리</div></li>
 					<li><div>
-							<a href="#" data-cno="3">노트북</a>
+							<a href="/list?cNo=3" data-cno="3">노트북</a>
 						</div></li>
 					<li><div>
-							<a href="#" data-cno="2">태블릿</a>
+							<a href="/list?cNo=2" data-cno="2">태블릿</a>
 						</div></li>
 					<li><div>
-							<a href="#" data-cno="1">핸드폰</a>
+							<a href="/list?cNo=1" data-cno="1">핸드폰</a>
 						</div></li>
 					<li><div>
-							<a href="#" data-cno="4">액세서리</a>
+							<a href="/list?cNo=4" data-cno="4">액세서리</a>
 						</div></li>
 				</ul>
 			</aside>
