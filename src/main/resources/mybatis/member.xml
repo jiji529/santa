@@ -33,7 +33,7 @@
 		WHERE userEmail=#{userEmail}
 	</delete>
 	
-	<select id="emailCheck">
+	<select id="mailCheck" resultType="Integer">
 		select count(userEmail)
 		from tbl_user
 		where userEmail=#{userEmail}

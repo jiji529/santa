@@ -1,13 +1,17 @@
 package com.sendandtake.www.main.web;
 
+import java.lang.reflect.Member;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,6 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.sendandtake.www.main.model.MemberVO;
 import com.sendandtake.www.main.pager.Pager;
 import com.sendandtake.www.main.service.MainService;
+import com.sendandtake.www.main.service.MemberService;
 import com.sendandtake.www.product.model.ProductVO;
 
 @Controller
@@ -22,6 +27,9 @@ public class MainController {
 	
 	@Autowired
 	MainService mainService;
+	
+	@Autowired
+	MemberService memberservice;
 	
 	//홈페이지
 	@GetMapping("/")
@@ -101,11 +109,14 @@ public class MainController {
 		}
 		
 	}
-	//카카오로그인
-	@GetMapping("/kakao/callback")
-	public String kakaoCallback(@RequestParam String code, HttpSession session) {
-		return "redirect:/";
-	}
+//	//카카오로그인
+//	@PostMapping("/kakao/callback")
+//	public String kakaoCallback(@ModelAttribute("mvo") MemberVO mvo, HttpServletRequest request,ModelMap model,HttpSession session) {
+//		mvo.setUserPwd(mvo.getUserEmail());
+////		MemberVO mvo = memberservice.
+//		
+//		return "redirect:/";
+//	}
 	
 	//로그아웃
 	@GetMapping("/logout")

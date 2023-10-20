@@ -24,7 +24,7 @@ public class MemberController {
 	final String path = "member/";
 	
 	@Autowired
-	MemberService memberservice;
+	MemberService memberService;
 	
 	@Autowired
 	private MailSendService mailservice;
@@ -35,26 +35,10 @@ public class MemberController {
 		return path +"join";
 	}
 	
-
-	//아이디 중복체크
-	@PostMapping("/checkEmail")
-	@ResponseBody
-	public ResponseEntity<String> emailCheck(@RequestParam("email") String email) {
-	    int count = memberservice.emailCheck(email);
-	    
-	    if (count == 0) {
-	        // 중복되지 않은 Email 
-	        return ResponseEntity.ok("0");
-	    } else {
-	        // 중복된 Email 
-	        return ResponseEntity.ok("1");
-	    }
-	}
-	
 	//회원정보 수정
 	@GetMapping("/update/{userNo}")
 	String update(@PathVariable int userNo, Model model) {
-		MemberVO mvo= memberservice.mvo(userNo);
+		MemberVO mvo= memberService.mvo(userNo);
 		
 		model.addAttribute("mvo", mvo);
 		
@@ -65,7 +49,7 @@ public class MemberController {
 	String update(@PathVariable int userNo, MemberVO mvo) {
 		mvo.setUserNo(userNo);
 		
-		memberservice.update(mvo);
+		memberService.update(mvo);
 		
 		return "user";
 	}
@@ -73,7 +57,7 @@ public class MemberController {
 	//회원탈퇴
 	@GetMapping("/delete/{userNo}")
 	String delete(@PathVariable int userNo) {
-		memberservice.delete(userNo);
+		memberService.delete(userNo);
 		
 		return "main";
 	}
@@ -84,6 +68,11 @@ public class MemberController {
 	public String mailCheck(String email, HttpSession session) {
 		System.out.println("이메일 인증 요청");
 		System.out.println("이메일 인증 이메일 :" + email);
+		
+		if(memberService.emailCheck(email) > 0) {
+			System.out.println("중복 된 이메일 :" + email);
+			return "FAIL";
+		}
 		
 		String authNumber = mailservice.joinEmail(email);
 		
@@ -99,9 +88,20 @@ public class MemberController {
 		System.out.println(authNumber + ", " + authNum);
 		
 		if(authNum.equals(authNumber))
-			memberservice.join(mvo);
+			memberService.join(mvo);
 		
 		return "redirect:../";
 	}
 	
+	//이메일 인증
+	@ResponseBody
+		@PostMapping("/authCheck/{authNumber}")
+		String authCheck(@PathVariable String authNumber, @SessionAttribute("auth_number") String authNum) {
+			System.out.println(authNumber + ", " + authNum);
+			
+			if(authNum.equals(authNumber))
+				return "OK";
+			
+			return "FAIL";
+		}
 }

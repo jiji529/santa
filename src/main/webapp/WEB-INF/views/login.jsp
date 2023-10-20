@@ -45,48 +45,50 @@
 	if(msg)
 		alert(msg);
 	</script>
-    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-    <script>
-        Kakao.init('526623ee8b7d0f83434205bd9b90b585'); // Replace with your Kakao JavaScript Key
+	
+<form id="frmLogin" name="frmLogin" method="post" action="/kakao/callback">
+	<input type="hidden" name="loginType" value=""/>	
+	<input type="hidden" id="userEmail" name="id">	
+</form>
 
-        // Function to handle Kakao login
-        function kakaoLogin() {
-            Kakao.Auth.login({
-                success: function (response) {
-                    Kakao.API.request({
-                        url: '/v2/user/me',
-                        success: function (response) {
-                            console.log(response);
-                            // You can handle the user data here
-                        },
-                        fail: function (error) {
-                            console.log(error);
-                        },
-                    });
-                },
-                fail: function (error) {
-                    console.log(error);
-                },
-            });
-        }
+<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>		
+<script>
+$(document).ready(function(){
+	//카카오톡로그인버튼
+	$(".btn-kakao").click(function(){
+		const type = $(this).data("type");
+		kakaoLogin(type);
+		return false;
+	});
+});
+//카카오 키 정보 입력
+Kakao.init('526623ee8b7d0f83434205bd9b90b585');//본인 javaScript 키
 
-/*         // Function to handle Kakao logout
-        function kakaoLogout() {
-            if (Kakao.Auth.getAccessToken()) {
-                Kakao.API.request({
-                    url: '/v1/user/unlink',
-                    success: function (response) {
-                        console.log(response);
-                        // Handle logout success
-                    },
-                    fail: function (error) {
-                        console.log(error);
-                    },
-                });
-                Kakao.Auth.setAccessToken(undefined);
-            }
-        } */
-    </script>
+//카카오SDK 초기화
+Kakao.isInitialized();
+
+//카카오로그인
+function kakaoLogin(type){
+	Kakao.Auth.login({
+		success:function(response){
+			Kakao.API.request({
+				url:'/v2/user/me',
+				success:function(response){
+					console.log(response)
+					$("input[name=loginType]").val();
+					$("#userEmail").val(response.id);
+ 					$("#frmLogin").submit();
+				},
+				fail: function(error){
+					console.log(error)
+				},
+			})
+		},fail: function(error){
+			console.log(error)
+		},
+	})
+}
+</script>
 
 
 </body>
