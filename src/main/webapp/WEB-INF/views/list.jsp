@@ -123,7 +123,8 @@
 										<img src="/resources/img/product/${item.pImg1}" alt="이미지를 찾을수 없습니다." class="thum">
 									</div>
 									<h2>${item.pName}</h2>
-									<p>${item.pCode}</p>
+									<p>${item.pCode}</p><br>
+									<div class="detail_view" >자세히보기</div>
 <!-- 									<div class="org_price"> -->
 <!-- 										<del>30,000</del> -->
 <!-- 										<span> 10% </span> -->
