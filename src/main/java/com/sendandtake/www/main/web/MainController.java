@@ -45,7 +45,7 @@ public class MainController {
 			session.removeAttribute("msg");
 		}
 			
-		pager.setPerPage(8);
+		pager.setPerPage(12);
 		List<ProductVO> list = mainService.selectProductList(pager);
 		
 		
@@ -53,8 +53,8 @@ public class MainController {
 		    int pNo = product.getpNo();
 		    ProductVO pvo = productService.selectProduct(pNo);
 		    
-		    int index = pvo.getpName().indexOf(" ");
-		    String CompanyName = pvo.getpName().substring(0, index);
+		    int index = pvo.getpCode().indexOf("_");
+		    String CompanyName = pvo.getpCode().substring(0, index);
 		    
 		    // comName을 각 ProductVO에 추가
 		    product.setComName(CompanyName.toUpperCase());
