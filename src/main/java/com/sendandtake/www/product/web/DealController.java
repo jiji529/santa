@@ -62,16 +62,16 @@ public class DealController {
 	
 	//상품구매종류선택
 	@GetMapping("/buyinput")
-	String buyinput(@SessionAttribute("productVO") ProductVO pvo, DealVO dvo, Model model) {
+	String buyinput(@SessionAttribute("productVO") ProductVO pvo, Model model) {
 		
 		List<SaleProductVO> priceList = productService.selectPriceList(pvo.getpNo());
-		
-		for (SaleProductVO pList : priceList) {
-			if(pList.getGrade().equals(pvo.getGrade())) {
-				dvo.setGrade(pvo.getGrade());
-				dvo.setImdbuyprice(pList.getSalePrice());
-			}
-		}
+//		, DealVO dvo
+//		for (SaleProductVO pList : priceList) {
+//			if(pList.getGrade().equals(pvo.getGrade())) {
+//				dvo.setGrade(pvo.getGrade());
+//				dvo.setImdbuyprice(pList.getSalePrice());
+//			}
+//		}
 		
 		
 		
