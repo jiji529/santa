@@ -31,7 +31,7 @@ public class MainController {
 	ProductService productService;
 	
 	@Autowired
-	MemberService memberservice;
+	MemberService memberService;
 	
 	//홈페이지
 	@GetMapping("/")
@@ -135,14 +135,19 @@ public class MainController {
 				session.setAttribute("msg", "로그인 정보가 올바르지 않습니다.");
 				return "redirect:/login.do";
 			}
-//		}else {
-//			MemberVO kakao = member;
-//		kakao.setUserEmail(member.getUserEmail());
-//			kakao.setUserPwd("");
-//			mainService.addKakao(kakao);
-//			
-//		session.setAttribute("member", kakao);
-//			
+			}else {
+			MemberVO kakao = member;
+			kakao.setUserEmail(member.getUserEmail());
+			kakao.setUserPwd("");
+//			kakao.setUserCreate("");
+			kakao.setMngYn("");
+			kakao.setUserYn("");
+			kakao.setUseYn("");
+			
+			memberService.join(kakao);
+			
+		session.setAttribute("member", kakao);
+			
 		}
 	
 		return "redirect:/";
@@ -157,16 +162,7 @@ public class MainController {
 		return "redirect:/";
 	}
 	
-	//고객문의
-	@GetMapping("/support.do")
-	String support(Model model) {
-		
-		List<MemberVO> list = mainService.selectMemberList();
-		
-		model.addAttribute("list", list);
-		
-		return "support";
-	}
+
 	
 	
 	//카테고리페이지

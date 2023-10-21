@@ -46,8 +46,7 @@
 		alert(msg);
 	</script>
 	
-<form id="frmLogin" name="frmLogin" method="post" action="/kakao/callback">
-	<input type="hidden" name="loginType" value=""/>	
+<form id="frmLogin" name="frmLogin" method="post" action="/kakao/callback">	
 	<input type="hidden" id="userEmail" name="id">	
 </form>
 
@@ -75,7 +74,6 @@ function kakaoLogin(type){
 				url:'/v2/user/me',
 				success:function(response){
 					console.log(response)
-					$("input[name=loginType]").val();
 					$("#userEmail").val(response.id);
  					$("#frmLogin").submit();
 				},
