@@ -156,19 +156,7 @@ public class MainController {
 		
 		return "redirect:/";
 	}
-	
-	//고객문의
-	@GetMapping("/support.do")
-	String support(Model model) {
-		
-		List<MemberVO> list = mainService.selectMemberList();
-		
-		model.addAttribute("list", list);
-		
-		return "support";
-	}
-	
-	
+
 	//카테고리페이지
 	@GetMapping("/list")
 	String list(Model model ,Pager pager) {
