@@ -13,7 +13,7 @@ public class SaleProductVO {
 	private Date storeDate;
 	private int userNo;
 	private int adrNo;
-	private int salePrice;
+	private int salePrice; 
 	private Date saleStart;
 	private String dCompany;
 	private String sendTrackingNo;

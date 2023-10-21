@@ -45,7 +45,7 @@ public class ProductDaoImpl implements ProductDao {
 	@Override
 	public List<SaleProductVO> selectPriceList(int pNo) {
 
-		return sql.selectList("deal.priceList", pNo);
+		return sql.selectList("deal.imdBuyPriceList", pNo);
 	}
 
 	@Override

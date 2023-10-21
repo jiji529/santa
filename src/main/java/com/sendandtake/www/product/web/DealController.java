@@ -9,8 +9,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
+import com.sendandtake.www.product.model.DealVO;
 import com.sendandtake.www.product.model.ProductVO;
 import com.sendandtake.www.product.model.SaleProductVO;
+import com.sendandtake.www.product.service.DealService;
 import com.sendandtake.www.product.service.ProductService;
 
 @Controller
@@ -18,6 +20,9 @@ public class DealController {
 	
 	@Autowired
 	ProductService productService;
+	
+	@Autowired
+	DealService dealService;
 	
 	//상품구매
 	@GetMapping("/buy")
@@ -57,7 +62,19 @@ public class DealController {
 	
 	//상품구매종류선택
 	@GetMapping("/buyinput")
-	String buyinput(@SessionAttribute("productVO") ProductVO pvo, Model model) {
+	String buyinput(@SessionAttribute("productVO") ProductVO pvo, DealVO dvo, Model model) {
+		
+		List<SaleProductVO> priceList = productService.selectPriceList(pvo.getpNo());
+		
+		for (SaleProductVO pList : priceList) {
+			if(pList.getGrade().equals(pvo.getGrade())) {
+				dvo.setGrade(pvo.getGrade());
+				dvo.setImdbuyprice(pList.getSalePrice());
+			}
+		}
+		
+		
+		
 		
 		model.addAttribute("pvo", pvo);
 		

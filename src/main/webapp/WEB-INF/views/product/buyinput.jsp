@@ -59,7 +59,7 @@
                     <div id="buy_bid" class="hide">
 
                         <form action="/" method="post">
-
+							<input type="hidden" name="">
                             <div>
                                 <dl>
                                     <dt>구매 희망가</dt>

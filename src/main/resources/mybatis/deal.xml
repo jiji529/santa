@@ -3,11 +3,14 @@
 
 <mapper namespace="deal"> 
 
-<select id="priceList" resultType="SaleProduct">
+<select id="imdBuyPriceList" resultType="SaleProduct">
 	SELECT grade, MIN(salePrice) AS salePrice
 	FROM tbl_sale_product 
 	WHERE pNo = #{pNo} AND progress = '4'
-	GROUP BY grade;
+	GROUP BY grade
 </select>
+
+<!-- <select id="imdSellPriceList">
+</select> -->
 
 </mapper>
