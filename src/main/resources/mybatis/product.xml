@@ -29,17 +29,17 @@
 	SELECT *, (SELECT salePrice 
                  FROM tbl_sale_product 
                  WHERE tbl_product.pNo = tbl_sale_product.pNo AND  progress IN (6, 7, 8)
-                 ORDER BY saleEnd DESC
+                 ORDER BY saleEnd DESC, saleNo DESC
                  LIMIT 1) recentPrice,
                  					(SELECT salePrice 
 										FROM tbl_sale_product 
 										WHERE tbl_product.pNo = tbl_sale_product.pNo AND progress = 4
-										ORDER BY salePrice
+										ORDER BY salePrice, saleNo DESC
 										LIMIT 1) immediatePurchacePrice,
 																	(SELECT desiredPrice 
 																		FROM tbl_hope_purchase 
 																		WHERE tbl_product.pNo = tbl_hope_purchase.pNo
-																		ORDER BY desiredPrice DESC
+																		ORDER BY desiredPrice DESC, purNo DESC
 																		LIMIT 1) immediateSellingPrice
                  					    
      FROM tbl_product WHERE pNo = #{pNo}
@@ -69,5 +69,15 @@
 ORDER BY pNo
 		
 </sql>
+
+<select id="ratio" resultType="SaleProduct">
+	SELECT salePrice
+	FROM tbl_sale_product 
+	WHERE pNo=1 AND  progress IN (6, 7, 8)
+	ORDER BY saleEnd DESC, saleNo DESC
+	limit 2;
+</select>
+
+
 
 </mapper>

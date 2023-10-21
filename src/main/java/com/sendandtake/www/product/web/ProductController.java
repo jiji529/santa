@@ -23,6 +23,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.sendandtake.www.main.model.MemberVO;
 import com.sendandtake.www.product.model.ProductVO;
 import com.sendandtake.www.product.model.ReviewVO;
+import com.sendandtake.www.product.model.SaleProductVO;
 import com.sendandtake.www.product.service.ProductService;
 
 @Controller
@@ -33,7 +34,7 @@ public class ProductController {
 	
 	//상세페이지
 	@GetMapping("/detail.do")
-	String detail(int pNo, Model model, ReviewVO rvo, HttpSession session) {
+	String detail(int pNo, Model model, ReviewVO rvo, SaleProductVO svo, HttpSession session) {
 		
 		//상품 하나 불러오기
 		ProductVO pvo = productService.selectProduct(pNo);
@@ -53,6 +54,40 @@ public class ProductController {
 		
 		model.addAttribute("rvList", rvList);	
 		
+		//최근거래가, 직전구하기 -> (최근거래가-직전거래가)/직전거래가 * 100
+		List<SaleProductVO> TwoPrices = productService.selectSaleProduct(pNo);
+		
+		int p1;
+		int p2;
+		int priceGap;
+		
+		//거래내역이 1개 이하일 때
+		if(TwoPrices.size() <= 1) {
+			
+			priceGap = 0;
+			model.addAttribute("gap", priceGap);
+			model.addAttribute("tp", "-");
+			
+		} else {
+			
+			p1 = TwoPrices.get(0).getSalePrice();
+			p2 = TwoPrices.get(1).getSalePrice();
+			
+			//최근거래가-직전거래가
+			priceGap = Math.abs(p1 - p2);
+
+			//(최근거래가-직전거래가)/직전거래가 * 100
+			double result = (double)((p1 - p2)*100/p2);
+			double ratio = Math.ceil(result);
+						
+			model.addAttribute("gap", priceGap);
+			model.addAttribute("tp", ratio);
+		}
+		
+		//관심 개수 가져오기
+		int LikeCount = productService.selectLikeCnt(pNo);
+		
+		model.addAttribute("likeCnt", LikeCount);
 		
 		return "detail/detail";
 	}

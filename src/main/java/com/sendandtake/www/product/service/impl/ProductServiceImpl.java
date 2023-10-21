@@ -57,6 +57,17 @@ public class ProductServiceImpl implements ProductService {
 		return productDao.selectPriceList(pNo);
 	}
 
+	@Override
+	public List<SaleProductVO> selectSaleProduct(int pNo) {
+
+		return productDao.selectSaleProduct(pNo);
+	}
+
+	@Override
+	public int selectLikeCnt(int pNo) {
+		return productDao.selectLikeCnt(pNo);
+	}
+
 
 
 

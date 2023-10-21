@@ -53,5 +53,15 @@ public class ProductDaoImpl implements ProductDao {
 		return sql.selectOne("product.total",pager);
 	}
 
+	@Override
+	public List<SaleProductVO> selectSaleProduct(int pNo) {
+		return sql.selectList("product.ratio",pNo);
+	}
+
+	@Override
+	public int selectLikeCnt(int pNo) {
+		return sql.selectOne("like.cnt", pNo);
+	}
+
 
 }

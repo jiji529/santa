@@ -20,6 +20,10 @@ public interface ProductDao {
 
 	int total(Pager pager);
 
+	List<SaleProductVO> selectSaleProduct(int pNo);
+
+	int selectLikeCnt(int pNo);
+
 
 
 }

@@ -21,5 +21,9 @@ public interface ProductService {
 
 	List<SaleProductVO> selectPriceList(int pNo);
 
+	List<SaleProductVO> selectSaleProduct(int pNo);
+
+	int selectLikeCnt(int pNo);
+
 
 }
