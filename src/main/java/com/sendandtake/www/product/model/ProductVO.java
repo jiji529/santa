@@ -3,7 +3,7 @@ package com.sendandtake.www.product.model;
 public class ProductVO {
 	
 	private int pNo;
-	private int cNo;
+	private String pCategory;
 	private String pCode;
 	private String pName;
 	private String pInfo;
@@ -66,12 +66,15 @@ public class ProductVO {
 	public void setpNo(int pNo) {
 		this.pNo = pNo;
 	}
-	public int getcNo() {
-		return cNo;
+	
+	public String getpCategory() {
+		return pCategory;
 	}
-	public void setcNo(int cNo) {
-		this.cNo = cNo;
+
+	public void setpCategory(String pCategory) {
+		this.pCategory = pCategory;
 	}
+
 	public String getpCode() {
 		return pCode;
 	}

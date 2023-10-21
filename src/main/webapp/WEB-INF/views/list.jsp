@@ -59,9 +59,9 @@
 		showAllProducts();
 
 		$(".cgory a").click(function() {
-			var cNo = $(this).data("cno");
+			var pCategory = $(this).data("pcategory");
 			
-			$("#list_product").load("list_product?page=1&cNo=" + cNo);
+			$("#list_product").load("list_product?page=1&pCategory=" + pCategory);
 		});
 
 		function showAllProducts() {
@@ -95,16 +95,16 @@
 				<ul class="cgory">
 					<li><div>카테고리</div></li>
 					<li><div>
-							<a href="/list?cNo=3" data-cno="3">노트북</a>
+							<a href="/list?pCategory=노트북" data-pcategory="노트북">노트북</a>
 						</div></li>
 					<li><div>
-							<a href="/list?cNo=2" data-cno="2">태블릿</a>
+							<a href="/list?pCategory=태블릿" data-pcategory="태블릿">태블릿</a>
 						</div></li>
 					<li><div>
-							<a href="/list?cNo=1" data-cno="1">핸드폰</a>
+							<a href="/list?pCategory=핸드폰" data-pcategory="핸드폰">핸드폰</a>
 						</div></li>
 					<li><div>
-							<a href="/list?cNo=4" data-cno="4">액세서리</a>
+							<a href="/list?pCategory=액세서리" data-pcategory="액세서리">액세서리</a>
 						</div></li>
 				</ul>
 			</aside>
@@ -112,7 +112,14 @@
 				<!-- 히트상품 영역 -->
 				<section class="hit">
 					<h3>
-						<span>전체 상품</span>
+						<c:choose>
+							<c:when test="${not empty pCategory}">
+								<span>${pCategory}</span>
+							</c:when>
+							<c:otherwise>
+								<span>전체상품</span>
+							</c:otherwise>
+						</c:choose>
 					</h3>
 
 					<div id="list_product">

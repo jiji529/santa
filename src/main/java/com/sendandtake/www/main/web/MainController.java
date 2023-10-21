@@ -13,6 +13,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.sendandtake.www.main.model.MemberVO;
@@ -176,18 +177,19 @@ public class MainController {
 
 	//카테고리페이지
 	@GetMapping("/list")
-	String list(Model model ,Pager pager) {
+	String list(@RequestParam(name = "pCategory", required = false) String pCategory, Model model ,Pager pager) {
 		
 //		pager.setKeyword("");
 		pager.setPerPage(12);
 		List<ProductVO> list = mainService.selectProductList(pager);
 		
+		model.addAttribute("pCategory", pCategory);
 		model.addAttribute("list", list);
 		
 		return "list";
 	}
 	
-	//카테고리페이지
+	//카테고리페이지_ajax
 		@GetMapping("/list_product")
 		String list_product(Model model ,Pager pager) {
 			

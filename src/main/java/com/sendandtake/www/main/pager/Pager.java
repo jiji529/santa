@@ -13,15 +13,17 @@ public class Pager {
 	private int search=1; // 1로 설정해서 shop.xml에서 검색 조건문을 실행한다. 아래의 조건문이 search가 0이상이므로 !
 	private String keyword;
 	
-	private int cNo;
+	private String pCategory;
 	
 	
-	public int getcNo() {
-		return cNo;
+	
+
+	public String getpCategory() {
+		return pCategory;
 	}
 
-	public void setcNo(int cNo) {
-		this.cNo = cNo;
+	public void setpCategory(String pCategory) {
+		this.pCategory = pCategory;
 	}
 
 	public int getOffset() {		
@@ -34,8 +36,8 @@ public class Pager {
 		if(search > 0 && keyword != null)
 			queryString += "&keyword=" + keyword;
 		
-		else if(search > 0 && cNo != 0)
-			queryString += "&cNo=" + cNo;
+		else if(search > 0 && pCategory != null)
+			queryString += "&pCategory=" + pCategory;
 		
 		return queryString;
 	}
