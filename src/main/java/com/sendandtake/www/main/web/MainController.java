@@ -1,5 +1,6 @@
 package com.sendandtake.www.main.web;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -103,6 +104,7 @@ public class MainController {
 		
 		MemberVO mvo = mainService.selectLogin(vo);
 		
+		
 		//로그인 실패시, 로그인 화면으로 이동
 		if(mvo==null) {
 			
@@ -123,33 +125,37 @@ public class MainController {
 	}
 	//카카오로그인
 	@PostMapping("/kakao/callback")
-	public String kakaoCallback(@ModelAttribute("mvo") MemberVO member, HttpServletRequest request,ModelMap model,HttpSession session) {
-		member.setUserPwd(member.getUserEmail());
-		MemberVO mvo = mainService.selectLogin(member);
-		if(mvo != null && mvo.getUserEmail() != null && !mvo.getUserEmail().equals("")) {
-			
-			if(mvo.getUserEmail() != null) {
-				request.getSession().setAttribute("member", mvo);
+	public String kakaoCallback(@ModelAttribute("mvo") MemberVO vo, HttpServletRequest request,
+			HttpSession session) {
+		vo.setUserPwd(vo.getUserEmail());
+		MemberVO mvo = mainService.selectLogin(vo);
+		
+		if (mvo != null&&mvo.getUserEmail() !=null && !mvo.getUserEmail().equals("")) {
+
+			if (mvo.getUserEmail() != null) {
+
+				request.getSession().setAttribute("loginUser", mvo);
+				session.setAttribute("msg","환영합니다");
 				return "redirect:/";
-			}else {
+			} else {
 				session.setAttribute("msg", "로그인 정보가 올바르지 않습니다.");
 				return "redirect:/login.do";
 			}
-			}else {
-			MemberVO kakao = member;
-			kakao.setUserEmail(member.getUserEmail());
-			kakao.setUserPwd("");
-//			kakao.setUserCreate("");
+		} else {
+			MemberVO kakao = vo;
+			kakao.setUserEmail(vo.getUserEmail());
+			kakao.setUserPwd(vo.getUserEmail());
+			kakao.setUserCreate(new Date());
 			kakao.setMngYn("");
 			kakao.setUserYn("");
 			kakao.setUseYn("");
-			
+
 			memberService.join(kakao);
-			
-		session.setAttribute("member", kakao);
-			
+
+			session.setAttribute("loginUser", kakao);
+
 		}
-	
+
 		return "redirect:/";
 	}
 	

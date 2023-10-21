@@ -47,7 +47,7 @@
 	</script>
 	
 <form id="frmLogin" name="frmLogin" method="post" action="/kakao/callback">	
-	<input type="hidden" id="userEmail" name="id">	
+	<input type="hidden" id="userEmail" name="userEmail">	
 </form>
 
 <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>		
