@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+#chart {
+	margin-top: 15px;
+	width: 490px;
+	height: 400px;
+}
+
+.chartHidden {
+	display: none;
+}
+
+#chart-btns {
+	margin: 0 auto;
+	display: flex;
+   	justify-content: space-between;
+   	align-items: center;
+   	padding: 0 80px;
+}

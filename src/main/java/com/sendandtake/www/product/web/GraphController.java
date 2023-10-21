@@ -14,16 +14,15 @@ import com.sendandtake.www.product.model.SaleProductVO;
 import com.sendandtake.www.product.service.ProductService;
 
 @Controller
-public class ChartController {
-
+public class GraphController {
+	
 	@Autowired
 	ProductService productService;
-
 	
-	@GetMapping("/chartTest")
+	@GetMapping("/graphTest")
 	String chartTest() {
 		
-		return "detail.detail";
+		return "graphDeco";
 	}
 	
 	@ResponseBody
@@ -36,7 +35,9 @@ public class ChartController {
 		List<SaleProductVO> AList = new ArrayList<SaleProductVO>(); 
 		List<SaleProductVO> BList = new ArrayList<SaleProductVO>();
 		
+
 		for (SaleProductVO cl : chartList) {
+
 			
 			 if (cl.getGrade().equals("S")) { 
 			 SList.add(cl);

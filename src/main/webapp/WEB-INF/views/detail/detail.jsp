@@ -13,14 +13,14 @@
    <!-- ======= TOP Header ======= -->
   <jsp:include page="../header.jsp"></jsp:include>
   
-  
-  
   <!-- 상세페이지: event -->
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/event.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/events.css">
   
   <!-- 리뷰추가 새창 -->
   <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/reviews.css">
   
+  <!-- 그래프 만들기 -->
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/charts.css">
 
 </head>
 <body>
@@ -34,7 +34,7 @@
   <main id="main" class="min">
     <!-- ======= 상세페이지 section ======= -->
     
-    <section id="events" class="events">
+    <section id="events" class="events min-events">
       <div id="product" class="container" data-aos="fade-up">
 
         <div class="row">
@@ -49,17 +49,18 @@
           <div class="col-md-6 d-flex align-items-stretch">
             <div class="card">
               <div class="card-body">
-              	
-              	
-                <p><a href="/list?keyword=${comName}"><strong>${comName}</strong></a></p>
+                <p><a href="#"><strong>${comName}</strong></a></p>
                 <h5 class="card-title">${pvo.pName}</h5>
                 <h5 class="pCodeWrite">${pvo.pCode}</h5>
-                <p>발매가 : ${pvo.releasePrice}원</p>
+                <div>
+                	<p>발매가 : ${pvo.releasePrice}원</p>
+                </div>
                 <hr>
+                <div id="recentPrice">
                 <p>최근거래가 : <fmt:formatNumber value="${pvo.recentPrice}" pattern="#,###,###"/>원</p>
-                
-                <div id="redBlueButton">
-                	<a class="OneRedBtn btn btn-danger" href="${buyUrl}">
+                </div>
+                <div id="redBlueButton" class="row">
+                	<a class="OneRedBtn btn btn-danger col-md-6 d-flex align-items-stretch" href="${buyUrl}">
                 		<div class="btnDesign" id="FrontRed">구매</div>
                 		<div class="btnDesign" id="BackRed">
                 			<p class="p1">
@@ -69,7 +70,7 @@
                 		</div>
                 	</a>
                 	
-                	<a class="OneRedBtn btn btn-success" href="${sellUrl}">
+                	<a class="OneBlueBtn btn btn-success col-md-6 d-flex align-items-stretch" href="${sellUrl}">
                 		<div class="btnDesign" id="FrontRed">판매</div>
                 		<div class="btnDesign" id="BackRed">
                 			<p class="p1">
@@ -79,7 +80,7 @@
                 		</div>
 					</a>
                 </div>
-                <div class="d-grid gap-1">
+                <div class="likeBtn d-grid gap-1">
                 	<button type="button" class="btn btn-light btn-lg">
                 		<div class="OneLikeBtn">
                 		<div></div>
@@ -92,34 +93,32 @@
                 		</div>
                 	</button>
                 </div>
+                <div id="chart">
+					<div id="chart-btns">
+						<button id="SchartBtn" class="btn btn-light">S등급</button>
+						<button id="AchartBtn" class="btn btn-light">A등급</button>
+						<button id="BchartBtn" class="btn btn-light">B등급</button>
+					</div>
+					<canvas id="Sline-chart"></canvas>
+					<canvas id="Aline-chart" class="chartHidden"></canvas>
+					<canvas id="Bline-chart" class="chartHidden"></canvas>
+				</div>
               </div>
             </div>
-
           </div>
         </div>
-        <div id="graph-center">
-		    <h1 class="text-center">상품 등급 별 거래현황</h1>
-		    <div class="gap-2 col-5 mx-auto">
-			    <button id="SchartBtn" class="btn btn-light">S등급 상품 차트보기</button>
-				<button id="AchartBtn" class="btn btn-light">A등급 상품 차트보기</button>
-				<button id="BchartBtn" class="btn btn-light">B등급 상품 차트보기</button>
-			</div>
-			<canvas id="Sline-chart" width="400vW" height="400vh"></canvas>
-			<canvas id="Aline-chart" width="400vw" height="400vh"></canvas>
-			<canvas id="Bline-chart" width="400vw" height="400vh"></canvas> 
-		</div>
-
       </div>
     </section><!-- End Events Section -->
 
     <!-- ======= 리뷰 section ======= -->
     <section id="popular-courses" class="courses">
       <div class="container"><!-- data-aos="fade-up" -->
-
+	<hr>
         <div class="section-title">
-          <h2>Review</h2>
-          <p>Review</p>
+        <div>
+          <h2>Review</h2></span>
           <button type="button" id="rvAdd" class="btn btn-light">리뷰추가</button>
+        </div>
           
         </div>
 
@@ -133,7 +132,7 @@
 	          <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4">
 		          	<div id="rvOne" class="course-item">
 		            
-		              <img src="/resources/upload/${rvListOne.rvNewImg}${rvListOne.rvExtn}" class="ajaxRvImg img-fluid" alt="리뷰이미지" style="width: 520px;height: 300px; object-fit: cover;">
+		              <img src="/resources/upload/${rvListOne.rvNewImg}${rvListOne.rvExtn}" class="ajaxRvImg img-fluid" alt="리뷰이미지" style="width: 520px;height: 300px;">
 		              
 		              <div class="course-content">
 			                <div class="d-flex justify-content-between align-items-center mb-3">
@@ -146,8 +145,6 @@
 			                  </div>
 			                </div>
 		              </div>
-		              
-		              
 		            </div>
 	          </div> 
 		</c:forEach>
@@ -176,7 +173,8 @@
 	            <label for="rvImg">이미지 첨부</label>
 	            <input type="file" id="rvImg" name="rvImg">
             </div>
-            내용: <br><input type="text" name="rvContent" style="width: 296px;">
+            내용: <br><input type="text" maxlength='50' name="rvContent" style="width: 296px;">
+            <p>* 리뷰 내용은 50자 내로 적어주세요.</p>
             <div class="between">
 	            <input type="button" value="확인" id="rvSave">
 	            <input type="button" value="취소" id="rvCancel">
@@ -221,7 +219,7 @@
   
   <!-- 차트 만들기 기능 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-  <script src="js/chart.js"></script>
+  <script src="js/charts.js"></script>
 
 </body>
 </html>
