@@ -10,8 +10,12 @@
 	GROUP BY grade
 </select>
 
-<!-- <select id="imdSellPriceList">
-	SELECT 
-</select> -->
+<select id="imdSellPrice" resultType="Deal">
+	SELECT pNo, userNo, grade, desiredPrice AS imdSellPrice
+	FROM tbl_hope_purchase
+	WHERE purYn = 'N' AND grade = #{grade}
+	ORDER BY desiredPrice DESC, purNo
+	LIMIT 1
+</select>
 
 </mapper>

@@ -9,6 +9,12 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 li, ol, ul {
     list-style: none;
 }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 /*
 header{background: black; height: 90px;font-weight: 700;box-sizing: border-box; color: white; 
     display: flex;justify-content: center;align-items: center;  

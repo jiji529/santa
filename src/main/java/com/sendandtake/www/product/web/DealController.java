@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
 import com.sendandtake.www.product.model.DealVO;
+import com.sendandtake.www.product.model.OrderVO;
 import com.sendandtake.www.product.model.ProductVO;
 import com.sendandtake.www.product.model.SaleProductVO;
 import com.sendandtake.www.product.service.DealService;
@@ -65,17 +66,15 @@ public class DealController {
 	String buyinput(@SessionAttribute("productVO") ProductVO pvo, Model model) {
 		
 		List<SaleProductVO> priceList = productService.selectPriceList(pvo.getpNo());
-//		, DealVO dvo
-//		for (SaleProductVO pList : priceList) {
-//			if(pList.getGrade().equals(pvo.getGrade())) {
-//				dvo.setGrade(pvo.getGrade());
-//				dvo.setImdbuyprice(pList.getSalePrice());
-//			}
-//		}
 		
+		DealVO dvo = dealService.imdSellPrice(pvo);
 		
-		
-		
+		for (SaleProductVO pList : priceList) {
+			if(pList.getGrade().equals(pvo.getGrade())) {
+				dvo.setImdBuyPrice(pList.getSalePrice());
+			}
+		}
+		model.addAttribute("dvo", dvo);
 		model.addAttribute("pvo", pvo);
 		
 		return "product/buyinput";
@@ -83,13 +82,18 @@ public class DealController {
 	
 	//상품구매 배송/결제
 	@GetMapping("/buypay")
-	String buypay() {
+	String buypay(DealVO dvo, @SessionAttribute("productVO") ProductVO pvo, Model model) {
+		
+		model.addAttribute("dvo", dvo);
+		model.addAttribute("pvo", pvo);
 		return "product/buypay";
 	}
 	
 	//상품구매완료
 	@GetMapping("/buycomplete")
-	String buycomplete() {
+	String buycomplete(@SessionAttribute("productVO") ProductVO pvo, OrderVO ovo, Model model) {
+		model.addAttribute("ovo", ovo);
+		model.addAttribute("pvo", pvo);
 		return "product/buycomplete";
 	}
 	

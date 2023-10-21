@@ -1,8 +1,8 @@
 window.onload = () => {
 
   let bid_st = document.querySelector('#buy_bid input[name="saleTerm"]');
-  let bid_sp = document.querySelector('#buy_bid input[name="salePrice"]');
-  let imd_sp = document.querySelector('#buy_imd input[name="salePrice"]');
+  let bid_sp = document.querySelector('#buy_bid input[name="desiredPrice"]');
+  let imd_sp = document.querySelector('#buy_imd input[name="desiredPrice"]');
 
   // 구매 입찰, 즉시 구매 폼 변경
   document.querySelector(".tab-group").addEventListener('click', (e) => {

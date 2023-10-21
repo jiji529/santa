@@ -23,11 +23,11 @@
        <div class="wrap ctn">
            <div id="item_info">
                <div id="item_img">
-                   <img src="${pageContext.request.contextPath}/resources/img/iphone15protita.png" alt="상품이미지">
-               </div>
-               <div id="item_detail">
-                   <span>apple_iphone14pro_128G_silver</span>
-                   <span>아이폰 14 프로 128기가 실버</span>
+                   <img src="${pageContext.request.contextPath}/resources/img/product/${pvo.pImg1}" alt="상품이미지">
+                </div>
+                <div id="item_detail">
+                    <span>${pvo.pCode}</span>
+                    <span>${pvo.pName}</span>
                </div>
            </div>
            <div id="grade_select">

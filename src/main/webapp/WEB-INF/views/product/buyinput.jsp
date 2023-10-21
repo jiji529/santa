@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +31,7 @@
                 <div id="item_detail">
                     <span>${pvo.pCode}</span>
                     <span>${pvo.pName}</span>
-                    <span>${pvo.grade}</span>
+                    <span>${dvo.grade}</span>
                 </div>
             </div>
             <div id="input_select">
@@ -38,11 +39,11 @@
                     <ul>
                         <li class="now_price">
                             <p>즉시 구매가</p>
-                            <p><span>${pvo.immediatePurchacePrice}</span>원</p>
+                            <p><fmt:formatNumber value="${dvo.imdBuyPrice}" pattern="#,###,###"/>원</p>
                         </li>
                         <li class="now_price">
                             <p>즉시 판매가</p>
-                            <p><span>${pvo.immediateSellingPrice}</span>원</p>
+                            <p><fmt:formatNumber value="${dvo.imdSellPrice}" pattern="#,###,###"/>원</p>
                         </li>
                     </ul>
                 </div>
@@ -58,13 +59,13 @@
                 <div class="tab-content">
                     <div id="buy_bid" class="hide">
 
-                        <form action="/" method="post">
-							<input type="hidden" name="">
+                        <form action="${pageContext.request.contextPath}/buypay" method="get">
+							<input type="hidden" name="type" value="bid">
                             <div>
                                 <dl>
                                     <dt>구매 희망가</dt>
                                     <dd>
-                                        <input type="text" name="salePrice" placeholder="희망가 입력" pattern="([0-9]+.{0,1}[0-9]*,{0,1})*[0-9]" required="required" autocomplete="off">
+                                        <input type="number" name="desiredPrice" placeholder="희망가 입력" pattern="([0-9]+.{0,1}[0-9]*,{0,1})*[0-9]" required="required" autocomplete="off">
                                         <span>원</span>
                                     </dd>
                                 </dl>
@@ -100,13 +101,13 @@
 
                     <div id="buy_imd">
 
-                        <form action="/" method="post">
-
+                        <form action="${pageContext.request.contextPath}/buypay" method="get">
+							<input type="hidden" name="type" value="imd">
                             <div>
                                 <dl>
                                     <dt>즉시 구매가</dt>
                                     <dd>
-                                        <span>${pvo.immediatePurchacePrice}</span>
+                                        <span><fmt:formatNumber value="${dvo.imdBuyPrice}" pattern="#,###,###"/></span>
                                         <span>원</span>
                                     </dd>
                                 </dl>
@@ -114,8 +115,8 @@
                             </div>
 
                             <!-- 숨겨진 값 -->
-                            <input type="hidden" name="salePrice" value="">
-
+                            <input type="hidden" name="desiredPrice" value="${dvo.imdBuyPrice}" >
+                            
                             <div class="sub">
                                 <button>
                                     <div>

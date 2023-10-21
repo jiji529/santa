@@ -7,6 +7,8 @@
 		<typeAlias type="com.sendandtake.www.product.model.ProductVO" alias="Product"/>
 		<typeAlias type="com.sendandtake.www.product.model.ReviewVO" alias="Review"/>
 		<typeAlias type="com.sendandtake.www.product.model.SaleProductVO" alias="SaleProduct"/>
+		<typeAlias type="com.sendandtake.www.product.model.DealVO" alias="Deal"/>
+		<typeAlias type="com.sendandtake.www.product.model.OrderVO" alias="Order"/>
 	</typeAliases>
 	
 	<mappers>

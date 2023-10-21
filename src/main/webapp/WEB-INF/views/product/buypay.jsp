@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,12 +26,12 @@
         <div class="wrap ctn">
             <div id="item_info">
                 <div id="item_img">
-                    <img src="${pageContext.request.contextPath}/resources/img/iphone15protita.png" alt="상품이미지">
+                    <img src="${pageContext.request.contextPath}/resources/img/product/${pvo.pImg1}" alt="상품이미지">
                 </div>
                 <div id="item_detail">
-                    <span>apple_iphone14pro_128G_silver</span>
-                    <span>아이폰 14 프로 128기가 실버</span>
-                    <span>S</span>
+                    <span>${pvo.pCode}</span>
+                    <span>${pvo.pName}</span>
+                    <span>${pvo.grade}</span>
                 </div>
             </div>
 
@@ -83,11 +84,12 @@
                 <div id="amt">
                     <div>
                         <p>즉시구매가</p>
-                        <p><span>1,000,000</span>원</p>
+                        <p><span><fmt:formatNumber value="${dvo.desiredPrice}" type="number" pattern="#,###,###"/></span>원</p>
                     </div>
                     <div>
+	                    <c:set var="chargePrice" value="${dvo.desiredPrice * 0.05}" />
                         <p>수수료</p>
-                        <p><span>50,000</span>원</p>
+                        <p><span><fmt:formatNumber value="${chargePrice}" type="number" pattern="###,###,###"/></span>원</p>
                     </div>
                     <div>
                         <p>배송비</p>
@@ -147,16 +149,18 @@
             <div class="address total">
                 <div>
                     <span>총 결제금액</span>
-                    <p class="sell"><span>1,053,000</span>원</p>
+                    <c:set var="realPrice" value="${dvo.desiredPrice + chargePrice + 3000}" />
+                    <p class="sell"><span><fmt:formatNumber value="${realPrice}" type="number" pattern="#,###,###"/></span>원</p>
                 </div>
             </div>
 
             <div class="sub">
-                <form action="#" id="payform">
-                    <input type="hidden" name="adrNo" value="">
-                    <input type="hidden" name="userNo" value="">
-                    <input type="hidden" name="saleNo" value="">
+                <form action="${pageContext.request.contextPath}/buycomplete" id="payform" >
+                    <!-- <input type="hidden" name="adrNo" value=""> -->
+                    <!-- <input type="hidden" name="userNo" value=""> -->
+                    <!-- <input type="hidden" name="saleNo" value=""> -->
                     <input type="hidden" name="payType" value="">
+                    <input type="hidden" name="realPrice" value="${realPrice}">
                     <button class="btn_not_active">
                         <div>
                             <span>결제하기</span>
