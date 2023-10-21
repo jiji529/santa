@@ -126,6 +126,25 @@ html, body {
 cursor: not-allowed;
 }
 
+.btn2 {
+    width: 100%;
+    margin: 15px 0;
+    padding: 12px 15px;
+    background:  #fff;
+    border-color:#212529;
+/*     border: none; */
+    border-radius: 4px;
+    cursor: pointer;
+    color:#212529;
+    transition-duration: 0.2s;
+}
+
+
+.btn2:disabled{
+	opacity: 0.2;
+cursor: not-allowed;
+}
+
 .ck {
     margin-left: 20px;
 }

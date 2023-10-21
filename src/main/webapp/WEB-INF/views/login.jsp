@@ -28,7 +28,7 @@
                 </a>
             </div>
             <div>
-                <a href="${pageContext.request.contextPath}/member/join"><button type="submit" class="btn1">회원가입</button></a>
+                <a href="${pageContext.request.contextPath}/member/join"><button type="submit" class="btn2">회원가입</button></a>
             </div>
         </div>
     </div>
