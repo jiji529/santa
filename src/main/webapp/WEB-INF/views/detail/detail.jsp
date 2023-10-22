@@ -49,7 +49,7 @@
           <div class="col-md-6 d-flex align-items-stretch">
             <div class="card">
               <div class="card-body">
-                <p><a href="#"><strong>${comName}</strong></a></p>
+                <p><a href="/list?keyword=${comName}"><strong>${comName}</strong></a></p>
                 <h5 class="card-title">${pvo.pName}</h5>
                 <h5 class="pCodeWrite">${pvo.pCode}</h5>
                 <div>
