@@ -51,7 +51,7 @@
             </div><!---->
             <div data-v-512d9435="" class="content">
               <div data-v-6abf8c64="" class="empty_area">
-                <p data-v-6abf8c64="" class="desc">추가하신 관심 상품이 없습니다.</p><a data-v-472c9b08="" data-v-6abf8c64="" href=""
+                <p data-v-6abf8c64="" class="desc">추가하신 관심 상품이 없습니다.</p><a data-v-472c9b08="" data-v-6abf8c64="" href="/list"
                   class="btn outlinegrey small"> SHOP 바로가기 </a>
               </div>
               <div>

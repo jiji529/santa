@@ -213,7 +213,7 @@
                   <div data-v-52a917ff="" class="interest_product"><!---->
                     <div data-v-6abf8c64="" data-v-52a917ff="" class="empty_area has_bg">
                       <p data-v-6abf8c64="" class="desc">추가하신 관심 상품이 없습니다.</p><a data-v-472c9b08="" data-v-6abf8c64=""
-                        href="" class="btn outlinegrey small"> SHOP 바로가기 </a>
+                        href="/list" class="btn outlinegrey small"> SHOP 바로가기 </a>
                     </div>
                   </div><!---->
                 </div>

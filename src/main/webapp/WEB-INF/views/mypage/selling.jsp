@@ -134,7 +134,7 @@
                   </div>
                 </div>
                 <div data-v-6abf8c64="" data-v-7a0ddb52="" class="empty_area">
-                  <p data-v-6abf8c64="" class="desc">판매 입찰 내역이 없습니다.</p><a data-v-472c9b08="" data-v-6abf8c64="" href=""
+                  <p data-v-6abf8c64="" class="desc">판매 입찰 내역이 없습니다.</p><a data-v-472c9b08="" data-v-6abf8c64="" href="/list"
                     class="btn outlinegrey small"> SHOP 바로가기 </a>
                 </div>
                 <div data-v-7a0ddb52="" class="v-portal" style="display: none;"></div>
