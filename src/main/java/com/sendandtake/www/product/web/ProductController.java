@@ -92,6 +92,18 @@ public class ProductController {
 		return "detail/detail";
 	}
 	
+	@GetMapping("/likeActive/ajax")
+	Map<String, Integer> likeActive (int pNo) {
+		
+		Map<String, Integer> likeCntMap = new HashMap<String, Integer>();
+		
+		int LikeCount = productService.selectLikeCnt(pNo);
+		
+		likeCntMap.put("likeCnt", LikeCount);
+		
+		return likeCntMap;
+	}
+	
 	
 	@ResponseBody
 	@PostMapping("/rvSave/ajax")
