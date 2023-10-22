@@ -92,14 +92,25 @@ public class ProductController {
 		return "detail/detail";
 	}
 	
+	//관심 버튼 눌렀을 때 insert
 	@GetMapping("/likeActive/ajax")
-	Map<String, Integer> likeActive (int pNo) {
-		
+	Map<String, Integer> likeActive (int pNo, @RequestParam("loginUser") MemberVO mvo) {
+
+		//관심상품 개수 가져오기
 		Map<String, Integer> likeCntMap = new HashMap<String, Integer>();
 		
 		int LikeCount = productService.selectLikeCnt(pNo);
 		
 		likeCntMap.put("likeCnt", LikeCount);
+		
+		//관심 추가 및 likeYn 변경
+		
+		/*productService
+		
+		if
+		productService.insertLike(pNo);*/
+		
+		
 		
 		return likeCntMap;
 	}
