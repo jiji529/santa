@@ -60,7 +60,7 @@ public class ProductDaoImpl implements ProductDao {
 
 	@Override
 	public int selectLikeCnt(int pNo) {
-		return sql.selectOne("like.cnt", pNo);
+		return sql.selectOne("like.likeCnt", pNo);
 	}
 
 

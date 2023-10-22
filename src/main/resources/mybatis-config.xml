@@ -17,5 +17,6 @@
 		<mapper resource="mybatis/product.xml"/>
 		<mapper resource="mybatis/review.xml"/>
 		<mapper resource="mybatis/deal.xml"/>
+		<mapper resource="mybatis/like.xml"/>
 	</mappers>
 </configuration>

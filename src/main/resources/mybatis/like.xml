@@ -3,8 +3,8 @@
 
 <mapper namespace="like"> 
 
-<select id="cnt" resultType="java.lang.Integer">
-	SELECT count(*)
+<select id="likeCnt" resultType="java.lang.Integer">
+	SELECT count(*) LikeCount
 	FROM tbl_like
 	WHERE pNo=1 AND likeYn = "Y";
 </select>
