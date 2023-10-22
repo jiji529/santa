@@ -12,7 +12,7 @@
 
   <jsp:include page="../header.jsp"></jsp:include>
 
-  <link href="resources/css/sellbuy.css" rel="stylesheet">
+  <link href="${pageContext.request.contextPath}/resources/css/sellbuy.css" rel="stylesheet">
 </head>
 
 <body>
