@@ -105,18 +105,21 @@ main  aside  .cgory  li  a {
     font-weight: bold;
 }
 
-main > aside > .cgory > li > a:hover {
-    background: #2b313f;
+main > aside  .cgory  li  a:hover {
+    background: #000;
     color: #fff;
 }
 
-main > aside > .cgory > li > a:hover + ol {
+main > aside  .cgory .active {
+    text-decoration: none;
+    font-size: 1em;
     display: block;
+    padding: 0 20px;
+    line-height: 40px;
+    font-weight: bold;
+    background: #000;
+    color: #fff;
 }
-
-main > aside > .cgory ol:hover {
-    display: block;
-}   
 
 main > aside > .cgory i {
     width: 22px;
@@ -131,31 +134,6 @@ main > aside > .cgory > li i.fa-angle-right{
     margin-right: 0;
 }
 
-/* main > aside > .category ol { */
-/*     position: absolute; */
-/*     left: 215px; */
-/*     top: 0; */
-/*     display: none; */
-/*     width: 215px; */
-/*     height: 100%; */
-/*     border: 1px solid #787f89; */
-/*     background: #fff; */
-/*     box-sizing: border-box; */
-/*     z-index: 10000; */
-/* } */
-
-/* main > aside > .category ol > li { */
-/*     width: 100%; */
-/*     height: 24px; */
-/*     padding: 10px; */
-/*     box-sizing: border-box; */
-/* } */
-
-/* main > aside > .category ol > li > a:hover { */
-/*     color: #41ab47; */
-/*     text-decoration: underline; */
-/* } */
-
 main > section {
     float: right;
     width: 985px;
@@ -169,13 +147,6 @@ main > section {
      height: auto;
      box-sizing: border-box;
  }
-
-/*  main > section > section > div  .thumbs { */
-/*      float: left; */
-/*      width: 25%; */
-/*      height: 345px; */
-/*      box-sizing: border-box; */
-/*  } */
 
  h3 {
      display: block;

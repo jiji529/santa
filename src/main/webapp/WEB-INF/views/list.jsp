@@ -52,9 +52,21 @@
             });
         });
        
+
+        //카테고리버튼에 active클래스 추가
+        document.addEventListener("DOMContentLoaded", function () {
+            var links = document.querySelectorAll(".cgory a");
+
+            links.forEach(function (link) {
+                if (link.getAttribute("data-pcategory") === "${pCategory}") {
+                    link.classList.add("active");
+                }
+            });
+        });
+
         
 
-	//카테고리버튼
+	//카테고리버튼_ajax
 	$(document).ready(function() {
 		showAllProducts();
 
@@ -95,7 +107,7 @@
 				<ul class="cgory">
 					<li><div>카테고리</div></li>
 					<li><div>
-							<a href="/list?pCategory=노트북" data-pcategory="노트북">노트북</a>
+							<a href="/list?pCategory=노트북" data-pcategory="노트북" >노트북</a>
 						</div></li>
 					<li><div>
 							<a href="/list?pCategory=태블릿" data-pcategory="태블릿">태블릿</a>
