@@ -99,23 +99,48 @@ public class DealController {
 	
 	//상품판매
 	@GetMapping("/sell")
-	String sell() {
+	String sell(int pNo, @SessionAttribute("productVO") ProductVO pvo, Model model) {
+		
+		pvo.setGrade("S");
+		DealVO dvo = dealService.imdSellPrice(pvo);
+		model.addAttribute("Sprice", dvo.getImdSellPrice());
+		
+		pvo.setGrade("A");
+		dvo = dealService.imdSellPrice(pvo);
+		model.addAttribute("Aprice", dvo.getImdSellPrice());
+		
+		pvo.setGrade("B");
+		dvo = dealService.imdSellPrice(pvo);
+		model.addAttribute("Bprice", dvo.getImdSellPrice());
+		
+		model.addAttribute("pvo", pvo);
+		
 		return "product/sell";
 	}
 	//상품판매동의
 	@GetMapping("/sellcheck")
-	String sellcheck() {
+	String sellcheck(@SessionAttribute("productVO") ProductVO pvo, Model model) {
+		
+		model.addAttribute("pvo", pvo);
+		
 		return "product/sellcheck";
 	}
 	
 	//상품판매 반송/결제
 	@GetMapping("/sellpay")
-	String sellpay() {
+	String sellpay(@SessionAttribute("productVO") ProductVO pvo, Model model) {
+		
+		model.addAttribute("pvo", pvo);
+		
 		return "product/sellpay";
 	}
 	//상품판매신청완료
 	@GetMapping("/sellcomplete")
-	String sellcomplete() {
+	String sellcomplete(@SessionAttribute("productVO") ProductVO pvo, OrderVO ovo, Model model) {
+		
+		model.addAttribute("pvo", pvo);
+		model.addAttribute("ovo", ovo);
+		
 		return "product/sellcomplete";
 	}
 	

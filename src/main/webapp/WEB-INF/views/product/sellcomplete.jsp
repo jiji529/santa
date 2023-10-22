@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,12 +31,12 @@
             </div>
             <div id="item_info">
                 <div id="item_img">
-                    <img src="${pageContext.request.contextPath}/resources/img/iphone15protita.png" alt="상품이미지">
+                    <img src="${pageContext.request.contextPath}/resources/img/product/${pvo.pImg1}" alt="상품이미지">
                 </div>
                 <div id="item_detail">
-                    <span>apple_iphone14pro_128G_silver</span>
-                    <span>아이폰 14 프로 128기가 실버</span>
-                    <span>S</span>
+                    <span>${pvo.pCode}</span>
+                    <span>${pvo.pName}</span>
+                    <span></span>
                 </div>
             </div>
             <div class="confirm">
@@ -57,9 +58,15 @@
                     </div>
                 </div>
             </div>
+            <div class="address total">
+                <div>
+                    <span>총 결제금액</span>
+                    <p class="sell"><span><fmt:formatNumber value="${ovo.realPrice}" type="number" pattern="#,###,###"/></span>원</p>
+                </div>
+            </div>
             <div class="sub home">
-                <a href="/main.do" class="btn">홈</a>
-                <a href="" class="btn">마이페이지</a>
+                <a href="${pageContext.request.contextPath}/" class="btn">홈</a>
+                <a href="${pageContext.request.contextPath}/mypage.do" class="btn">마이페이지</a>
             </div>
         </div>
     </div>

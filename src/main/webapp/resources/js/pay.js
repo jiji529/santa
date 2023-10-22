@@ -4,7 +4,6 @@ window.onload = () => {
   
   // payType 선택 버튼
   document.querySelector('#pay ul').addEventListener('click', (e) => {
-    console.log(e.target.tagName);
     if(e.target.tagName =='A'){
       document.querySelectorAll('#pay ul a').forEach((a) => {
         a.classList.remove('act');

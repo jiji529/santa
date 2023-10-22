@@ -47,7 +47,7 @@
                     </div>
                     <div>
                         <p>계좌</p>
-                        <p><span>농협 30205********</span></p>
+                        <p><span>카카오 30205********</span></p>
                     </div>
                     <div>
                         <p>예금주</p>
@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="sub home">
-                <a href="${pageContext.request.contextPath}/main.do" class="btn">홈</a>
+                <a href="${pageContext.request.contextPath}/" class="btn">홈</a>
                 <a href="${pageContext.request.contextPath}/mypage.do" class="btn">마이페이지</a>
             </div>
         </div>

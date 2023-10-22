@@ -150,7 +150,7 @@
                 <div>
                     <span>총 결제금액</span>
                     <c:set var="realPrice" value="${dvo.desiredPrice + chargePrice + 3000}" />
-                    <p class="sell"><span><fmt:formatNumber value="${realPrice}" type="number" pattern="#,###,###"/></span>원</p>
+                    <p class="buy"><span><fmt:formatNumber value="${realPrice}" type="number" pattern="#,###,###"/></span>원</p>
                 </div>
             </div>
 

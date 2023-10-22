@@ -36,7 +36,7 @@
                        <button>
                            <div>
                                <span>S</span><br>
-                               <span class="sell">900,000</span>
+                               <span class="sell">${Sprice}</span>
                            </div>
                        </button>
                    </li>
@@ -44,7 +44,7 @@
                        <button>
                            <div>
                                <span>A</span><br>
-                               <span class="sell">800,000</span>
+                               <span class="sell">${Aprice}</span>
                            </div>
                        </button>
                    </li>
@@ -52,19 +52,21 @@
                        <button>
                            <div>
                                <span>B</span><br>
-                               <span class="sell">750,000</span>
+                               <span class="sell">${Bprice}</span>
                            </div>
                        </button>
                    </li>
                </ul>			
            </div>
            <div class="sub">
-               <button>
-                   <div>
-                       <span>판매상품 체크하기</span>
-                   </div>
-               </button>
-           </div>
+            	<form action="${pageContext.request.contextPath}/sellcheck" id="buy_form">
+	                <button id="buy_btn">
+	                    <div>
+	                        <span>판매기준 체크하기</span>
+	                    </div>
+	                </button>
+                </form>
+            </div>
        </div>
    </div>
    <!-- ======= 판매 폼 끝 ======= -->

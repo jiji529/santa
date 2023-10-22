@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,12 +25,12 @@
         <div class="wrap ctn">
             <div id="item_info">
                 <div id="item_img">
-                    <img src="${pageContext.request.contextPath}/resources/img/iphone15protita.png" alt="상품이미지">
+                    <img src="${pageContext.request.contextPath}/resources/img/product/${pvo.pImg1}" alt="상품이미지">
                 </div>
                 <div id="item_detail">
-                    <span>apple_iphone14pro_128G_silver</span>
-                    <span>아이폰 14 프로 128기가 실버</span>
-                    <span>S</span>
+                    <span>${pvo.pCode}</span>
+                    <span>${pvo.pName}</span>
+                    <span></span>
                 </div>
             </div>
 
@@ -72,6 +73,19 @@
                         <li><a class="btn" data-paytype="nPay">네이버페이<img src="${pageContext.request.contextPath}/resources/img/pay/Npay.png" /></a></li>
                         <li><a class="btn" data-paytype="kPay">카카오페이<img src="${pageContext.request.contextPath}/resources/img/pay/Kpay.png" /></a></li>
                     </ul>
+                </div>
+            </div>
+            
+            <div class="address">
+                <div>
+                    <span>최종 주문정보</span>
+                </div>
+                <div id="amt">
+                    <div>
+                        <p>검수료</p>
+                        <c:set var="realPrice" value="10000" />
+                        <p><span><fmt:formatNumber value="${realPrice}" type="number" pattern="#,###,###"/></span>원</p>
+                    </div>
                 </div>
             </div>
 
@@ -118,17 +132,26 @@
                                 </div>
                             </label>
                         </div>
+                        
                     </li>
                 </ul>
                 </form>
             </div>
+            
+            <div class="address total">
+                <div>
+                    <span>총 결제금액</span>
+                    <p class="sell"><span><fmt:formatNumber value="${realPrice}" type="number" pattern="#,###,###"/></span>원</p>
+                </div>
+            </div>
 
             <div class="sub">
-                <form action="#" id="payform">
-                    <input type="hidden" name="adrNo" value="">
-                    <input type="hidden" name="userNo" value="">
-                    <input type="hidden" name="saleNo" value="">
+                <form action="${pageContext.request.contextPath}/sellcomplete" id="payform">
+                    <!-- <input type="hidden" name="adrNo" value=""> -->
+                    <!-- <input type="hidden" name="userNo" value=""> -->
+                    <!-- <input type="hidden" name="saleNo" value=""> -->
                     <input type="hidden" name="payType" value="">
+                    <input type="hidden" name="realPrice" value="${realPrice}">
                     <button class="btn_not_active">
                         <div>
                             <span>결제하기</span>
